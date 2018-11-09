@@ -1,0 +1,1315 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+   box-sizing: border-box;
+}
+*,*:before,*:after {
+   box-sizing: inherit;
+}
+body {
+   background-color: #f2f2f2;
+   font-family: 'Open Sans', sans-serif;
+}
+
+/**Globales**/
+p {
+   color: #444444;
+}
+.seccion {
+   padding: 30px 0;
+}
+.seccion p {
+   font-size: 1.2em;
+   text-align: center;
+}
+h2 {
+   font-family: 'PT Sans', sans-serif;
+   text-transform: uppercase;
+   font-size: 2.4em;
+   text-align: center;
+}
+h2::after {
+   content: '';
+   margin: 0 auto;
+   background-color: rgba(185, 40, 40, 1);
+   display: block;
+   height: 5px;
+   width: 170px;
+}
+h3 {
+   font-size: 1.5em;
+   color: rgba(185, 40, 40, 1);
+   font-family: 'Oswald', sans-serif;
+   margin-top: 15px;
+}
+.button {
+   background-color: rgba(185, 40, 40, 0.8);
+   padding: 10px 40px;
+   color: white;
+   text-transform: uppercase;
+   font-family: 'Oswald', sans-serif;
+   font-weight: bold;
+   text-decoration: none;
+   /*font-size: 1em;*/
+   margin-top: 20px;
+   display: inline-block;
+   border: 2px solid rgba(185, 40, 40, 1);
+   transition: all .7s ease;
+}
+.button.hollow, .button.hollow:hover {
+   background-color: white;
+   color: rgb(95, 158, 202);
+}
+.button.transparente {
+   background-color: transparent;
+   border-color: white;
+}
+.button.transparente:hover {
+   background-color: rgba(185, 40, 40, 1);
+   border: 2px solid wheat;
+   color: wheat;
+}
+.button:hover{
+   background-color: rgba(185, 40, 40, 1);
+}
+.float-right {
+   float: right;
+}
+.altura_20 {
+   height: 20px;
+}
+.width_25 {
+   width: 25%;
+}
+.rojito {
+   color: rgba(185, 40, 40, 1)!important;
+}
+.azulito {
+   color: cornflowerblue!important;
+}
+ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+.contenedor {
+   width: 95%;
+   margin: 0 auto;
+}
+@media only screen and (min-width:480px) {
+   .contenedor {
+      width: 95%;
+   }
+}
+@media only screen and (min-width:768px) {
+   .contenedor {
+      width: 90%;
+   }
+}
+@media only screen and (min-width:992px) {
+   .contenedor {
+      width: 90%;
+      max-width: 1200px;
+   }
+}
+.padding_bot_0 {
+   padding-bottom: 0!important;
+}
+.full_width {
+   width: 100%;
+}
+
+/**Lettering**/
+h1.nombre-sitio span {
+   position: relative;
+   text-shadow: 0 0 30px black;
+}
+p.slogan span {
+   position: relative;
+   text-shadow: 0 0 30px black;
+}
+
+/**Margenes**/
+.top_-180 {
+   margin-top: -180px;
+}
+
+/**Header**/
+div.hero {
+   /*background-image: url(../img/bog-wall-2.jpg);*/
+   height: 100vh;
+   background-position: center;
+   background-size: cover;
+}
+.hero::after {
+   content: "";
+   background: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+      ),url(../img/bog-wall-2.jpg);
+   /*opacity: 0.7;*/
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   position: absolute;
+   z-index: -1;
+   background-position: center;
+   background-size: cover;
+}
+.hero.segunda_vista::after {
+   height: 70%;
+}
+@media only screen and (min-width:768px) {
+   div.contenido-header {
+      padding-top: 100px;
+   }
+}
+nav.redes-sociales {
+   text-align: center;
+   margin-bottom: 5%;
+}
+nav.redes-sociales a{
+   color: #ffffff;
+   font-size: 2em;
+   margin-right: 20px;
+}
+nav.redes-sociales a:last-child {
+   margin-right: 0;
+}
+nav.redes-sociales a:nth-child(1):hover {
+   color: #3b5998;
+}
+nav.redes-sociales a:nth-child(2):hover {
+   color: #0084b4;
+}
+nav.redes-sociales a:nth-child(3):hover {
+   color: #c2281a ;
+}
+nav.redes-sociales a:nth-child(4):hover {
+   color: #c4302b;
+}
+nav.redes-sociales a:nth-child(5):hover {
+   color: #3f729b;
+}
+div.informacion-evento {
+   text-align: center;
+   color: white;
+   background-size: cover;
+}
+div.informacion-evento p {
+   margin: 0;
+   display: inline;
+   font-size: 30px;
+   font-variant: small-caps;
+   color: #f2f2f2;
+}
+div.informacion-evento p i {
+   color: rgb(181, 208, 227);
+   font-size: 2.1rem;
+}
+@media only screen and (min-width:768px) {
+   div.informacion-evento {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 30px;
+   }
+}
+p.fecha {
+   float: left;
+   padding-left: 100px;
+}
+p.ciudad {
+   float: right;
+   text-align: right;
+   padding-right: 100px;
+}
+p.slogan {
+   color: white !important;
+   font-size: 4pw!important;
+   text-shadow: 2px 2px #000;
+}
+p.slogan span {
+   font-weight: bold;
+}
+h1.nombre-sitio {
+   font-family: 'Oswald', sans-serif;
+   text-transform: uppercase;
+   font-size: 5.9vw;
+   color: rgb(185, 40, 40);
+   text-shadow: 1px 2px #000000b5;
+}
+/*.nombre-sitio-menu {
+   font-family: 'PT Sans', sans-serif;
+   text-transform: uppercase;
+   font-size: 2.9vw;
+}*/
+@media only screen and (min-width:768px) {
+   h1.nombre-sitio {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: 7.2vw;
+      margin: 0;
+      line-height: 1;
+   }
+}
+
+/**Barra**/
+div.barra {
+   background-color: rgba(255, 255, 255, 0.7);
+  /* padding: 15px 0;*/
+}
+.fixed {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 2;
+}
+div.logo {
+   width: 80%;
+   float: left;
+}
+div.logo img {
+   width: 58%;
+   cursor: pointer;
+}
+@media only screen and (min-width:768px) {
+   div.logo {
+      width: 33.3%;
+      float: left;
+      display: block;
+      margin-top: 0px;
+   }
+}
+
+/**Nav-principal**/
+nav.navegacion-principal {
+   display: none;
+   width: 100%;
+}
+nav.navegacion-principal a{
+   font-family: 'Oswald', sans-serif;
+   color: #ffffff;
+   font-size: 1.3em;
+   text-decoration: none;
+   text-transform: uppercase;
+   width: 100%;
+   display: block;
+   text-align: center;
+   margin-bottom: 15px;
+}
+nav.navegacion-principal a:hover{
+   background-color: rgba(185, 40, 40, 1);
+   transition: all .7s ease;
+   color: wheat;
+}
+nav.navegacion-principal a:last-child{
+   border: 2px solid rgba(185, 40, 40, 1);
+   color: black;
+   margin-right: 0;
+   border-radius: 10px;
+}
+nav.navegacion-principal a:last-child:hover{
+   color: #ffffff;
+}
+@media only screen and (min-width:768px) {
+   nav.navegacion-principal {
+      width: 66%;
+      float: right;
+      display: block;
+      text-align: right;
+   }
+   nav.navegacion-principal a{
+      font-family: 'Oswald', sans-serif;
+      color: black;
+      font-size: 1.3em;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 10px;
+      width: auto;
+      text-align: center;
+      margin-bottom: 10px;
+   }
+}
+/**Menu-movil**/
+div.menu-movil {
+   width: 60px;
+   display: block;
+   float: right;
+   text-align: right;
+   margin-top: 12px;
+}
+div.menu-movil {
+   cursor: pointer;
+}
+div.menu-movil span {
+   height: 8px;
+   margin-bottom: 6px;
+   background-color: white;
+   display: block;
+}
+@media only screen and (min-width:768px) {
+   div.menu-movil span {
+      display: none;
+   }
+}
+
+/**Talleres**/
+section.programa {
+   position: relative; /**Padre**/
+}
+div.contenedor-video {
+   max-width: 100%;
+   overflow-x: hidden;
+}
+div.contenido-programa {
+   position: absolute; /**Hijo**/
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+}
+div.programa-evento {
+   background-color: rgba(255, 255, 255, 0.7);
+}
+@media only screen and (min-width:768px) {
+   div.programa-evento {
+      width: 70%;
+   }
+}
+@media only screen and (min-width:992px) {
+   div.programa-evento {
+      width: 80%;
+   }
+   div.items_detalle p {
+      width: 33.3%;
+      float: left;
+   }
+}
+nav.menu-programa {
+   width: 100%;
+   border-bottom: 1px solid rgba(185, 40, 40, 1);
+   padding-bottom: 10px;
+}
+@media only screen and (min-width:768px) {
+   nav.menu-programa {
+      display: table;
+   }
+}
+nav.menu-programa a {
+   display: block;
+   text-align: center;
+   color: black;
+   text-decoration: none;
+   font-family: 'Oswald', sans-serif;
+   margin-bottom: 10px;
+   font-size: 1.2em;
+   position: relative;   
+   padding-bottom: 10px;
+}
+@media only screen and (min-width:768px) {
+   nav.menu-programa a {
+      display: table-cell;
+   }
+}
+nav.menu-programa a.activo::after {
+   position: absolute;
+   content: '';
+   left: 0;
+   right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   height: 20px;
+   width: 30px;
+   bottom: -30px;
+   background-image: url('../img/talleres-flecha.jpg');
+   background-position: top center;
+   background-repeat: no-repeat;
+}
+nav.menu-programa a.activo {
+   color: rgba(185, 40, 40, 1);
+}
+nav.menu-programa a i, div.detalle-evento p i {
+   color: cadetblue;
+   font-size: 1.2em;
+   margin-right: 10px;
+}
+div.ocultar {
+   display: none;
+}
+.ttl_info {
+   font-variant: small-caps;
+   font-weight: bolder;
+}
+
+/**Detalle-evento**/
+div.detalle-evento{
+   border-bottom: 1px solid rgba(185, 40, 40, 1);
+   padding: 0 25px;
+}
+/*div.detalle-evento:nth-child(2) {
+   border: none;
+}*/
+div.detalle-evento p {
+   margin-bottom: 15px;
+   font-size: 16px;
+}
+div.detalle-evento h3 {
+   font-size: 20px;
+}
+/**Invitados**/
+ul.lista-invitados li {
+   padding: 10px;
+   float: left;
+}
+@media only screen and (min-width:480px) {
+   ul.lista-invitados li {
+      width: 50%;
+   }
+}
+@media only screen and (min-width:768px) {
+   ul.lista-invitados li {
+      width: 50%;
+   }
+   ul.lista-invitados.publication li {
+      width: 33.3%;
+   }
+}
+div.invitado {
+   position: relative;
+   overflow: hidden;
+   border-radius: 25px;
+}
+div.invitado img{
+   /*max-width: 100%;*/
+   width: 100%;
+   filter: gray;
+   -webkit-filter: grayscale(0);
+   -webkit-transition: all .6s ease-in-out;
+}
+div.invitado:hover img{
+   -webkit-filter: grayscale(0.3);
+   -webkit-transform: scale(1.06);
+}
+div.invitado p{
+   line-height: 115%;
+   display: none; 
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   padding: 20px;
+   margin: 0;
+   background-color: rgba(0, 0, 0, 0.71);
+   width: 100%;
+   font-family: 'Oswald', sans-serif;
+   color: rgba(185, 40, 40, 1);
+   text-transform: uppercase;
+   font-size: 1.8em;
+   transition: all .4s ease-in-out;
+   text-shadow: 1px 2px #000000b5;
+}
+.serv_title {
+   display: block!important;
+}
+.item_venta {
+   display: block!important;
+   color: wheat!important;
+   font-size: 1.5em!important;
+}
+.item_venta i{
+   color: #bdbdbd;
+   font-size: 0.7em;
+}
+.item_venta span{
+   font-variant: small-caps;
+   font-size: 0.6em!important;
+}
+.item_venta span.item_precio{
+   font-size: 1.0em!important;
+   color: cornflowerblue;
+}
+div.invitado span{
+   color: #bdbdbd;
+   text-transform: none;
+   font-size: 0.7em;
+   line-height: 50%;
+}
+div.invitado:hover p{
+   display: block;
+   bottom: 0px;
+}
+div.invitado:hover p.serv_title{
+   display: none!important;
+}
+.bandera_venta {
+   -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    display: block!important;
+    float: left;
+}
+/** parallax servicio **/
+div.serv {
+   position: relative; /**padre**/
+   height: auto;
+   margin-top: 20px;
+}
+div.serv::before {
+   background-image: url(../img/planos_1.jpg);
+   content: '';
+}
+.serv h2 {
+   text-align: center;
+   color: #ffffff;
+   font-family: 'Oswald', sans-serif;
+   text-transform: uppercase;
+   -webkit-text-stroke: .5px #000000;
+}
+.serv h2::after {
+   display: none;
+}
+.div_recibe {
+   position: relative; /**padre**/
+   padding-top: 35px;
+   padding-bottom: 35px;
+}
+.serv p {
+   color: #fdfdfd;
+   font-size: 1.3em;
+   text-align: center;
+   text-shadow: 1px 2px #000000b5;
+}
+.serv.parallax::before {
+   background-attachment: initial!important;
+   -webkit-filter: brightness(.6);
+   filter: brightness(.6);
+}
+
+/**Contador**/
+.parallax::before {
+   width: 100%; /**ancho**/
+   height: 100%; /**alto**/
+   position: absolute; /**hijo**/
+   top: 0;
+   left: 0;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   background-attachment: fixed;
+   -webkit-filter: brightness(.7);
+   filter: brightness(.7);
+}
+div.contador {
+   position: relative; /**padre**/
+   height: auto;
+   margin-top: 20px;
+}
+div.contador::before {
+   background-image: url(../img/edificios_1.jpg);
+   content: '';
+}
+ul.resumen-evento {
+   position: relative; /**padre**/
+   padding-top: 50px;
+   padding-bottom: 350px;
+}
+ul.resumen-evento li {
+   width: 50%;
+   float: left;
+   text-align: center;
+   color: #ffffff;
+   font-family: 'Oswald', sans-serif;
+   text-transform: uppercase;
+   -webkit-text-stroke: .5px #000000;
+}
+p.numero {
+   color: rgb(95, 158, 202);
+   font-size: 8em;
+   display: block;
+   margin: 0 0 -20px 0;
+   font-family: 'Oswald', sans-serif;
+}
+@media only screen and (min-width:768px) {
+   ul.resumen-evento li {
+      width: 25%;
+   }
+}
+
+/**Tabla de Precios**/
+ul.lista-precios > li {
+   padding: 10px;
+}
+@media only screen and (min-width:768px) {
+   ul.lista-precios > li {
+      float: left;
+      width: 33.3%;
+   }
+}
+div.tabla-precio {
+   border: 1px solid #e1e1e1;
+   background-color: #ffffff;
+   padding: 40px 0;
+   text-align: center;
+   transition: all .3s ease-in-out;
+}
+div.tabla-precio:hover {
+   transform: scale(1.06);
+   border: 1px solid rgb(95, 158, 202);
+   box-shadow: 0px 0px 30px #666;/** x y blur color**/
+}
+div.tabla-precio ul li {
+   font-family: 'PT Sans', sans-serif;
+   font-size: 14px;
+   margin-bottom: 10px;
+   text-transform: uppercase;
+   color: #868686;
+   line-height: 26px;
+}
+div.tabla-precio ul li::before {
+   font-family: 'FontAwesome';
+   display: inline-block;
+   vertical-align: top;
+   padding: 0 5px;
+   font-size: 20px;
+   color: green;
+   -webkit-font-smoothing: antialiased;
+   content: '\f046'
+}
+div.tabla-precio h3 {
+   font-size: 19px;
+   text-transform: uppercase;
+}
+div.tabla-precio p.numero {
+   color: #000000;
+   margin-top: -16px;
+   margin-bottom: 10px;
+   font-size: 5.5em;
+   font-variant: small-caps;
+}
+
+/**Avaluos**/
+@media only screen and (min-width:768px) {
+   div#precios_avaluos > ul.lista-precios > li {
+      float: left;
+      width: 50%;
+   }
+}
+
+/**Mapa**/
+div.mapa {
+   height: 450px;
+   background-color: lightblue;
+   margin-top: 20px;
+}
+
+/**Testimoniales**/
+div.testimoniales {
+   padding-bottom: 20px;
+}
+div.testimonial {
+   padding: 5px;
+}
+@media only screen and (min-width:768px) {
+   div.testimonial {
+      float: left;
+      width: 33.3%;
+   }
+}
+blockquote {
+   background-color: #ffffff;
+   border: 1px solid #e1e1e1;
+   position: relative; /**Padre**/
+   margin: 0 0 10px 0;
+   padding-bottom: 20px;
+}
+blockquote p {
+   text-align: justify!important;
+   font-size: 1em!important;
+   font-family: 'PT Sans', sans-serif;
+   padding: 0 20px 0 65px;
+   font-style: italic;
+}
+blockquote p::before {
+   content: '\201c';
+   position: absolute;
+   left: 3px;
+   top: 0px;
+   font-size:8rem;
+   margin: 0;
+   padding: 0;
+   line-height: 1;
+   color: rgb(95, 158, 202);
+}
+footer.info-testimonial {
+   padding: 0;
+}
+footer.info-testimonial img {
+   float: left;
+   width: 20%;
+   border-radius: 50%;
+   margin-left: 20px;
+
+}
+footer.info-testimonial cite {
+   text-align: left;
+   color: rgb(95, 158, 202);
+   text-transform: uppercase;
+   font-size: 12px;
+   padding-top: 20px;
+   width: 66.6%;
+   float: right;
+   font-weight: bold;
+   font-style: normal;
+   font-size: 1em;
+}
+footer.info-testimonial cite span {
+   color: black;
+   display: block;
+   text-transform: none;
+}
+
+/**newsletter**/
+div.newsletter {
+   position: relative; /**Padre**/
+   height: auto;
+}
+div.newsletter::before {
+   background-image: url(../img/contact.jpg);
+   content: '';
+}
+div.newsletter .contenido {
+   padding: 100px 0;
+   color: white;
+   text-align: center;
+   position: relative; /**Padre**/
+}
+div.newsletter .contenido p {
+   font-size: 1.5em;
+   text-transform: uppercase;
+   color: wheat;
+}
+div.newsletter .contenido h3 {
+   color: white;
+   text-transform: uppercase;
+   font-size: 5vw;
+   font-family: 'PT Sans', sans-serif;
+}
+div.newsletter h3 span, div.newsletter div p span {
+   position: relative;
+   text-shadow: 0 0 30px black;
+}
+div.newsletter .contenido a {
+   margin-top: -20px;
+}
+
+
+/**Cuenta regresiva**/
+div.cuenta-regresiva ul li{
+   text-transform: uppercase;
+   font-family: 'Oswald', sans-serif;
+   font-size: 1em!important;
+   text-align: center;
+}
+div.cuenta-regresiva ul li p {
+   margin-bottom: -20px;
+}
+@media only screen and (min-width:768px) {
+   div.cuenta-regresiva ul li{
+      width: 25%;
+      float: left;
+   }
+}
+/**mapa**/
+.ubicacion {
+   margin-bottom: 30px;
+}
+
+/**Footer**/
+.site-footer {
+   background-color: #353535;
+   padding-top: 40px;
+   margin-top: 60px;
+}
+footer .contenedor > div{
+   color: white;
+   padding: 0 20px;
+   font-size: 12px;
+}
+@media only screen and (min-width:768px) {
+   footer .contenedor > div{
+      width: 33.3%;
+      float: left;
+   }
+}
+footer h3 {
+   color: white;
+   text-transform: uppercase;
+   font-family: 'Oswald', sans-serif;
+   margin-bottom: 20px;
+}
+footer h3 span {
+   color: rgba(185, 40, 40, 1);
+}
+footer .ultimos-tweets li {
+   margin-bottom: 10px;
+}
+footer nav.redes-sociales {
+   text-align: left;
+}
+footer nav.redes-sociales a i{
+   color: white;
+}
+footer nav.redes-sociales a i:hover{
+   color: wheat;
+}
+
+p.copyright {
+   color: #ffffff;
+   background-color: #2e2e2e;
+   padding: 10px 0;
+   margin: 20px 0 0 0;
+   text-align: center;
+}
+
+/** INTERNAS **/
+/**Conferencia**/
+.navegacion-principal .activo {
+   border-bottom: 2px solid rgba(185, 40, 40, 1);
+}
+div.galeria {
+   text-align: center;
+}
+div.galeria a {
+   display: inline-block;
+   margin-bottom: 5px;
+}
+/*Registro*/
+#error {
+   clear: both;
+   text-align: center;
+   padding: 10px;
+   display: none;
+}
+#datos_usuario input, #datos_usuario textarea, #datos_usuario select {
+   border: 1px solid #cccccc;
+   width: 100%;
+   height: 35px;
+   padding: 0 10px 0 10px;
+   overflow: auto;
+   border-radius: 30px 10px;
+}
+#datos_usuario textarea {
+   height: 100px;
+   padding: 5px 15px;
+}
+#datos_usuario input.btn_form {
+   border-radius: unset;
+   width: 40%;
+   margin: 20px auto 15px 30%;
+   height: 40px;
+}
+form#registro_venta h3 {
+   text-align: center;
+   text-transform: uppercase;
+   margin: 20px 0 0 0;
+}
+form#registro_venta label {
+   margin-bottom: 5px;
+   font-weight: bold;
+   color: wheat;
+   margin-right: 10px;
+}
+form#registro_arriendo h4 {
+   color: rgba(185, 40, 40, 0.8);
+   border-bottom: 2px solid rgba(185, 40, 40, 0.8);
+}
+form#registro_arriendo label {
+   color: rgba(185, 40, 40, 0.8);;
+}
+h4 {
+   text-transform: uppercase;
+   border-bottom: 2px solid rgb(255, 255, 255);
+   padding-bottom: 10px;
+   font-size: 1.2em;
+   color: wheat;
+}
+div.caja {
+   background-color: rgba(185, 40, 40, 0.8);
+   border: 1px solid #e1e1e1;
+   padding: 10px;
+   margin: 10px;
+}
+form#registro_arriendo > .caja {
+   background-color: rgba(245,222,179,0.6);
+}
+div.campo {
+   padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+   div.campo {
+      float: left;
+      width: 33.3%;
+   }
+   div.campo.coment {
+      float: left;
+      width: 100%;
+   }
+}
+
+div.paquetes .tabla-precio:hover {
+   transform: none;
+   box-shadow: none;
+}
+div.paquetes .tabla-precio input {
+   clear: both;
+   width: 100px;
+   margin: 10px auto 0 auto;
+   display: block;
+}
+.contenido-dia {
+   padding: 20px;
+   display: none;
+}
+@media only screen and (min-width: 768px) {
+   .contenido-dia > div {
+      float: left;
+      width: 33.3%;
+   }
+}
+.contenido-dia > div p {
+   text-align: left;
+   font-weight: bold;
+}
+.contenido-dia > div label {
+   display: block;
+   margin-bottom: 10px;
+}
+.contenido-dia > div input {
+   margin-right: 10px;
+}
+.contenido-dia > div label, div.resumen label {
+   font-weight: normal;
+}
+.contenido-dia > div label time {
+   color: rgb(73, 120, 162);
+   font-weight: bold;
+}
+
+/** Resumen registro **/
+
+.resumen p {
+   font-size: 1.2em;
+   text-transform: uppercase;
+}
+.total p {
+   font-weight: bold;
+}
+.resumen .extras {
+   float: left;
+   width: 50%;
+   padding: 30px;
+}
+.extras .orden {
+   text-align: left;
+   margin-bottom: 10px;
+}
+.extras .orden input, .orden #regalo {
+   margin: 10px 0 0 0;
+   display: block;
+}
+div.resumen div.total {
+   float: right;
+   width: 50%;
+   padding: 30px;
+}
+div.resumen input {
+   display: block;
+   margin: 10px auto;
+}
+#lista-productos {
+   background-color: #ededed;
+   padding: 20px;
+   display: none;
+}
+#suma-total {
+   text-align: center;
+   font-size: 2em;
+   color: rgb(73, 120, 162);
+}
+
+/**compra-venta**/
+.estilos_links {
+   text-decoration: none;
+   color: rgba(185, 40, 40, 1);
+   font-weight: bold;
+}
+.estilos_links:hover {
+   text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
