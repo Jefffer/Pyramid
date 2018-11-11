@@ -133,7 +133,7 @@
                    <nav class="menu-programa">
                       <a href="#talleres"><i class="fa fa-code" aria-hidden="true"></i> Detalles</a>
                       <a href="#conferencias"><i class="fas fa-comments" aria-hidden="true"></i> Descripción</a>
-                      <a href="#seminarios"><i class="fas fa-street-view" aria-hidden="true"></i> Agenda cita</a>
+                      <a href="#seminarios" id="agenda_cita_link"><i class="fas fa-street-view" aria-hidden="true"></i> Agenda cita</a>
                    </nav>
 
                    <div id="talleres" class="info-curso ocultar clearfix">
@@ -169,6 +169,7 @@
 
                    <div id="conferencias" class="info-curso ocultar clearfix">
                       <div class="detalle-evento">
+                        <h3>General</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
@@ -189,9 +190,32 @@
 
                    <div id="seminarios" class="info-curso ocultar clearfix">
                       <div class="detalle-evento">                         
-                         <p><i class="fa fa-calendar" aria-hidden="true"></i> <input type='text' class='datepicker-here' data-timepicker="true" data-time-format='hh:ii aa' data-language='en' /></p>
-                         <p><i class="fa fa-user" aria-hidden="true"></i> Ana Lisa Mel</p>
-                      </div>sdfasdf
+                         <!-- <p><i class="fa fa-calendar" aria-hidden="true"></i> <input type='text' class='datepicker-here' data-timepicker="true" data-time-format='hh:ii aa' data-language='en' /></p> -->
+                         <p>Para agendar una visita a este inmueble, solo debes diligenciar estos datos y nos pondremos en contacto contigo lo antes posible.</p>
+                         <div id="agenda_cita" class="registro">
+                              <div class="div_agenda">
+                                  <div class="campo_agenda">
+                                    <label for="nombre">Nombre completo: </label>
+                                    <input type="text" id="nombre" name="nombre" placeholder="">
+                                  </div>
+                                  <div class="campo_agenda">
+                                    <label for="celular">Teléfono o Celular: </label>
+                                    <input type="text" id="celular" name="celular" placeholder="">
+                                  </div>
+                                  <div class="campo_agenda">
+                                    <label for="email">Email: </label>
+                                    <input type="text" id="email" name="email" placeholder="">
+                                  </div>
+                              </div>
+                              <div class="div_agenda">
+                                <div class="datepicker-here calendarClass" data-timepicker="true" data-language='en'></div>
+                              </div>
+                              <div class="">
+                                <input type="button" class="button btn_form" id="btn_form_agendar" value="AGENDAR" >
+                            </div>
+                              
+                         </div>
+                      </div>
                    </div><!--#talleres-->
                 </div><!--.programa-evento-->
              </div><!--.contenedor-->

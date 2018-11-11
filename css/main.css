@@ -143,7 +143,7 @@ h3 {
    color: white;
    text-transform: uppercase;
    font-family: 'Oswald', sans-serif;
-   font-weight: bold;
+   /*font-weight: bold;*/
    text-decoration: none;
    /*font-size: 1em;*/
    margin-top: 20px;
@@ -164,8 +164,15 @@ h3 {
    border: 2px solid wheat;
    color: wheat;
 }
-.button:hover{
+.button:hover, #btn_form_agendar:hover{
    background-color: rgba(185, 40, 40, 1);
+}
+#btn_form_agendar {
+   color: wheat;
+   background-color: rgba(185, 40, 40, 0.9);
+   width: 50%;
+   margin-left: 25%;
+   margin-bottom: 20px;
 }
 .float-right {
    float: right;
@@ -536,6 +543,21 @@ div.ocultar {
 .ttl_info {
    font-variant: small-caps;
    font-weight: bolder;
+}
+
+/**Calendario**/
+.datepicker-here > div > div{
+   margin: auto;
+}
+.datepicker--day-name{
+   color: rgba(185, 40, 40, 1)!important;
+}
+.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current-{
+   color: rgba(185, 40, 40, 1)!important;
+   background-color: wheat!important;
+}
+.datepicker--cell.-current-{
+   color: cadetblue!important;
 }
 
 /**Detalle-evento**/
@@ -1021,6 +1043,12 @@ form#registro_arriendo h4 {
 form#registro_arriendo label {
    color: rgba(185, 40, 40, 0.8);;
 }
+form#registro_arriendo > .caja {
+   background-color: rgba(245,222,179,0.6);
+}
+form#agenda_cita > .caja{
+
+}
 h4 {
    text-transform: uppercase;
    border-bottom: 2px solid rgb(255, 255, 255);
@@ -1034,12 +1062,23 @@ div.caja {
    padding: 10px;
    margin: 10px;
 }
-form#registro_arriendo > .caja {
-   background-color: rgba(245,222,179,0.6);
-}
 div.campo {
    padding: 20px;
 }
+div.campo_agenda {
+   width: 96%;
+   float: left;
+   margin: 15px;
+}
+div.campo_agenda input{
+   border: 1px solid black;
+   width: 100%;
+   height: 35px;
+   padding: 0 10px 0 10px;
+   overflow: auto;
+   border-radius: 30px 10px;
+}
+
 
 @media only screen and (min-width: 768px) {
    div.campo {
@@ -1049,6 +1088,10 @@ div.campo {
    div.campo.coment {
       float: left;
       width: 100%;
+   }
+   .div_agenda {
+      width: 50%;
+      float: left;
    }
 }
 

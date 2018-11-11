@@ -293,11 +293,26 @@ $(function() {
 	}
 
 
+	// Alert Agendar cita
+	$('#agenda_cita_link').on('click', function() {
+		swal({
+			title: "¡Aviso!",
+			text: "Recuerda que puedes programar tus citas de Lunes a Domingo de 7:00 am a 7:00 pm, con un máximo de 15 días siguientes a partir de la fecha actual.",
+			icon: "warning",
+			dangerMode: true,		
+		});
+	});
+
+	// Propiedades calendario
+	$('.calendarClass').datepicker({
+	    language: 'en',
+	    minDate: new Date() // Now can select only dates, which goes after today
+	})
 
 	// Menu responsive
 	$('.menu-movil').on('click', function() {
 		$('.navegacion-principal').slideToggle();
-	})
+	});
 
 	// Menu activado
 	$('.navegacion-principal a').on('click', function() {
