@@ -1,0 +1,167 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+
+.description {
+  margin: 1em auto 2.25em;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: 2.5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul .inner {
+  padding-left: 1em;
+  overflow: hidden;
+  display: none;
+}
+
+ul .inner.show {
+  /*display: block;*/
+}
+
+ul li {
+  margin: .5em 0;
+}
+
+ul li a.toggle {
+  width: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fefefe;
+  padding: .75em;
+  border-radius: 0.15em;
+  transition: background .3s ease;
+}
+
+ul li a.toggle:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.toggle:after {
+  content: '\002B';
+}
+
+.toggle.active:after {
+  content: "\2212";
+}
+
+.label:empty {
+  display: none;
+}
+
+span {
+  cursor: pointer;
+}
+
+.chapters {
+  width: 100%;
+  background-color: white;
+/*  border-left: 1px solid rgb(230, 230, 230);
+  border-right: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid rgb(230, 230, 230);*/
+}
+
+.view {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+.view li {
+  padding: .5% 1%;
+  /*border-top: 1px solid rgb(230, 230, 230);*/
+}
+
+.view li:hover {
+  background: #f9f9f9;
+}
+
+.rows {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  /*justify-content:space-between;*/
+}
+
+.play {
+  padding-right: 10px;
+  /*align-self:center;*/
+}
+
+.video-title {
+  width: 100%;
+  white-space: normal !important;
+}
+
+.view-preview,
+.length {
+  color: #000;
+  text-align: center;
+}
+
+.view-preview {
+  width: 23%;
+}
+
+.length {
+  width: 10%;
+}
+
+button.accordion {
+  background-color: #d8d7d7;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  margin-top: 15px;
+}
+
+button.accordion.active,
+button.accordion:hover {
+  background-color: wheat;
+  color: rgba(185, 40, 40, 1);
+}
+
+button.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+button.accordion.active:after {
+  content: "\2212";
+}
+
+div.panel {
+  padding: 0 18px;
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  display: none;
+}
+
+.toogle {
+  float: left;
+}

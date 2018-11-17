@@ -138,9 +138,9 @@ h3 {
    margin-top: 15px;
 }
 .button {
-   background-color: rgba(185, 40, 40, 0.8);
+   background-color: rgba(185, 40, 40, 0.9);
    padding: 10px 40px;
-   color: white;
+   color: wheat;
    text-transform: uppercase;
    font-family: 'Oswald', sans-serif;
    /*font-weight: bold;*/
@@ -800,7 +800,7 @@ div.tabla-precio p.numero {
    color: #000000;
    margin-top: -16px;
    margin-bottom: 10px;
-   font-size: 5.5em;
+   font-size: 5em;
    font-variant: small-caps;
 }
 
@@ -1015,6 +1015,9 @@ div.galeria a {
    overflow: auto;
    border-radius: 30px 10px;
 }
+/*#datos_usuario input:focus, #datos_usuario textarea:focus, #datos_usuario select:focus {
+    border-color: #ffd75c;
+}*/
 #datos_usuario textarea {
    height: 100px;
    padding: 5px 15px;
