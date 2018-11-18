@@ -299,6 +299,16 @@
 			}
 		}
 
+		// Altura video
+		if ($('.galeria a:first-child').length) {
+			var alturaVideo = $('.galeria a:first-child').height();
+			$('.galeria iframe').height(alturaVideo-5);
+			$(window).resize(function() {
+				var alturaVideo = $('.galeria a:first-child').height();
+				$('.galeria iframe').height(alturaVideo-5);
+			});			
+		}
+
 
 		// Alert Agendar cita
 		$('#agenda_cita_link').on('click', function() {

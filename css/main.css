@@ -1031,7 +1031,7 @@ p.copyright {
 div.galeria {
    text-align: center;
 }
-div.galeria a {
+div.galeria a,  div.galeria iframe {
    display: inline-block;
    margin-bottom: 5px;
    width: 10%;
