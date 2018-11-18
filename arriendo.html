@@ -56,11 +56,10 @@
 
              <div class="contenido-header">
                 <nav class="redes-sociales">
-                   <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                   <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                   <!-- <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a> -->
-                   <!-- <a href="#"><i class="fa fa-play-circle" aria-hidden="true"></i></a> -->
-                   <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                   <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                   <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                   <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                   <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                 </nav>
                    <div class="informacion-evento">
                       <!-- <div class="clearfix">
@@ -181,54 +180,75 @@
                 <h4>Información básica del propietario</h4>
                 <div class="campo">
                   <label for="nombre">Nombre completo: </label>
-                  <input type="text" id="nombre" name="nombre" placeholder="" maxlength="40">
+                  <div>
+                    <i class="fas fa-user icon_form"></i>
+                    <input type="text" id="nombre" name="nombre" placeholder="" maxlength="40">
+                  </div>
                 </div>
                 <div class="campo">
                   <label for="celular">Teléfono o Celular: </label>
-                  <input type="text" id="celular" name="celular" placeholder="" maxlength="15">
+                  <div>
+                    <i class="fas fa-phone icon_form"></i>
+                    <input type="text" id="celular" name="celular" placeholder="" maxlength="15">
+                  </div>
                 </div>
                 <div class="campo">
                   <label for="email">Email: </label>
-                  <input type="text" id="email" name="email" placeholder="" maxlength="40">
+                   <div>
+                    <i class="fas fa-envelope icon_form"></i>
+                    <input type="text" id="email" name="email" placeholder="" maxlength="40">
+                  </div>
                 </div>
 
                 <h4 style="margin-top:13%;">Información básica del inmueble</h4>
                 <div class="campo">
                   <label for="inmueble">Tipo de Inmueble: </label>
                   <!-- <input type="text" id="nombre" name="nombre" placeholder=""> -->
-                  <select name="inmueble" id="inmueble">
-                    <option value="">Selecciona un tipo de inmueble</option>
-                    <option value="apartamento">Apartamento</option>
-                    <option value="bodega">Bodega</option>
-                    <option value="casa">Casa</option>
-                    <option value="finca">Finca</option>
-                    <option value="local">Local Comercial</option>
-                    <option value="lote">Lote</option>
-                    <option value="oficina">Oficina</option>
-                    <option value="otro">Otro (escríbelo en Comentarios)</option>
-                  </select>
+                  <div>
+                    <i class="fas fa-home icon_form"></i>
+                    <select name="inmueble" id="inmueble">
+                      <option value="">Selecciona un tipo de inmueble</option>
+                      <option value="apartamento">Apartamento</option>
+                      <option value="bodega">Bodega</option>
+                      <option value="casa">Casa</option>
+                      <option value="finca">Finca</option>
+                      <option value="local">Local Comercial</option>
+                      <option value="lote">Lote</option>
+                      <option value="oficina">Oficina</option>
+                      <option value="otro">Otro (escríbelo en Comentarios)</option>
+                    </select>
 
+                  </div>
                 </div>
                 <div class="campo">
                   <label for="cuidad">Ciudad: </label>
-                  <input type="text" id="cuidad" name="cuidad" placeholder="" maxlength="40">
+                  <div>
+                    <i class="fas fa-globe-americas  icon_form"></i>
+                    <input type="text" id="cuidad" name="cuidad" placeholder="" maxlength="40">
+                  </div>
                 </div>
                 <div class="campo">
                   <label for="barrio">Barrio: </label>
-                  <input type="text" id="barrio" name="barrio" placeholder="" maxlength="40">
+                  <div>
+                    <i class="fas fa-street-view  icon_form"></i>
+                    <input type="text" id="barrio" name="barrio" placeholder="" maxlength="40">
+                  </div>
                 </div>
                 <div class="campo">
                   <label for="antiguedad">Antiguedad: </label>
                   <!-- <input type="text¿¿" id="email" name="email" placeholder=""> -->
-                   <select name="antiguedad" id="antiguedad" >
-                    <option value="">Selecciona la Antiguedad del Inmueble</option>
-                    <option value="nuevo">Nuevo</option>
-                    <option value="1a3">1 - 3 años</option>
-                    <option value="4a6">4 - 6 años</option>
-                    <option value="7a10">7 - 10 años</option>
-                    <option value="11a15">11 - 15 años</option>
-                    <option value="mas15">Más de 15 años</option>
-                  </select>
+                  <div>
+                    <i class="fas fa-house-damage  icon_form"></i>
+                    <select name="antiguedad" id="antiguedad" >
+                      <option value="">Selecciona la Antiguedad del Inmueble</option>
+                      <option value="nuevo">Nuevo</option>
+                      <option value="1a3">1 - 3 años</option>
+                      <option value="4a6">4 - 6 años</option>
+                      <option value="7a10">7 - 10 años</option>
+                      <option value="11a15">11 - 15 años</option>
+                      <option value="mas15">Más de 15 años</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="campo coment">
                   <label for="coment_venta">Comentarios (opcional):</label>
