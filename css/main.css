@@ -999,7 +999,16 @@ div.galeria {
 div.galeria a {
    display: inline-block;
    margin-bottom: 5px;
+   width: 10%;
 }
+div.galeria a img{
+   width: 100%;
+}
+/*div.galeria a:first-child, div.galeria a:nth-child(2) {*/
+div.galeria a:first-child, div.galeria iframe {
+   width: 49%;
+}
+
 /*Registro*/
 #error {
    clear: both;
