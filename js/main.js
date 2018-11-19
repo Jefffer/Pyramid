@@ -456,10 +456,10 @@
 		});
 
 		// Menu activado
-		$('.navegacion-principal a').on('click', function() {
-			$('.navegacion-principal a').removeClass('activo');
-			$(this).addClass('activo');
-		});
+		// $('.navegacion-principal a').on('click', function() {
+		// 	$('.navegacion-principal a').removeClass('activo');
+		// 	$(this).addClass('activo');
+		// });
 
 		// Programa conferencia
 		$('.programa-evento .info-curso:first').show();

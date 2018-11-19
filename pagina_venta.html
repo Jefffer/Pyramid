@@ -50,7 +50,7 @@
                      <a href="#galeria_fotos">Galeria</a>
                      <a href="#info_inmueble">Información</a>
                      <a href="#ubicacion">Ubicación</a>
-                     <a href="registro.html">Contáctanos</a>
+                     <a href="contactanos.html">Contáctanos</a>
                      <!-- <a href="#">Iniciar Sesión</a> -->
                   </nav>
                </div><!--.contenedor-->
@@ -194,17 +194,26 @@
                          <p>Para agendar una visita a este inmueble, solo debes diligenciar estos datos y nos pondremos en contacto contigo lo antes posible.</p>
                          <div id="agenda_cita" class="registro">
                               <div class="div_agenda">
-                                  <div class="campo_agenda">
+                                  <div class="campo_agenda">                                    
                                     <label for="nombre">Nombre completo: </label>
-                                    <input type="text" id="nombre" name="nombre" placeholder="">
+                                    <div>
+                                      <i class="fas fa-user icon_form"></i>
+                                      <input type="text" id="nombre" name="nombre" placeholder="" maxlength="40">
+                                    </div>
                                   </div>
                                   <div class="campo_agenda">
                                     <label for="celular">Teléfono o Celular: </label>
-                                    <input type="text" id="celular" name="celular" placeholder="">
+                                    <div>
+                                      <i class="fas fa-phone icon_form"></i>
+                                      <input type="text" id="celular" name="celular" placeholder="" maxlength="15">
+                                    </div>
                                   </div>
                                   <div class="campo_agenda">
                                     <label for="email">Email: </label>
-                                    <input type="text" id="email" name="email" placeholder="">
+                                    <div>
+                                      <i class="fas fa-envelope icon_form"></i>
+                                      <input type="text" id="email" name="email" placeholder="" maxlength="40">
+                                    </div>
                                   </div>
                               </div>
                               <div class="div_agenda">
