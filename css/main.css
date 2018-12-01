@@ -1256,6 +1256,9 @@ div.resumen input {
 }
 
 /**como_funciona**/
+#como_funciona {
+   text-align: center;
+}
 div.ttl_proceso {
    width: 30%;
    float: left;
