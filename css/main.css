@@ -258,7 +258,7 @@ div.hero {
    content: "";
    background: linear-gradient(
       rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2)
+      rgba(0, 0, 0, 0.7)
       ),url(../img/bog-wall-2.jpg);
    /*opacity: 0.7;*/
    top: 0;
@@ -341,7 +341,7 @@ p.ciudad {
    padding-right: 100px;
 }
 p.slogan {
-   color: white !important;
+   color: wheat !important;
    font-size: 4pw!important;
    text-shadow: 2px 2px #000;
 }
@@ -355,6 +355,10 @@ h1.nombre-sitio {
    color: rgb(185, 40, 40);
    text-shadow: 1px 2px #000000b5;
 }
+h1.nombre-sitio .char14, h1.nombre-sitio .char15 {
+   color: wheat;
+}
+
 /*.nombre-sitio-menu {
    font-family: 'PT Sans', sans-serif;
    text-transform: uppercase;
@@ -385,9 +389,16 @@ div.logo {
    width: 80%;
    float: left;
 }
+div.logo a {
+   text-decoration: none;
+}
 div.logo img {
-   width: 58%;
+   width: 17%;
    cursor: pointer;
+   margin: 5px auto 5px auto;
+}
+div.logo #logo_name {
+   width: 49%;
 }
 @media only screen and (min-width:768px) {
    div.logo {
