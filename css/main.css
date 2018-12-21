@@ -91,6 +91,8 @@ textarea {
     padding: 0.2em 0;
 }
 
+
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -975,7 +977,6 @@ div.newsletter h3 span, div.newsletter div p span {
 div.newsletter .contenido a {
    margin-top: -20px;
 }
-
 
 /**Cuenta regresiva**/
 div.cuenta-regresiva ul li{

@@ -183,8 +183,8 @@
 		// Lettering
 		$('.nombre-sitio').lettering();
 		$('.slogan').lettering();
-		$('.newsletter h3').lettering();
-		$('.newsletter p').lettering();
+		$('.newsletter h3.nl').lettering();
+		$('.newsletter p.nl').lettering();
 
 		// Animar numeros
 		animarNumeros();
