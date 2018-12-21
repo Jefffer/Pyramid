@@ -184,9 +184,13 @@ h2.morph {
 	margin: 0;
 }
 
+h2.morph::after {
+	display: none;
+}
+
 p.morph {
 	font-family: 'Blokk', sans-serif;
-	font-size: 0.85em!important;
+	font-size: 0.85em;
 	text-align: center;
 	opacity: 0.5;
 	margin: 0;
