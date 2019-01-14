@@ -203,6 +203,35 @@
 		// 	}
 		// })
 
+		// Logica modal
+		// Get the modal
+		var modal = $('#myModal');
+
+		// Get the button that opens the modal
+		var modalBtn = $('#noCertBtn');
+
+		// Get the <span> element that closes the modal
+		var spanModal = $(".closeModal");
+
+		// When the user clicks on the button, open the modal 
+		modalBtn.on('click', function() {
+		  //modal.style.display = "block";
+		  modal.css('display', 'block');
+		});
+
+		// When the user clicks on <span> (x), close the modal
+		spanModal.on('click', function() {
+		  //modal.style.display = "none";
+		  modal.css('display', 'none');
+		});
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.on('click', function(event) {
+		  if (event.target == modal) {
+		    modal.style.display = "none";
+		  }
+		});
+
 		// llamado a Validaciones y Alert formulario desde vista Venta
 		$('#btn_form_vender').on('click', alertFormValidation);
 
