@@ -1087,6 +1087,7 @@ div#datos_usuario {
    padding: 0 10px 0 32px;
    overflow: auto;
    border-radius: 30px 10px;
+   outline: 0;
 }
 /*#datos_usuario input:focus, #datos_usuario textarea:focus, #datos_usuario select:focus {
     border-color: #ffd75c;
@@ -1159,8 +1160,8 @@ div.campo_agenda input{
    padding: 0 10px 0 33px;
    overflow: auto;
    border-radius: 30px 10px;
+   outline: 0;
 }
-
 
 @media only screen and (min-width: 768px) {
    div.campo {
@@ -1377,12 +1378,49 @@ i.ico_proceso {
    background-color: wheat;
 }
 /* Modal Body */
-.modal-body {padding: 2px 16px;}
+.modal-body {padding: 0 5% 0 5%;background-color: #fef0e3;}
+.modal-body input{
+   padding: 10px;
+   width: 100%;
+   border: 2px solid #ebd3bd;
+   background: transparent;
+   color: #b09a86;
+   font-weight: 300;
+   font-size: 1.2em;
+}
+.modal-body input:focus{
+   border-color: rgba(185, 40, 40, 1);
+   color: rgba(185, 40, 40, 1);
+   outline: 0;
+}
+.modal-body label{
+   display: block;
+   padding: 10px 0 0;
+   color: #9a7d64;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-weight: bold;
+   font-weight: 400!important;
+   text-align: left;
+   font-size: 0.7em;
+}
+.modal-body p{
+   color: #9a7d64;
+   font-size: 1.2em;
+}
 /* Modal Footer */
 .modal-footer {
-  padding: 2px 16px;
-  background-color: rgba(185, 40, 40, 1);
-  color: white!important;
+   background-color: rgba(185, 40, 40, 0.9);
+   color: wheat!important;
+   text-align: center;
+   padding: 19px;
+   cursor: pointer;   
+   font-weight: 600;
+   font-size: 19px;
+   letter-spacing: 1px;
+}
+.modal-footer:hover {
+   background-color: rgba(185, 40, 40, 1);
 }
 /* Modal Content */
 .modal-content {
