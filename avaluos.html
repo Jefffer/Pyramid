@@ -160,14 +160,27 @@
             <p><label><i class="fas fa-user-astronaut"></i> &nbsp;¿Cual es tu nombre completo? </label>
               <input type="text">
             </p>
+            <p><label><i class="fas fa-phone"></i> &nbsp;¿Cual es tu número telefónico? </label>
+              <input type="text">
+            </p>
             <p><label><i class="fas fa-map-marker-alt"></i> &nbsp;¿Cuál es la direccion del inmueble? </label>
               <input type="text">
             </p>
             <p><label><i class="fas fa-hotel"></i> &nbsp;¿Qué tipo de inmueble es? </label>
-              <input type="text">
+              <select name="inmueble" id="inmueble">
+                <option value="">Selecciona un tipo de inmueble</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="bodega">Bodega</option>
+                <option value="casa">Casa</option>
+                <option value="finca">Finca</option>
+                <option value="local">Local Comercial</option>
+                <option value="lote">Lote</option>
+                <option value="oficina">Oficina</option>
+                <option value="otro">Otro (escríbelo en Comentarios)</option>
+              </select>
             </p>
             <p><label><i class="fas fa-ruler"></i> &nbsp;¿Cuántos metros cuadrados tiene? </label>
-              <input type="text">
+              <input type="number" min="1">
             </p>
             <p><label><i class="fas fa-building"></i> &nbsp;¿Cuántos pisos tiene tu inmueble? </label>
               <input type="text">
@@ -176,37 +189,63 @@
               <input type="text">
             </p>
             <p><label><i class="fas fa-house-damage"></i> &nbsp;¿Cuál es el estado de la contrucción? </label>
-              <input type="text">
+              <select name="estado" id="estado">
+                <option value="">Selecciona el estado</option>
+                <option value="nuevo">Nuevo</option>                
+                <option value="excelente">Excelente</option>
+                <option value="bueno">Bueno</option>
+                <option value="regular">Regular</option>                
+              </select>
             </p>
             <p><label><i class="fas fa-calendar-check"></i> &nbsp;¿Cuántos años tiene tu inmueble?</label>
-              <input type="text">
+              <input type="number" min="0"> 
             </p>
             <p><label><i class="fas fa-hammer"></i> &nbsp;¿Tiene remodelaciones?¿Hace cuanto se hicieron?</label>
               <input type="text">
             </p>
             <p><label><i class="fas fa-bed"></i> &nbsp;¿Cuántas habitaciones tiene? </label>
-              <input type="text">
+              <input type="number" min="0"> 
             </p>
             <p><label><i class="fas fa-bath"></i> &nbsp;¿Cuántos baños tiene?</label>
-              <input type="text">
+              <input type="number" min="0"> 
             </p>
-            <p><label><i class="fas fa-warehouse"></i> &nbsp;¿Con cuántos parqueaderos cuenta? </label>
-              <input type="text">
+            <p><label><i class="fas fa-warehouse"></i> &nbsp;¿Tiene parqueadero?¿cuántos? </label>
+              <input type="number" min="0"> 
             </p>
             <p><label><i class="fas fa-couch"> &nbsp;</i>¿Tiene sala de estar? </label>
-              <input type="text">
+               <select name="sala" id="sala">
+                <option value="">Selecciona una opción</option>
+                <option value="si">Sí</option>                
+                <option value="no">No</option>                
+              </select>
             </p>
             <p><label><i class="fas fa-utensils"></i> &nbsp;¿Tiene cocina integral?</label>
-              <input type="text">
+              <select name="cocina" id="cocina">
+                <option value="">Selecciona una opción</option>
+                <option value="si">Sí</option>                
+                <option value="no">No</option>                
+              </select>
             </p>
             <p><label><i class="fas fa-leaf"></i> &nbsp;¿Cuenta con Antejardín?</label>
-              <input type="text">
+              <select name="jardin" id="jardin">
+                <option value="">Selecciona una opción</option>
+                <option value="si">Sí</option>                
+                <option value="no">No</option>                
+              </select>
             </p>
             <p><label><i class="fas fa-laptop"></i> &nbsp;¿Tiene cuarto de estudio?</label>
-              <input type="text">
+              <select name="estudio" id="estudio">
+                <option value="">Selecciona una opción</option>
+                <option value="si">Sí</option>                
+                <option value="no">No</option>                
+              </select>
             </p>
-            <p><label><i class="fas fa-tshirt"></i> &nbsp;¿Cuenta con cuarto de ropas? </label>
-              <input type="text">
+            <p><label><i class="fas fa-tshirt"></i> &nbsp;¿Cuenta con cuarto de lavado? </label>
+              <select name="lavado" id="lavado">
+                <option value="">Selecciona una opción</option>
+                <option value="si">Sí</option>                
+                <option value="no">No</option>                
+              </select>
             </p>         
           </div>
           <div class="modal-footer">

@@ -1353,7 +1353,7 @@ i.ico_proceso {
 
 /* The Close Button */
 .closeModal {
-  color: #aaa;
+  color: #fef0e3;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -1379,16 +1379,16 @@ i.ico_proceso {
 }
 /* Modal Body */
 .modal-body {padding: 0 5% 0 5%;background-color: #fef0e3;}
-.modal-body input{
+.modal-body input, .modal-body select{
    padding: 10px;
    width: 100%;
    border: 2px solid #ebd3bd;
    background: transparent;
    color: #b09a86;
    font-weight: 300;
-   font-size: 1.2em;
+   font-size: 1.1em;
 }
-.modal-body input:focus{
+.modal-body input:focus, .modal-body select:focus{
    border-color: rgba(185, 40, 40, 1);
    color: rgba(185, 40, 40, 1);
    outline: 0;
@@ -1396,16 +1396,17 @@ i.ico_proceso {
 .modal-body label{
    display: block;
    padding: 10px 0 0;
-   color: #9a7d64;
+   color: #716256;
    text-transform: uppercase;
    letter-spacing: 1px;
    font-weight: bold;
    font-weight: 400!important;
    text-align: left;
    font-size: 0.7em;
+   margin-left: 1%;
 }
 .modal-body p{
-   color: #9a7d64;
+   color: #716256;
    font-size: 1.2em;
 }
 /* Modal Footer */
