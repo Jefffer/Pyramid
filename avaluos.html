@@ -136,7 +136,7 @@
                    <li>Registro fotográfico</li>
                    <li>Firma certificada por Lonja de avaluadores</li>
                  </ul>
-                 <a id="CertBtn" class="button">Solicitar</a>
+                 <a id="certBtn" class="button">Solicitar</a>
                </div>
              </li>
 
@@ -146,14 +146,13 @@
 
        </section><!--.precios .seccion-->
 
-       <!-- The Modal -->
-       <div id="myModal" class="modal">
-
+       <!-- Modal no certificado -->
+       <div id="modalNoCert" class="modal">
         <!-- Modal content -->
         <div class="modal-content">          
           <div class="modal-header">
             <span class="closeModal">&times;</span>
-            <h2>Avalúo no certificado</h2>
+            <h2>Avalúo No Certificado</h2>
           </div>
           <div class="modal-body">
             <p>A continuación te haremos unas preguntas para que nos brindes mayor informacion sobre tu inmueble</p>
@@ -161,6 +160,9 @@
               <input type="text">
             </p>
             <p><label><i class="fas fa-phone"></i> &nbsp;¿Cual es tu número telefónico? </label>
+              <input type="text">
+            </p>
+            <p><label><i class="fas fa-at"></i> &nbsp;¿Cual es tu correo electrónico? </label>
               <input type="text">
             </p>
             <p><label><i class="fas fa-map-marker-alt"></i> &nbsp;¿Cuál es la direccion del inmueble? </label>
@@ -247,6 +249,50 @@
                 <option value="no">No</option>                
               </select>
             </p>         
+          </div>
+          <div class="modal-footer">
+            <a>ENVIAR</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Certificado -->
+       <div id="modalCert" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">          
+          <div class="modal-header">
+            <span class="closeModal">&times;</span>
+            <h2>Avalúo Certificado</h2>
+          </div>
+          <div class="modal-body">
+            <p>Por favor, brindanos tus datos de contacto para formalizar la visita al inmueble</p>
+            <p><label><i class="fas fa-user-astronaut"></i> &nbsp;¿Cual es tu nombre completo? </label>
+              <input type="text">
+            </p>
+            <p><label><i class="fas fa-phone"></i> &nbsp;¿Cual es tu número telefónico? </label>
+              <input type="text">
+            </p>
+            <p><label><i class="fas fa-at"></i> &nbsp;¿Cual es tu correo electrónico? </label>
+              <input type="text">
+            </p>           
+            <p><label><i class="fas fa-hotel"></i> &nbsp;¿Qué tipo de inmueble es? </label>
+              <select name="inmueble" id="inmueble">
+                <option value="">Selecciona un tipo de inmueble</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="bodega">Bodega</option>
+                <option value="casa">Casa</option>
+                <option value="finca">Finca</option>
+                <option value="local">Local Comercial</option>
+                <option value="lote">Lote</option>
+                <option value="oficina">Oficina</option>
+                <option value="otro">Otro (escríbelo en Comentarios)</option>
+              </select>
+            </p>
+            <p><label><i class="fas fa-ruler"></i> &nbsp;¿Cuántos metros cuadrados tiene? </label>
+              <input type="number" min="1">
+            </p>
+                     
           </div>
           <div class="modal-footer">
             <a>ENVIAR</a>

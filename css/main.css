@@ -1361,7 +1361,7 @@ i.ico_proceso {
 }
 .closeModal:hover,
 .closeModal:focus {
-  color: black;
+  color: wheat;
   text-decoration: none;
   cursor: pointer;
 }
@@ -1397,7 +1397,7 @@ i.ico_proceso {
 .modal-body label{
    display: block;
    padding: 10px 0 0;
-   color: #716256;
+   color: #757575;
    text-transform: uppercase;
    letter-spacing: 1px;
    font-weight: bold;
@@ -1407,7 +1407,7 @@ i.ico_proceso {
    margin-left: 1%;
 }
 .modal-body p{
-   color: #716256;
+   color: #757575;
    font-size: 1.2em;
 }
 /* Modal Footer */
