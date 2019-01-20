@@ -1041,9 +1041,7 @@ footer .ultimos-tweets li {
 footer nav.redes-sociales {
    text-align: left;
 }
-footer nav.redes-sociales a i{
-   color: white;
-}
+footer nav.redes-sociales a i{color: white;}
 footer nav.redes-sociales a i:hover{
    color: wheat;
 }
