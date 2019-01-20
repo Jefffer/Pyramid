@@ -77,7 +77,7 @@
 }
 
 .icon-close::before {
-	content: "\e601";
+	content: "\00d7";
 }
 
 .icon-play::before {
@@ -91,11 +91,14 @@
 .icon-close {
 	position: absolute;
 	top: 20px;
-	right: 20px;
+	right: 20px;	
+	font-size: 100%!important;
+	font-weight: 600;
+	color: rgba(185, 40, 40, 0.9)!important;
 }
 
 .icon-close:hover {
-	color: #a50a05;
+	color: rgba(185, 40, 40, 1)!important;	
 }
 
 /* Styles for dummy content */
@@ -220,13 +223,13 @@
   color: #cacaca;
 }
 
-.content-style-form input[type="text"]:focus,
-.content-style-form input[type="password"]:focus {
+.content-style-form input:focus,
+.content-style-form textarea:focus {
 	border-color: #e75854;
 	color: #e75854;
 }
 
-.content-style-form input:focus {
+.content-style-form input:focus, .content-style-form textarea:focus {
 	outline: 0;
 }
 
