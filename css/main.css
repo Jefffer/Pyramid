@@ -1012,6 +1012,14 @@ footer .contenedor > div{
    padding: 0 20px;
    font-size: 12px;
 }
+footer .contenedor > div > p{
+   color: white;
+   text-align: center;
+}
+footer .contenedor > div > p span{
+   letter-spacing: 1px;
+   font-weight: 600;
+}
 @media only screen and (min-width:768px) {
    footer .contenedor > div{
       width: 33.3%;
