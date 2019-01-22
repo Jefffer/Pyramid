@@ -189,6 +189,12 @@
 		// Animar numeros
 		animarNumeros();
 
+		// click modal Contacto
+		$('#contactoMenu').click(function(){
+			$("#btnContacto").click();
+		});
+
+
 		// Menú fijo
 		// var windowHeight = $(window).height();
 		// var barraAltura = $('.barra').innerHeight();

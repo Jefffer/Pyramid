@@ -428,6 +428,7 @@ nav.navegacion-principal a{
    display: block;
    text-align: center;
    margin-bottom: 15px;
+   cursor: pointer;
 }
 nav.navegacion-principal a:hover{
    background-color: rgba(185, 40, 40, 1);
@@ -1042,10 +1043,7 @@ footer nav.redes-sociales {
    text-align: left;
 }
 footer nav.redes-sociales a i{color: white;}
-footer nav.redes-sociales a i:hover{
-   color: wheat;
-}
-
+footer nav.redes-sociales a i:hover{color: wheat;}
 p.copyright {
    color: #ffffff;
    background-color: #2e2e2e;
@@ -1053,7 +1051,6 @@ p.copyright {
    margin: 20px 0 0 0;
    text-align: center;
 }
-
 /** INTERNAS **/
 /**Conferencia**/
 .navegacion-principal .activo {
