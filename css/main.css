@@ -322,6 +322,8 @@ div.informacion-evento p {
    font-size: 30px;
    font-variant: small-caps;
    color: #f2f2f2;
+   line-height: 1;
+   letter-spacing: 2px;
 }
 div.informacion-evento p i {
    color: rgb(181, 208, 227);
@@ -332,6 +334,14 @@ div.informacion-evento p i {
       width: 80%;
       margin: 0 auto;
       margin-top: 30px;
+   }
+}
+@media only screen and (max-width:768px) {
+   div.informacion-evento p {
+      font-size: 12px;
+   }
+   h1.nombre-sitio {
+      font-size: 2em!important;
    }
 }
 p.fecha {
