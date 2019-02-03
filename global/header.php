@@ -3,10 +3,10 @@
              <div class="barra clearfix fixed">
                <div class="contenedor ">
                   <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                       <img src="img/Pyramid-logo.png" alt="Logo">
                     </a>
-                    <a href="index.html">                    
+                    <a href="index.php">                    
                       <img id="logo_name" src="img/Pyramid-name-2.png" alt="Logo">
                     </a>
                      <!-- <h1 class="nombre-sitio-menu">Inmobiliaria BABEL</h1> -->
