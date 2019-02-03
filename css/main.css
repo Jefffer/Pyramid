@@ -16,6 +16,12 @@ html {
     line-height: 1.4;
 }
 
+@font-face {
+  font-family: 'Aaargh';
+  src: url('../fonts/aaargh/Aaargh-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/aaargh/Aaargh-webfont.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -366,6 +372,7 @@ p.slogan span {
 }
 h1.nombre-sitio {
    font-family: 'Oswald', sans-serif;
+   /*font-family: 'Aaargh', sans-serif;*/
    text-transform: uppercase;
    font-size: 5.9vw;
    color: rgb(185, 40, 40);
@@ -383,6 +390,7 @@ h1.nombre-sitio .char14, h1.nombre-sitio .char15 {
 @media only screen and (min-width:768px) {
    h1.nombre-sitio {
       font-family: 'Oswald', sans-serif;
+      /*font-family: 'Aaargh', sans-serif;*/
       text-transform: uppercase;
       font-size: 7.2vw;
       margin: 0;
