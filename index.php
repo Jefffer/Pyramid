@@ -49,15 +49,15 @@
                   </div>
 
                   <nav class="navegacion-principal clearfix">
-                     <a class="" href="index.html">Inicio</a>
-                     <a href="como_funciona.html">¿Cómo funciona?</a>
+                     <a class="" href="index.php">Inicio</a>
+                     <a href="como_funciona.php">¿Cómo funciona?</a>
                      <ul class="nav">
                        <li><a href="#nuestros_servicios">Servicios</a>
                           <ul>
-                            <li><a href="compra_venta.html">Compra y venta</a></li>
-                            <li><a href="arriendo.html">Arriendo</a></li>
-                            <li><a href="avaluos.html">Avalúos</a></li>
-                            <li><a href="asesorias.html">Asesorias</a></li>
+                            <li><a href="compra_venta.php">Compra y venta</a></li>
+                            <li><a href="arriendo.php">Arriendo</a></li>
+                            <li><a href="avaluos.php">Avalúos</a></li>
+                            <li><a href="asesorias.php">Asesorias</a></li>
                           </ul>
                        </li>
                      </ul>
