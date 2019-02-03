@@ -26,53 +26,9 @@
         <![endif]-->
 
         <header class="side-header">
-           <div class="hero segunda_vista">
-
-             <div class="barra clearfix fixed">
-               <div class="contenedor ">
-                  <div class="logo">
-                    <a href="index.html">
-                      <img src="img/logo_inmo1.png" alt="Logo">
-                    </a>
-                     <!-- <h1 class="nombre-sitio-menu">Inmobiliaria BABEL</h1> -->
-                  </div>
-
-                  <div class="menu-movil">
-                     <span></span>
-                     <span></span>
-                     <span></span>
-                  </div>
-
-                  <nav class="navegacion-principal clearfix">
-                     <a href="index.html">Inicio</a>
-                     <a href="#asesorias">asesorías</a>
-                     <a href="#preguntas_frecuentes">Preguntas frecuentes</a>
-                     <a href="contactanos.html">Contáctanos</a>
-                     <!-- <a href="#">Iniciar Sesión</a> -->
-                  </nav>
-               </div><!--.contenedor-->
-            </div><!--.barra-->
-
-
-             <div class="contenido-header">
-                <nav class="redes-sociales">
-                   <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                   <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                   <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                   <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                </nav>
-                   <div class="informacion-evento">
-                      <!-- <div class="clearfix">
-                        <p class="fecha"><i class="fa fa-calendar" aria-hidden="true"></i> 10 - 12 Diciembre</p>
-                        <p class="ciudad">Madrid, Cundinamarca <i class="fa fa-map-marker" aria-hidden="true"></i></p>
-                      </div> -->
-                      <br>
-
-                      <h1 class="nombre-sitio">Inmobiliaria PYRAMID</h1>
-                      <p class="slogan">Tus soluciones inmobiliarias <span>al instante</span></p>
-                   </div><!--.informacion-evento-->
-                </div><!--.contenido-header-->
-             </div><!--.hero-->
+           <?php
+            include('global/header2.php');
+          ?>
         </header>
 
         <section id="asesorias" class="seccion contenedor padding_bot_0 top_-180">
@@ -315,33 +271,9 @@
        </section><!--.section-->  
 
        <footer class="site-footer">
-          <div class="contenedor clearfix">
-             <div class="footer-informacion">
-                <h3>Sobre <span>Conference of Thrones</span></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pa</p>
-             </div>
-             <div class="ultimos-tweets">
-                <h3>Últimos <span>tweets</span></h3>
-                <ul>
-                   <li>Sed do eiusmod tempor incm veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</li>
-                   <li>Sed do eiusmod tempor  et dolore  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</li>
-                   <li>Sed do eiusmod t ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</li>
-                </ul>
-             </div>
-             <div class="menu">
-                <h3>Redes <span>Sociales</span></h3>
-                <nav class="redes-sociales">
-                 <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                 <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                 <a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a>
-                 <a href="#"><i class="fa fa-play-circle" aria-hidden="true"></i></a>
-                 <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-              </nav>
-             </div>
-          </div>
-
-          <p class="copyright">Todos los derechos reservados - Conference of Thrones 2017 &copy</p>
-
+          <?php
+            include('global/footer.php');
+          ?>
        </footer>
 
 

@@ -26,69 +26,10 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header class="side-header">          
-
-           <div class="hero">
-
-             <div class="barra clearfix fixed">
-               <div class="contenedor ">
-                  <div class="logo">
-                    <a href="index.html">
-                      <img src="img/Pyramid-logo.png" alt="Logo">
-                    </a>
-                    <a href="index.html">                    
-                      <img id="logo_name" src="img/Pyramid-name-2.png" alt="Logo">
-                    </a>
-                     <!-- <h1 class="nombre-sitio-menu">Inmobiliaria BABEL</h1> -->
-                  </div>
-
-                  <div class="menu-movil">
-                     <span></span>
-                     <span></span>
-                     <span></span>
-                  </div>
-
-                  <nav class="navegacion-principal clearfix">
-                     <a class="" href="index.php">Inicio</a>
-                     <a href="como_funciona.php">¿Cómo funciona?</a>
-                     <ul class="nav">
-                       <li><a href="#nuestros_servicios">Servicios</a>
-                          <ul>
-                            <li><a href="compra_venta.php">Compra y venta</a></li>
-                            <li><a href="arriendo.php">Arriendo</a></li>
-                            <li><a href="avaluos.php">Avalúos</a></li>
-                            <li><a href="asesorias.php">Asesorias</a></li>
-                          </ul>
-                       </li>
-                     </ul>
-                     <a id="contactoMenu">Contáctanos</a>
-                     <!-- <a href="#">Iniciar Sesión</a> -->
-                  </nav>
-               </div><!--.contenedor-->
-            </div><!--.barra-->
-
-
-             <div class="contenido-header">
-                <nav class="redes-sociales">
-                   <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                   <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                   <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                   <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                </nav>
-                   <div class="informacion-evento">
-                      <!-- <div class="clearfix">
-                        <p class="fecha"><i class="fa fa-calendar" aria-hidden="true"></i> 10 - 12 Diciembre</p>
-                        <p class="ciudad">Madrid, Cundinamarca <i class="fa fa-map-marker" aria-hidden="true"></i></p>
-                      </div> -->
-                      <br>
-
-                      <h1 class="nombre-sitio">Inmobiliaria PYRAMID</h1>
-                      <p class="slogan">Eficacia, Confianza y Calidad</p> <br>
-                      <p class="slogan"><span>Juntos podemos hacerlo posible</span></p>
-                   </div><!--.informacion-evento-->
-                </div><!--.contenido-header-->
-             </div><!--.hero-->
-
+        <header class="side-header">
+          <?php
+            include('global/header.php');
+          ?>
         </header>
 
         <section id="como_funciona" class="seccion contenido contenedor">
@@ -96,7 +37,7 @@
            <p>
              <b>Inmobiliaria <span class="rojito">Py</span>ramid</b> nace como respuesta a las diferentes inquietudes presentadas en el mercado inmobiliario, que gracias a nuestra constante innovación en diferentes estrategias de negociación y marketing buscamos resolver de manera rápida y eficiente, cambiando el concepto de compra-venta y alquiler en una manera más sencilla de intercambiar y utilizar tus bienes.
             </p>
-            <a href="como_funciona.html" class="button">Saber más</a>
+            <a href="como_funciona.php" class="button">Saber más</a>
        </section><!--.section-->
 
        <!-- <section class="programa">
@@ -192,7 +133,7 @@
           <ul class="lista-invitados clearfix">
              <li>
                 <div class="invitado">
-                  <a href="compra_venta.html">
+                  <a href="compra_venta.php">
                      <img src="img/llave_1.jpg" alt="Imagen invitado">                  
                      <p class="serv_title">Compra y Venta</p>
                      <p>Compra y Venta 
@@ -204,7 +145,7 @@
              </li>             
              <li>
                 <div class="invitado">
-                  <a href="arriendo.html">
+                  <a href="arriendo.php">
                      <img src="img/arriendo_1.jpg" alt="Imagen invitado">
                      <p class="serv_title">Arriendo</p>
                      <p>Arriendo
@@ -216,7 +157,7 @@
              </li>
              <li>
                 <div class="invitado">
-                  <a href="avaluos.html">
+                  <a href="avaluos.php">
                      <img src="img/avaluo_1.jpg" alt="Imagen invitado">
                      <p class="serv_title">Avalúos</p>
                      <p>Avalúos
@@ -228,7 +169,7 @@
              </li>
              <li>
                 <div class="invitado">
-                  <a href="asesorias.html">
+                  <a href="asesorias.php">
                      <img src="img/asesorias.jpg" alt="Imagen invitado">
                      <p class="serv_title">Asesorías</p>
                      <p>Asesorías
@@ -381,9 +322,7 @@
                </div>
              </li>
            </ul>
-
          </div><!--.contenedor-->
-         <p>Los items mencionados en cada tipo de avalúo se entregan en un Informe detallado de acuerdo a la valuación del inmueble. Si tienes alguna duda por favor dirígite a las preguntas frecuentes en <a class="estilos_links" href="asesorias.html">Asesosorías</a> o directamente <a class="estilos_links" href="registro.html">Contáctanos</a>.</p>
        </section><!--.precios .seccion-->
 
        <!--
@@ -476,40 +415,9 @@
        <!-- </section> -->
 
        <footer class="site-footer">
-          <div class="contenedor clearfix">
-             <div class="footer-informacion">
-                <h3>Comunícate con <span>Nosotros</span></h3>
-                <p><span>Angélica Pineda Martinez</span> <br>
-                  <i class="far fa-envelope"></i> angelica.p@inmobiliariapyramid.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 350 6039310 
-                </p>
-                <p><span>Alexander Pineda Martinez</span> <br>
-                  <i class="far fa-envelope"></i> alexander.p@inmobiliariapyramid.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 313 3655012 
-                </p>
-                <p><span>Jefferson Rodríguez Rodríguez</span> <br>
-                  <i class="far fa-envelope"></i> jefferson.r@inmobiliariapyramid.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 313 3714054
-                </p>
-             </div>
-             <div class="ultimos-tweets">
-                <h3>Últimos <span>tweets</span></h3>
-                <ul>
-                   <li>Sed do eiusmod tempor incm veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</li>
-                   <li>Sed do eiusmod tempor  et dolore  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</li>
-                   <li>Sed do eiusmod t ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</li>
-                </ul>
-             </div>
-             <div class="menu">
-                <h3>Redes <span>Sociales</span></h3>
-                <nav class="redes-sociales">
-                 <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                 <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                 <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                 <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-              </nav>
-             </div>
-          </div>
-
-          <p class="copyright">Inmobiliaria Pyramid - Bogotá, Colombia 2019</p>
-
+          <?php
+            include('global/footer.php');
+          ?>
        </footer>
 
 
