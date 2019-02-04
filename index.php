@@ -298,7 +298,7 @@
                      <li>Características jurídicas del inmueble</li>
                      <li>Descripción del método valuación</li>
                    </ul>
-                   <a id="noCertBtn" class="button">Solicitar</a>
+                   <a id="noCertBtn" class="button">Saber más</a>
                  </div>
                </li>
 
@@ -318,7 +318,7 @@
                    <li>Registro fotográfico</li>
                    <li>Firma certificada por Lonja de avaluadores</li>
                  </ul>
-                 <a id="certBtn" class="button">Solicitar</a>
+                 <a id="certBtn" class="button">Saber más</a>
                </div>
              </li>
            </ul>
