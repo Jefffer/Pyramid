@@ -14,7 +14,7 @@
 				}).addTo(map);
 
 				L.marker([4.728828, -74.053656]).addTo(map)
-				.bindPopup('Exsis SAS.<br> Prueba popup.')
+				.bindPopup('Prueba popup.')
 				.openPopup()
 				.bindTooltip('Tooltip de prueba')
 				.openTooltip();
@@ -523,7 +523,26 @@
 			$('#horas').html(event.strftime('%H'));
 			$('#minutos').html(event.strftime('%M'));
 			$('#segundos').html(event.strftime('%S'));		
-		})
+		});
 
-
+		// Boton Whatsapp
+		$('#wppDiv').floatingWhatsApp({
+		    phone: '573506039310',
+		    popupMessage: 'Hola, cuéntanos que necesitas',
+		    message: "",
+		    position: 'right',
+		    showPopup: true,
+		    showOnIE: false,
+		    headerTitle: '¡Bienvenido!',
+		    headerColor: 'rgb(185, 40, 40)',
+		    backgroundColor: 'crimson',
+		    size: '60px',
+		    zIndex: 100
+		});
+		/*$(document).mouseup(function (e){
+			var container = $(".floating-wpp-popup");
+			if (!container.is(e.target) && container.has(e.target).length === 0){
+				container.fadeOut();				
+			}
+		});*/
 	});

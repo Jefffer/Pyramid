@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Asesorias .: Inmobiliaria Pyramid</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,7 +17,11 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/morph/component.css" />
+        <link rel="stylesheet" type="text/css" href="css/morph/content.css" />
+        <link rel="stylesheet" type="text/css" href="css/morph/demo.css" />
         <link rel="stylesheet" href="css/accordion.css">
+        <link rel="stylesheet" href="css/wpp/floating-wpp.min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body class="conferencia">
@@ -270,15 +274,12 @@
 
        </section><!--.section-->  
 
-       <footer class="site-footer">
           <?php
             include('global/footer.php');
           ?>
-       </footer>
 
-
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script type="text/javascript" src="js/jquery/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/wpp/floating-wpp.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/jquery.animateNumber.min.js"></script>        
         <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
@@ -289,6 +290,8 @@
         <script src="js/accordion.js"></script>
 
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="js/datepicker/datepicker.min.js"></script>
+        <script src="js/datepicker/i18n/datepicker.en.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

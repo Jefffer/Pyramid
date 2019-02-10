@@ -429,7 +429,7 @@
 
 /* Media Queries */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
 	.morph-button-modal.open .morph-content {
 		top: 0% !important;
 		left: 0% !important;

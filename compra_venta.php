@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Compra y Venta .: Inmobiliaria Pyramid</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,6 +17,10 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/morph/component.css" />
+        <link rel="stylesheet" type="text/css" href="css/morph/content.css" />
+        <link rel="stylesheet" type="text/css" href="css/morph/demo.css" />
+        <link rel="stylesheet" href="css/wpp/floating-wpp.min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body class="conferencia">
@@ -45,7 +49,7 @@
           <ul class="lista-invitados publication clearfix">
              <li>
                 <div class="invitado">
-                  <a href="pagina_venta.html">
+                  <a href="pagina_venta.php">
                      <img src="img/Publicaciones_venta/house_1.jpg" alt="Imagen invitado">
                      <!-- <p class="bandera_venta">asdfasdfasdg</p> -->
                      <p class="item_venta">Casa en Cedritos
@@ -61,7 +65,7 @@
              </li>             
              <li>
                 <div class="invitado">
-                  <a href="pagina_venta.html">
+                  <a href="pagina_venta.php">
                      <img src="img/arriendo_1.jpg" alt="Imagen invitado">
                      <p class="item_venta">Casa en Prado
                         <br>
@@ -74,7 +78,7 @@
              </li>
              <li>
                 <div class="invitado">
-                  <a href="pagina_venta.html">
+                  <a href="pagina_venta.php">
                      <img src="img/Publicaciones_venta/house_2.jpg" alt="Imagen invitado">
                      <p class="item_venta">Apartamento en Chia
                         <br>
@@ -87,7 +91,7 @@
              </li>
              <li>
                 <div class="invitado">
-                  <a href="pagina_venta.html">
+                  <a href="pagina_venta.php">
                      <img src="img/Publicaciones_venta/house_3.jpg" alt="Imagen invitado">
                      <p class="item_venta">Apartamento en Colina
                         <br>
@@ -100,7 +104,7 @@
              </li>
              <li>
                 <div class="invitado">
-                  <a href="pagina_venta.html">
+                  <a href="pagina_venta.php">
                      <img src="img/Publicaciones_venta/house_4.jpg" alt="Imagen invitado">
                      <p class="item_venta">Apartamento en Cajicá
                         <br>
@@ -113,7 +117,7 @@
              </li>
              <li>
                 <div class="invitado">
-                  <a href="pagina_venta.html">
+                  <a href="pagina_venta.php">
                      <img src="img/Publicaciones_venta/house_5.jpg" alt="Imagen invitado">
                      <p class="item_venta">Casa en El Refugio
                         <br>
@@ -181,14 +185,14 @@
                 <div class="campo">
                   <label for="cuidad">Ciudad: </label>
                   <div>
-                    <i class="fas fa-globe-americas  icon_form"></i>
+                    <i class="fas fa-globe-americas icon_form"></i>
                     <input type="text" id="cuidad" name="cuidad" placeholder="" maxlength="40">
                   </div>
                 </div>
                 <div class="campo">
                   <label for="barrio">Barrio: </label>
                   <div>
-                    <i class="fas fa-street-view  icon_form"></i>
+                    <i class="fas fa-street-view icon_form"></i>
                     <input type="text" id="barrio" name="barrio" placeholder="" maxlength="40">
                   </div>
                 </div>
@@ -196,7 +200,7 @@
                   <label for="antiguedad">Antiguedad: </label>
                   <!-- <input type="text¿¿" id="email" name="email" placeholder=""> -->
                   <div>
-                    <i class="fas fa-house-damage  icon_form"></i>
+                    <i class="fas fa-house-damage icon_form"></i>
                      <select name="antiguedad" id="antiguedad" >
                       <option value="">Selecciona la Antiguedad del Inmueble</option>
                       <option value="nuevo">Nuevo</option>
@@ -214,21 +218,19 @@
                 </div>
                 <div id="error"></div>
                 <div class="full_width">
+                  <i class="fas fa-angle-double-right icon_form"></i>                  
                   <input type="button" class="button btn_form" id="btn_form_vender" value="INGRESA TU INMUEBLE" >
                 </div>
             </div><!--#datos_usuario-->
           </form>
        </section><!--.section-->  
 
-       <footer class="site-footer">
           <?php
             include('global/footer.php');
           ?>
-       </footer>
 
-
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script type="text/javascript" src="js/jquery/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/wpp/floating-wpp.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/jquery.animateNumber.min.js"></script>        
         <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
@@ -238,6 +240,8 @@
         <script src="js/main.js"></script>
 
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="js/datepicker/datepicker.min.js"></script>
+        <script src="js/datepicker/i18n/datepicker.en.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Inmobiliaria Pyramid .: Servicios Inmobiliarios</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="css/morph/component.css" />
         <link rel="stylesheet" type="text/css" href="css/morph/content.css" />
         <link rel="stylesheet" type="text/css" href="css/morph/demo.css" />
+        <link rel="stylesheet" href="css/wpp/floating-wpp.min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -32,7 +33,7 @@
           ?>
         </header>
 
-        <section id="como_funciona" class="seccion contenido contenedor">
+        <section id="como_funcion" class="seccion contenido contenedor">
            <h2>¿Cómo funciona?</h2>
            <p>
              <b>Inmobiliaria <span class="rojito">Py</span>ramid</b> nace como respuesta a las diferentes inquietudes presentadas en el mercado inmobiliario, que gracias a nuestra constante innovación en diferentes estrategias de negociación y marketing buscamos resolver de manera rápida y eficiente, cambiando el concepto de compra-venta y alquiler en una manera más sencilla de intercambiar y utilizar tus bienes.
@@ -198,16 +199,16 @@
           <div class="contenedor">
              <ul class="resumen-evento">
                 <li>
-                   <p class="numero">15</p> Talleres
+                   <p class="numero">2</p> Casas
                 </li>
                 <li>
-                   <p class="numero">9</p> Conferencias
+                   <p class="numero">10</p> Apartamentos
                 </li>
                 <li>
-                   <p class="numero">6</p> Invitados
+                   <p class="numero">2</p> Tipos de Avalúo
                 </li>
                 <li>
-                   <p class="numero">3</p> Días
+                   <p class="numero">3</p> Asesores
                 </li>
              </ul>
 
@@ -298,7 +299,7 @@
                      <li>Características jurídicas del inmueble</li>
                      <li>Descripción del método valuación</li>
                    </ul>
-                   <a id="noCertBtn" class="button">Saber más</a>
+                   <a id="noCertBtn" href="avaluos.php" class="button">Saber más</a>
                  </div>
                </li>
 
@@ -318,7 +319,7 @@
                    <li>Registro fotográfico</li>
                    <li>Firma certificada por Lonja de avaluadores</li>
                  </ul>
-                 <a id="certBtn" class="button">Saber más</a>
+                 <a id="certBtn" href="avaluos.php" class="button">Saber más</a>
                </div>
              </li>
            </ul>
@@ -386,12 +387,13 @@
                       <div class="content-style-form content-style-form-1">
                         <span class="icon icon-close">Close the dialog</span>
                         <h2 class="morph">Contáctanos</h2>
-                        <form>
-                          <p class="morph"><label>Nombre</label><input type="text" /></p>
-                          <p class="morph"><label>Email</label><input type="text" /></p>
-                          <p class="morph"><label>Teléfono</label><input type="text" /></p>
-                          <p class="morph"><label>Mensaje</label><textarea placeholder="Dinos lo que necesitas, estamos para ayudarte..."></textarea></p>                          
-                          <p class="morph"><button>Enviar</button></p>
+                        <form name="form_contact" action="" method="post" id="">
+                          <p class="morph"><label>Nombre</label><input name="nombre" type="text" /></p>
+                          <p class="morph"><label>Email</label><input name="email" type="text" /></p>
+                          <p class="morph"><label>Teléfono</label><input name="telefono" type="text" /></p>
+                          <p class="morph"><label>Mensaje</label><textarea name="mensaje" placeholder="Dinos lo que necesitas, nos pondremos en contácto muy pronto"></textarea></p>                          
+                          <!-- <p class="morph"><button type="submit" name="submit">ENVIAR<button/></p> -->
+                          <p class="morph"><input id="sub_contact" type="submit" name="submit" value="ENVIAR" /></p>
                         </form>
                       </div>
                     </div>
@@ -414,15 +416,12 @@
           </div> -->  <!--.cuenta-regresiva-->
        <!-- </section> -->
 
-       <footer class="site-footer">
-          <?php
-            include('global/footer.php');
-          ?>
-       </footer>
+        <?php
+          include('global/footer.php');
+        ?>
 
-
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script type="text/javascript" src="js/jquery/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/wpp/floating-wpp.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/jquery.animateNumber.min.js"></script>        
         <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
@@ -515,3 +514,50 @@
         </script>
     </body>
 </html>
+
+<?php
+$from = 'contacto@inmobiliariapyramid.com';
+$to = $_POST['email'];
+$subject = "Contacto Inmobiliaria Pyramid";
+
+$message = "
+<html>
+<head>
+<title>HTML email</title>
+</head>
+<body>
+<h2>Hola " . $_POST['nombre'] . ",</h2><br>
+<p>Hemos recibido un correo de tu parte con la siguiente información:<br><br>
+<b>Nombre:</b> " . $_POST['nombre'] . "<br>
+<b>Email:</b> " . $_POST['email'] . "<br>
+<b>Teléfono:</b> " . $_POST['telefono'] . "<br><br>
+Y el siguiente mensaje: <i><br><br>" . 
+$_POST['mensaje'] . "</i><br><br>
+Nos pondremos en contácto contigo muy pronto. Gracias por escogernos<br><br>
+<b>Inmobiliaria Pyramid</b>
+</body>
+</html>";
+
+// Always set content-type when sending HTML email
+$headers='';
+$headers .= 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+$headers .= 'From: '.$from.' '. "\r\n";
+$bool = mail($to,$subject,$message, $headers);
+
+if($bool){
+  echo "<script>";
+  // echo "swal({";
+  //   echo "title: "Datos incompletos",";
+  //   echo "text: "Por favor ingresa tu número telefónico.",";
+  //   echo "icon: "warning",";
+  //   echo "dangerMode: true,";
+  //   echo "});";
+  echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
+  echo "</script>";
+}else{
+  echo "<script>";
+    echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
+  echo "</script>";
+}
+?>

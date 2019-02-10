@@ -204,7 +204,6 @@
 	font-weight: 400!important;
     text-align: left;
 }
-
 .content-style-form input[type="text"],
 .content-style-form input[type="password"],
 .content-style-form textarea {
@@ -214,28 +213,41 @@
 	background: transparent;
 	color: #b09a86;
 	font-weight: 300;
-	font-size: 2.2em;
+	font-size: 1.7em;
+    line-height: 1.3;
+}
+@media only screen and (max-width:480px) {   
+   .content-style-form input[type="text"],
+	.content-style-form input[type="password"],
+	.content-style-form textarea {
+		padding: 10px;
+		width: 100%;
+		border: 2px solid #ebd3bd;
+		background: transparent;
+		color: #b09a86;
+		font-weight: 300;
+		font-size: 1.4em;
+	    line-height: 1.3;
+	}
 }
 .content-style-form textarea {
 	resize: none;
+	min-height: 100px;
 }
 .content-style-form textarea::placeholder {
   color: #cacaca;
 }
-
 .content-style-form input:focus,
 .content-style-form textarea:focus {
 	border-color: #e75854;
 	color: #e75854;
 }
-
 .content-style-form input:focus, .content-style-form textarea:focus {
 	outline: 0;
 }
-
-.content-style-form button {
+.content-style-form button, .content-style-for input[type="button"], #sub_contact {
 	display: block;
-	margin-top: 2.5em;
+	margin-top: 2em;
 	padding: 1.5em;
 	width: 100%;
 	border: none;
@@ -246,18 +258,15 @@
 	font-weight: 800;
 	font-size: 1.25em;
 }
-
 .content-style-form .icon-close {
 	top: 0;
 	right: 0;
 	color: #ebd3bd;
 	font-size: 75%;
 }
-
 .content-style-form .icon-close:hover {
 	color: #e75854;
 }
-
 .js .content-style-form-1 h2,
 .js .content-style-form-1 p,
 .js .content-style-form-1 .icon-close {
@@ -267,17 +276,14 @@
 	-webkit-transform: scale(0.85);
 	transform: scale(0.85);
 }
-
 .content-style-form-1 p:first-child {
 	-webkit-transition-delay: 0.4s;
 	transition-delay: 0.4s;
 }
-
 .content-style-form-1 p:nth-child(2) {
 	-webkit-transition-delay: 0.45s;
 	transition-delay: 0.45s;
 }
-
 .content-style-form-1 p:nth-child(3) {
 	-webkit-transition-delay: 0.5s;
 	transition-delay: 0.5s;
@@ -290,7 +296,6 @@
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
-
 .js .content-style-form-2 h2,
 .js .content-style-form-2 p,
 .js .content-style-form-2 .icon-close {
@@ -300,27 +305,22 @@
 	-webkit-transform: translateY(50px);
 	transform: translateY(50px);
 }
-
 .content-style-form-2 p:first-child {
 	-webkit-transition-delay: 0.35s;
 	transition-delay: 0.35s;
 }
-
 .content-style-form-2 p:nth-child(2) {
 	-webkit-transition-delay: 0.4s;
 	transition-delay: 0.4s;
 }
-
 .content-style-form-2 p:nth-child(3) {
 	-webkit-transition-delay: 0.45s;
 	transition-delay: 0.45s;
 }
-
 .content-style-form-2 p:nth-child(4) {
 	-webkit-transition-delay: 0.5s;
 	transition-delay: 0.5s;
 }
-
 .morph-button.open .content-style-form-2 h2,
 .morph-button.open .content-style-form-2 p,
 .morph-button.open .content-style-form-2 .icon-close {
@@ -328,7 +328,6 @@
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 }
-
 .content-style-form-4 form {
 	padding: 30px;
 	background: #fff;

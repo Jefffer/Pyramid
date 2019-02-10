@@ -16,12 +16,6 @@ html {
     line-height: 1.4;
 }
 
-@font-face {
-  font-family: 'Aaargh';
-  src: url('../fonts/aaargh/Aaargh-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/aaargh/Aaargh-webfont.ttf')  format('truetype'); /* Safari, Android, iOS */
-}
-
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -129,13 +123,13 @@ p {
    padding: 30px 0;
 }
 .seccion p {
-   font-size: 1.1em;
+   font-size: 0.9em;
    text-align: center;
 }
 h2 {
    font-family: 'PT Sans', sans-serif;
    text-transform: uppercase;
-   font-size: 2.4em;
+   font-size: 1.2em;
    text-align: center;
 }
 h2::after {
@@ -221,14 +215,27 @@ ul {
    width: 95%;
    margin: 0 auto;
 }
-@media only screen and (min-width:480px) {
+@media only screen and (min-width:480px) {   
    .contenedor {
       width: 95%;
    }
 }
 @media only screen and (min-width:768px) {
+   h2 {
+      font-size: 2.4em;
+   }
+   .seccion p {
+      font-size: 1.1em;
+   }
+   .serv p {
+      font-size: 1.2em!important;
+   }
    .contenedor {
       width: 90%;
+   }
+   h1.nombre-sitio span {
+      position: relative;
+      text-shadow: 0 0 10px black;
    }
 }
 @media only screen and (min-width:992px) {
@@ -247,7 +254,7 @@ ul {
 /**Lettering**/
 h1.nombre-sitio span {
    position: relative;
-   text-shadow: 0 0 30px black;
+   text-shadow: 0 0 25px black;
 }
 p.slogan span {
    position: relative;
@@ -292,14 +299,22 @@ div.contenido-header {
    div.contenido-header {
       padding-top: 100px;
    }
+   nav.redes-sociales {
+      text-align: center;
+      margin-bottom: 5%;
+      margin-top: 0!important;
+   }
+   nav.redes-sociales a{
+      font-size: 2em!important;
+   }
 }
 nav.redes-sociales {
    text-align: center;
-   margin-bottom: 5%;
+   margin-top: 8%;
 }
 nav.redes-sociales a{
    color: #ffffff;
-   font-size: 2em;
+   font-size: 1.5em;
    margin-right: 20px;
 }
 nav.redes-sociales a:last-child {
@@ -351,6 +366,7 @@ div.informacion-evento p i {
    }
    h1.nombre-sitio {
       font-size: 2em!important;
+      margin: 0!important;
    }
 }
 p.fecha {
@@ -423,7 +439,7 @@ div.logo img {
    margin: 10px auto;
 }
 div.logo #logo_name {
-   width: 49%;
+   width: 35%;
 }
 @media only screen and (min-width:768px) {
    div.logo {
@@ -441,15 +457,18 @@ nav.navegacion-principal {
 }
 nav.navegacion-principal a{
    font-family: 'Oswald', sans-serif;
-   color: #ffffff;
+   color: rgba(185, 40, 40, 1);
    font-size: 1.3em;
    text-decoration: none;
    text-transform: uppercase;
    width: 100%;
-   display: block;
+   display: grid;
    text-align: center;
    margin-bottom: 15px;
    cursor: pointer;
+}
+nav.navegacion-principal ul {
+   width: 100%;
 }
 nav.navegacion-principal a:hover{
    background-color: rgba(185, 40, 40, 1);
@@ -471,6 +490,9 @@ nav.navegacion-principal a:last-child:hover{
       float: right;
       display: block;
       text-align: right;
+   }
+   nav.navegacion-principal ul {
+      width: auto;
    }
    nav.navegacion-principal a{
       font-family: 'Oswald', sans-serif;
@@ -531,10 +553,10 @@ div.menu-movil {
 div.menu-movil span {
    height: 8px;
    margin-bottom: 6px;
-   background-color: white;
+   background-color: rgba(185, 40, 40, 1);
    display: block;
 }
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:830px) {
    div.menu-movil span {
       display: none;
    }
@@ -775,7 +797,7 @@ div.serv::before {
 }
 .serv p {
    color: #fdfdfd;
-   font-size: 1.3em;
+   font-size: 0.9em;
    text-align: center;
    text-shadow: 1px 2px #000000b5;
 }
@@ -824,7 +846,7 @@ ul.resumen-evento li {
 }
 p.numero {
    color: rgb(95, 158, 202);
-   font-size: 8em;
+   font-size: 7em;
    display: block;
    margin: 0 0 -20px 0;
    font-family: 'Oswald', sans-serif;
@@ -832,6 +854,9 @@ p.numero {
 @media only screen and (min-width:768px) {
    ul.resumen-evento li {
       width: 25%;
+   }
+   p.numero {
+      font-size: 8em;
    }
 }
 
@@ -843,6 +868,12 @@ ul.lista-precios > li {
    ul.lista-precios > li {
       float: left;
       width: 33.3%;
+   }
+   div.tabla-precio p.numero {
+      font-size: 5em!important;
+   }
+   div.tabla-precio ul li {
+      font-size: 14px!important;
    }
 }
 div.tabla-precio {
@@ -859,7 +890,7 @@ div.tabla-precio:hover {
 }
 div.tabla-precio ul li {
    font-family: 'PT Sans', sans-serif;
-   font-size: 14px;
+   font-size: 12px;
    margin-bottom: 10px;
    text-transform: uppercase;
    color: #868686;
@@ -883,7 +914,7 @@ div.tabla-precio p.numero {
    color: #000000;
    margin-top: -16px;
    margin-bottom: 10px;
-   font-size: 5em;
+   font-size: 4em;
    font-variant: small-caps;
 }
 
@@ -1113,6 +1144,7 @@ div#datos_usuario {
    overflow: auto;
    border-radius: 30px 10px;
    outline: 0;
+   color: #464646;
 }
 /*#datos_usuario input:focus, #datos_usuario textarea:focus, #datos_usuario select:focus {
     border-color: #ffd75c;
@@ -1123,6 +1155,7 @@ div#datos_usuario {
 }
 #datos_usuario input.btn_form {
    border-radius: unset;
+   color: wheat;
    width: 40%;
    margin: 20px auto 15px 30%;
    height: 40px;
@@ -1295,7 +1328,24 @@ div.resumen input {
 }
 
 /**como_funciona**/
-#como_funciona {
+@media only screen and (max-width: 768px) {
+   div.ttl_proceso, div.txt_proceso {
+      display: contents!important;
+   }
+   #como_funciona {
+      width: 100%;
+   }
+   #como_funciona > div {
+      padding: 10px;
+   }
+   #como_funciona > div.cf_fondo_rojo {
+      background-color: rgba(185, 40, 40, 1);
+   }
+   .cf_fondo_rojo > .txt_proceso p {
+      color: #dcdada;
+   }
+}
+#como_funciona, #como_funcion {
    text-align: center;
 }
 div.ttl_proceso {
@@ -1345,11 +1395,13 @@ div.ttl_proceso.proceso_2 div{
 
 div.ttl_proceso p{ 
    color: rgba(185, 40, 40, 1);
-   margin: 0;
+   margin: 0;   
+   line-height: 1.4;
+   font-size: 1em;
 }
 div.ttl_proceso p:first-child{ 
    font-weight: 600;
-   font-size: 2em;
+   font-size: 2em!important;
 }
 div.txt_proceso p{ 
    color: black;
@@ -1468,7 +1520,28 @@ i.ico_proceso {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
 }
-
+/* Whatsapp button */
+.floatwhatsapp{
+   position:fixed;
+   width:60px;
+   height:60px;
+   bottom:40px;
+   right:40px;
+   background-color:#25d366;
+   color:#FFF;
+   border-radius:50px;
+   text-align:center;
+  font-size:30px;
+   box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.my-float-whatsapp{
+   margin-top:16px;
+}
+/* Contact btn */
+.contact_hide {
+   display: none;
+}
 
 /* ==========================================================================
    Helper classes
