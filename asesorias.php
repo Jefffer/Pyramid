@@ -38,7 +38,7 @@
         <section id="asesorias" class="seccion contenedor padding_bot_0 top_-180">
            <h2>Asesorías</h2>
            <p>
-            En nuestras asesorías nos encargamos de atender cualquier inquietud o inconveniente inmobiliario que tengas. Si deseas tratar tu duda de manera personalizada puedes <a class="estilos_links" href="registro.html">Contactarte con Nosotros</a> para que uno de nuestros asesores maneje tu caso. 
+            En nuestras asesorías nos encargamos de atender cualquier inquietud o inconveniente inmobiliario que tengas. Si deseas tratar tu duda de manera personalizada puedes <a class="estilos_links" id="contactoLink">Contactarte con Nosotros</a> para que uno de nuestros asesores maneje tu caso. 
             </p>
        </section><!--.section-->   
 

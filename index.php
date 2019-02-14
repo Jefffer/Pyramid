@@ -291,7 +291,7 @@
                  <li>
                    <div class="tabla-precio">
                     <h3>Avalúo no certificado</h3>
-                    <p class="numero">$37.900</p>
+                    <!-- <p class="numero">$37.900</p> -->
                     <ul>
                      <li>Precio de venta y arriendo</li>
                      <li>Estudio de Normatividad del inmueble</li>
@@ -306,7 +306,7 @@
                <li>
                  <div class="tabla-precio">
                   <h3>Avalúo certificado</h3>                      
-                  <p class="numero">desde $249.000</p>
+                  <!-- <p class="numero">desde $249.000</p> -->
                   <ul>
                    <li>Visita al inmueble</li>                         
                    <li>Precio de venta y arriendo</li>
@@ -556,8 +556,8 @@ if($bool){
   echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
   echo "</script>";
 }else{
-  echo "<script>";
-    echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
-  echo "</script>";
+  // echo "<script>";
+  //   echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
+  // echo "</script>";
 }
 ?>

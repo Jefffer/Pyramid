@@ -56,7 +56,7 @@
 </div><!--.hero-->
 
 <div class="mockup-content" style="height:0;">
-  <div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+  <div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed" style="height:0;">
     <button id="btnContacto" class="contact_hide" type="button">Contacto</button>
     <div class="morph-content">
       <div>
@@ -188,9 +188,9 @@ if($bool){
   echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
   echo "</script>";
 }else{
-  echo "<script>";
-    echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
-  echo "</script>";
+  // echo "<script>";
+  //   echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
+  // echo "</script>";
 }
 ?>
 

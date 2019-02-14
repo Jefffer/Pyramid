@@ -99,7 +99,7 @@
            </ul>
 
          </div><!--.contenedor-->
-         <p>Los items mencionados en cada tipo de avalúo se entregan en un Informe detallado de acuerdo a la valuación del inmueble. Si tienes alguna duda por favor dirígite a las preguntas frecuentes en <a class="estilos_links" href="asesorias.html">Asesosorías</a> o directamente <a class="estilos_links" href="registro.html">Contáctanos</a>.</p>
+         <p>Los items mencionados en cada tipo de avalúo se entregan en un Informe detallado de acuerdo a la valuación del inmueble. Si tienes alguna duda por favor dirígite a las preguntas frecuentes en <a class="estilos_links" href="asesorias.php">Asesosorías</a> o directamente <a class="estilos_links" id="contactoLink">Contáctanos</a>.</p>
        </section><!--.precios .seccion-->
 
        <!-- Modal no certificado -->

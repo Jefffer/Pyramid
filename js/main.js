@@ -193,7 +193,9 @@
 		$('#contactoMenu').click(function(){
 			$("#btnContacto").click();
 		});
-
+		$('#contactoLink').click(function(){
+			$("#btnContacto").click();
+		});
 
 		// Menú fijo
 		// var windowHeight = $(window).height();

@@ -1418,7 +1418,7 @@ i.ico_proceso {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 1900; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -1427,7 +1427,6 @@ i.ico_proceso {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
 /* The Close Button */
 .closeModal {
   color: #fef0e3;
@@ -1511,9 +1510,29 @@ i.ico_proceso {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.4s;
-  margin-top: 7%;
-  max-height: 80%;
+  margin-top: 5%;
+  max-height: 90%;
   overflow-y: scroll;
+}
+@media only screen and (max-width: 768px) {
+   .modal {
+      z-index: 1900;
+   }
+   .modal-content {
+      width: 100%;
+      max-height: 100%;
+      height: 100%;
+      margin-top: 0;
+   }
+   .modal-body p {
+      font-size: 0.9em;      
+   }
+   .modal-body label {
+      font-size: 0.6em;
+   }
+   .modal-body input, .modal-body select{
+      font-size: 1em;
+   }
 }
 /* Add Animation */
 @keyframes animatetop {
