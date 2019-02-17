@@ -1344,6 +1344,7 @@ div.resumen input {
    text-decoration: none;
    color: rgba(185, 40, 40, 1);
    font-weight: bold;
+   cursor: pointer;
 }
 .estilos_links:hover {
    text-decoration: underline;
@@ -1435,7 +1436,13 @@ div.txt_proceso.proceso_2 p{
 i.ico_proceso {
    font-size: 4em;
 }
-
+/* Politicas */
+p.txt_politicas {
+   margin-bottom: 0!important;
+   font-size: 0.9em!important;
+   line-height: 1.5;
+   color: #444444!important;
+}
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -1555,6 +1562,9 @@ i.ico_proceso {
    .modal-body input, .modal-body select{
       font-size: 1em;
    }
+   p.txt_politicas {
+      font-size: 0.8em;
+   }
 }
 /* Add Animation */
 @keyframes animatetop {
@@ -1579,10 +1589,11 @@ i.ico_proceso {
 .my-float-whatsapp{
    margin-top:16px;
 }
-/* Contact btn */
+/* Contact */
 .contact_hide {
    display: none;
 }
+
 
 /* ==========================================================================
    Helper classes
