@@ -1097,11 +1097,14 @@ footer nav.redes-sociales {
 footer nav.redes-sociales a i{color: white;}
 footer nav.redes-sociales a i:hover{color: wheat;}
 p.copyright {
-   color: #ffffff;
+   color: #b7b7b7;
    background-color: #2e2e2e;
    padding: 10px 0;
    margin: 20px 0 0 0;
    text-align: center;
+   font-size: 0.8em;
+   letter-spacing: 1px;
+   font-variant: small-caps;
 }
 /** INTERNAS **/
 /**Conferencia**/
@@ -1156,8 +1159,8 @@ div#datos_usuario {
 #datos_usuario input.btn_form {
    border-radius: unset;
    color: wheat;
-   width: 40%;
-   margin: 20px auto 15px 30%;
+   width: 100%;
+   margin: 20px auto 15px 0;
    height: 40px;
    border: 1px solid wheat;
 }
@@ -1168,16 +1171,21 @@ form#registro_venta h3 {
 }
 form#registro_venta label {
    margin-bottom: 5px;
-   font-weight: bold;
    color: wheat;
    margin-right: 10px;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   font-size: 0.9em;
 }
 form#registro_arriendo h4 {
    color: rgba(185, 40, 40, 0.8);
    border-bottom: 2px solid rgba(185, 40, 40, 0.8);
 }
 form#registro_arriendo label {
-   color: rgba(185, 40, 40, 0.8);;
+   color: rgba(185, 40, 40, 0.8);
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   font-size: 0.9em;
 }
 form#registro_arriendo > .caja {
    background-color: rgba(245,222,179,0.6);
@@ -1220,8 +1228,22 @@ div.campo_agenda input{
    border-radius: 30px 10px;
    outline: 0;
 }
-
+@media only screen and (max-width: 768px) {
+   #datos_usuario input, #datos_usuario textarea, #datos_usuario select {
+      font-size: 0.9em;
+   }
+   .seccion {
+      padding: 10px 0!important;
+   }
+   form#registro_arriendo h4, h4 {
+      font-size: 1em;
+   }
+}
 @media only screen and (min-width: 768px) {
+   #datos_usuario input.btn_form {
+      width: 40%;
+      margin: 20px auto 15px 30%;      
+   }
    div.campo {
       float: left;
       width: 33.3%;

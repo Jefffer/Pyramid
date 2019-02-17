@@ -137,71 +137,71 @@
            En esta sección, buscamos conocer mejor a las personas que desean vender con nosotros, solo necesitas diligenciar el formulario que encontraras en la parte inferior, el cual se compone de preguntas básicas sobre ti y el inmueble que deseas vender, para llevarnos una idea mas clara del servicio con el cual te sentirás mas cómodo al momento de vender tu inmueble.
           </p>
 
-          <form id="registro_venta" class="registro clearfix" method="post">            
+          <form id="registro_venta" class="registro clearfix" method="post">
             <div id="datos_usuario" class="registro caja clearfix">
                 <h4>Información básica del propietario</h4>
                 <div class="campo">
-                  <label for="nombre">Nombre completo: </label>
+                  <label for="nombreForm">Nombre completo: </label>
                   <div>
                     <i class="fas fa-user icon_form"></i>
-                    <input type="text" id="nombre" name="nombre" placeholder="" maxlength="40">
+                    <input type="text" id="nombre" name="nombreForm" placeholder="" maxlength="40">
                   </div>
                 </div>
                 <div class="campo">
-                  <label for="celular">Teléfono o Celular: </label>
+                  <label for="celularForm">Teléfono o Celular: </label>
                   <div>
                     <i class="fas fa-phone icon_form"></i>
-                    <input type="number" id="celular" name="celular" placeholder="" maxlength="15">
+                    <input type="number" id="celular" name="celularForm" placeholder="" maxlength="15">
                   </div>
                 </div>
                 <div class="campo">
-                  <label for="email">Email: </label>
+                  <label for="emailForm">Email: </label>
                   <div>
                     <i class="fas fa-envelope icon_form"></i>
-                    <input type="text" id="email" name="email" placeholder="" maxlength="40">
+                    <input type="text" id="email" name="emailForm" placeholder="" maxlength="40">
                   </div>
                 </div>
 
                 <h4 style="margin-top:13%;">Información básica del inmueble</h4>
                 <div class="campo">
-                  <label for="inmueble">Tipo de Inmueble: </label>
+                  <label for="inmuebleForm">Tipo de Inmueble: </label>
                   <!-- <input type="text" id="nombre" name="nombre" placeholder=""> -->
                   <div>
                     <i class="fas fa-home icon_form"></i>
-                    <select name="inmueble" id="inmueble">
+                    <select name="inmuebleForm" id="inmueble">
                       <option value="">Selecciona un tipo de inmueble</option>
-                      <option value="apartamento">Apartamento</option>
-                      <option value="bodega">Bodega</option>
-                      <option value="casa">Casa</option>
-                      <option value="finca">Finca</option>
-                      <option value="local">Local Comercial</option>
-                      <option value="lote">Lote</option>
-                      <option value="oficina">Oficina</option>
-                      <option value="otro">Otro (escríbelo en Comentarios)</option>
+                      <option value="Apartamento">Apartamento</option>
+                      <option value="Bodega">Bodega</option>
+                      <option value="Casa">Casa</option>
+                      <option value="Finca">Finca</option>
+                      <option value="Local">Local Comercial</option>
+                      <option value="Lote">Lote</option>
+                      <option value="Oficina">Oficina</option>
+                      <option value="Otro">Otro (escríbelo en Comentarios)</option>
                     </select>
 
                   </div>
                 </div>
                 <div class="campo">
-                  <label for="cuidad">Ciudad: </label>
+                  <label for="cuidadForm">Ciudad: </label>
                   <div>
                     <i class="fas fa-globe-americas icon_form"></i>
-                    <input type="text" id="cuidad" name="cuidad" placeholder="" maxlength="40">
+                    <input type="text" id="cuidad" name="cuidadForm" placeholder="" maxlength="40">
                   </div>
                 </div>
                 <div class="campo">
-                  <label for="barrio">Barrio: </label>
+                  <label for="barrioForm">Barrio: </label>
                   <div>
                     <i class="fas fa-street-view icon_form"></i>
-                    <input type="text" id="barrio" name="barrio" placeholder="" maxlength="40">
+                    <input type="text" id="barrio" name="barrioForm" placeholder="" maxlength="40">
                   </div>
                 </div>
                 <div class="campo">
-                  <label for="antiguedad">Antiguedad: </label>
+                  <label for="antiguedadForm">Antiguedad: </label>
                   <!-- <input type="text¿¿" id="email" name="email" placeholder=""> -->
                   <div>
                     <i class="fas fa-house-damage icon_form"></i>
-                     <select name="antiguedad" id="antiguedad" >
+                     <select name="antiguedadForm" id="antiguedad" >
                       <option value="">Selecciona la Antiguedad del Inmueble</option>
                       <option value="nuevo">Nuevo</option>
                       <option value="1a3">1 - 3 años</option>
@@ -217,9 +217,8 @@
                   <textarea maxlength="500" type="text" id="coment_venta" name="coment_venta" placeholder="Si tienes alguna duda o sugerencia para tu proceso de venta, cuéntanos..."></textarea>
                 </div>
                 <div id="error"></div>
-                <div class="full_width">
-                  <i class="fas fa-angle-double-right icon_form"></i>                  
-                  <input type="button" class="button btn_form" id="btn_form_vender" value="INGRESA TU INMUEBLE" >
+                <div class="full_width">                
+                  <input type="submit" name="submitForm" class="button btn_form" id="btn_form_vender" value="INGRESA TU INMUEBLE" >
                 </div>
             </div><!--#datos_usuario-->
           </form>
@@ -254,3 +253,57 @@
         </script>
     </body>
 </html>
+
+<?php
+if (isset($_POST['submitForm'])){
+  $from = 'contacto@inmobiliariapyramid.com';
+  $to = $_POST['emailForm'];
+  $subject = "Vende con Nosotros .: Inmobiliaria Pyramid";
+
+  $message = "
+  <html>
+  <head>
+  <title>HTML email</title>
+  </head>
+  <body>
+  <h2>Nos complace saludarte " . $_POST['nombreForm'] . ",</h2><br>
+  <p>Has ingresado la siguiente información, relacionada al inmueble en venta que deseas publicar en nuestra plataforma:<br><br>
+  <b>Tipo de Inmueble:</b> " . $_POST['inmuebleForm'] . "<br>
+  <b>Ciudad:</b> " . $_POST['cuidadForm'] . "<br>
+  <b>Barrio:</b> " . $_POST['barrioForm'] . "<br>
+  <b>Antiguedad:</b> " . $_POST['antiguedadForm'] . "<br>
+  <b>Comentarios:</b> " . $_POST['coment_venta'] . "<br><br>
+  Además de la siguiente información personal:<br>
+  <b>Nombre:</b> " . $_POST['nombreForm'] . "<br>
+  <b>Teléfono:</b> " . $_POST['celularForm'] . "<br>
+  <b>Email:</b> " . $_POST['emailForm'] . "<br><br>
+  Nos pondremos en contácto contigo muy pronto. Gracias por escogernos.<br><br>
+  <b>Inmobiliaria Pyramid</b><br>
+  Juntos podemos hacerlo posible</p>
+  </body>
+  </html>";
+
+  // Always set content-type when sending HTML email
+  $headers='';
+  $headers .= 'MIME-Version: 1.0' . "\r\n";
+  $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+  $headers .= 'From: '.$from.' '. "\r\n";
+  $bool = mail($to,$subject,$message, $headers);
+
+  if($bool){
+    echo "<script>";
+    // echo "swal({";
+    //   echo "title: "Datos incompletos",";
+    //   echo "text: "Por favor ingresa tu número telefónico.",";
+    //   echo "icon: "warning",";
+    //   echo "dangerMode: true,";
+    //   echo "});";
+    echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
+    echo "</script>";
+  }else{
+     echo "<script>";
+       echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
+     echo "</script>";
+  }
+}
+?>

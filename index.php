@@ -391,7 +391,8 @@
                           <p class="morph"><label>Nombre</label><input name="nombre" type="text" /></p>
                           <p class="morph"><label>Email</label><input name="email" type="text" /></p>
                           <p class="morph"><label>Teléfono</label><input name="telefono" type="text" /></p>
-                          <p class="morph"><label>Mensaje</label><textarea name="mensaje" placeholder="Dinos lo que necesitas, nos pondremos en contácto muy pronto"></textarea></p>                          
+                          <p class="morph"><label>Mensaje</label><textarea name="mensaje" placeholder="Dinos lo que necesitas, nos pondremos en contácto muy pronto"></textarea></p>
+                          <p class="morph">Al enviar este formulario estás aceptando nuestras <a>políticas de privacidad</a></p>
                           <!-- <p class="morph"><button type="submit" name="submit">ENVIAR<button/></p> -->
                           <p class="morph"><input id="sub_contact" type="submit" name="submit" value="ENVIAR" /></p>
                         </form>
@@ -534,7 +535,7 @@ $message = "
 Y el siguiente mensaje: <i><br><br>" . 
 $_POST['mensaje'] . "</i><br><br>
 Nos pondremos en contácto contigo muy pronto. Gracias por escogernos<br><br>
-<b>Inmobiliaria Pyramid</b>
+<b>Inmobiliaria Pyramid</b></p>
 </body>
 </html>";
 
