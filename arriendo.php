@@ -270,7 +270,7 @@ if (isset($_POST['submitArriendo'])){
   <b>Barrio:</b> " . $_POST['barrioForm'] . "<br>
   <b>Antiguedad:</b> " . $_POST['antiguedadForm'] . "<br>
   <b>Comentarios:</b> " . $_POST['coment_arriendo'] . "<br><br>
-  Además de la siguiente información personal:<br>
+  Además de la siguiente información personal:<br><br>
   <b>Nombre:</b> " . $_POST['nombreForm'] . "<br>
   <b>Teléfono:</b> " . $_POST['celularForm'] . "<br>
   <b>Email:</b> " . $_POST['emailForm'] . "<br><br>

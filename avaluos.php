@@ -105,7 +105,7 @@
        <!-- Modal no certificado -->
        <div id="modalNoCert" class="modal">
         <!-- Modal content -->
-        <form class="modal-content">          
+        <form class="modal-content" method="post" >          
           <div class="modal-header">
             <span class="closeModal">&times;</span>
             <h2>Avalúo No Certificado</h2>
@@ -113,16 +113,16 @@
           <div class="modal-body">
             <p>A continuación te haremos unas preguntas para que nos brindes mayor informacion sobre tu inmueble</p>
             <p><label><i class="fas fa-user-astronaut"></i> &nbsp;¿Cual es tu nombre completo? </label>
-              <input type="text">
+              <input type="text" name="nombre">
             </p>
             <p><label><i class="fas fa-phone"></i> &nbsp;¿Cual es tu número telefónico? </label>
-              <input type="text">
+              <input type="text" name="tel">
             </p>
             <p><label><i class="fas fa-at"></i> &nbsp;¿Cual es tu correo electrónico? </label>
-              <input type="text">
+              <input type="email" name="correo">
             </p>
             <p><label><i class="fas fa-map-marker-alt"></i> &nbsp;¿Cuál es la direccion del inmueble? </label>
-              <input type="text">
+              <input type="text" name="direccion">
             </p>
             <p><label><i class="fas fa-hotel"></i> &nbsp;¿Qué tipo de inmueble es? </label>
               <select name="inmueble" id="inmueble">
@@ -138,13 +138,13 @@
               </select>
             </p>
             <p><label><i class="fas fa-ruler"></i> &nbsp;¿Cuántos metros cuadrados tiene? </label>
-              <input type="number" min="1">
+              <input type="number" min="1" name="metros">
             </p>
             <p><label><i class="fas fa-building"></i> &nbsp;¿Cuántos pisos tiene tu inmueble? </label>
-              <input type="text">
+              <input type="text" name="pisos">
             </p>
             <p><label><i class="fas fa-level-down-alt"></i> &nbsp;¿Tiene sotanos?¿cuántos?</label>
-              <input type="text">
+              <input type="text" name="sotanos">
             </p>
             <p><label><i class="fas fa-house-damage"></i> &nbsp;¿Cuál es el estado de la contrucción? </label>
               <select name="estado" id="estado">
@@ -156,19 +156,19 @@
               </select>
             </p>
             <p><label><i class="fas fa-calendar-check"></i> &nbsp;¿Cuántos años tiene tu inmueble?</label>
-              <input type="number" min="0"> 
+              <input type="number" min="0" name="tiempo">
             </p>
             <p><label><i class="fas fa-hammer"></i> &nbsp;¿Tiene remodelaciones?¿Hace cuanto se hicieron?</label>
-              <input type="text">
+              <input type="text" name="remodelacion">
             </p>
             <p><label><i class="fas fa-bed"></i> &nbsp;¿Cuántas habitaciones tiene? </label>
-              <input type="number" min="0"> 
+              <input type="number" min="0" name="habitacion">
             </p>
             <p><label><i class="fas fa-bath"></i> &nbsp;¿Cuántos baños tiene?</label>
-              <input type="number" min="0"> 
+              <input type="number" min="0" name="banos">
             </p>
             <p><label><i class="fas fa-warehouse"></i> &nbsp;¿Tiene parqueadero?¿cuántos? </label>
-              <input type="number" min="0"> 
+              <input type="number" min="0" name="parq">
             </p>
             <p><label><i class="fas fa-couch"> &nbsp;</i>¿Tiene sala de estar? </label>
                <select name="sala" id="sala">
@@ -180,8 +180,8 @@
             <p><label><i class="fas fa-utensils"></i> &nbsp;¿Tiene cocina integral?</label>
               <select name="cocina" id="cocina">
                 <option value="">Selecciona una opción</option>
-                <option value="si">Sí</option>                
-                <option value="no">No</option>                
+                <option value="si">Sí</option>
+                <option value="no">No</option>
               </select>
             </p>
             <p><label><i class="fas fa-leaf"></i> &nbsp;¿Cuenta con Antejardín?</label>
@@ -217,7 +217,7 @@
       <!-- Modal Certificado -->
        <div id="modalCert" class="modal">
         <!-- Modal content -->
-        <form class="modal-content">          
+        <form class="modal-content" method="post">        
           <div class="modal-header">
             <span class="closeModal">&times;</span>
             <h2>Avalúo Certificado</h2>
@@ -290,3 +290,68 @@
 </script>
 </body>
 </html>
+
+<?php
+if (isset($_POST['subNoCert'])){
+  $from = 'contacto@inmobiliariapyramid.com';
+  $to = $_POST['emailForm'];
+  $subject = "Arrienda con Nosotros .: Inmobiliaria Pyramid";
+
+  $message = "
+  <html>
+  <head>
+  <title>HTML email</title>
+  </head>
+  <body>
+  <h2>Nos complace saludarte " . $_POST['nombre'] . ",</h2><br>
+  <p>Has solicitado un avalúo No Certificado, relacionando la siguiente información personal:<br><br>
+  <b>Nombre completo:</b> " . $_POST['nombre'] . "<br>
+  <b>Número telefónico:</b> " . $_POST['tel'] . "<br>
+  <b>Correo electrónico:</b> " . $_POST['correo'] . "<br><br>
+  Además de la siguiente información del inmueble:<br><br>  
+  <b>Dirección:</b> " . $_POST['direccion'] . "<br>
+  <b>Tipo:</b> " . $_POST['inmueble'] . "<br>
+  <b>Metros cuadrados:</b> " . $_POST['metros'] . "<br><br>
+  <b>Pisos:</b> " . $_POST['pisos'] . "<br>
+  <b>Sótanos:</b> " . $_POST['sotanos'] . "<br>
+  <b>Estado:</b> " . $_POST['estado'] . "<br>
+  <b>Antiguedad:</b> " . $_POST['tiempo'] . "<br>
+  <b>Remodelaciones:</b> " . $_POST['remodelacion'] . "<br>
+  <b>Habitaciones:</b> " . $_POST['habitacion'] . "<br>
+  <b>Baños:</b> " . $_POST['banos'] . "<br>
+  <b>Parqueadero(s):</b> " . $_POST['parq'] . "<br>
+  <b>Sala de estar:</b> " . $_POST['sala'] . "<br>
+  <b>Cocina integral:</b> " . $_POST['cocina'] . "<br>
+  <b>Antejardín:</b> " . $_POST['jardin'] . "<br>
+  <b>Cuarto de estudio:</b> " . $_POST['estudio'] . "<br>
+  <b>Cuarto de Lavado:</b> " . $_POST['lavado'] . "<br><br>
+  Nos pondremos en contácto contigo muy pronto. Gracias por escogernos.<br><br>
+  <b>Inmobiliaria Pyramid</b><br>
+  Juntos podemos hacerlo posible</p>
+  </body>
+  </html>";
+
+  // Always set content-type when sending HTML email
+  $headers='';
+  $headers .= 'MIME-Version: 1.0' . "\r\n";
+  $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+  $headers .= 'From: '.$from.' '. "\r\n";
+  $bool = mail($to,$subject,$message, $headers);
+
+  if($bool){
+    echo "<script>";
+    // echo "swal({";
+    //   echo "title: "Datos incompletos",";
+    //   echo "text: "Por favor ingresa tu número telefónico.",";
+    //   echo "icon: "warning",";
+    //   echo "dangerMode: true,";
+    //   echo "});";
+    echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
+    echo "</script>";
+  }else{
+     echo "<script>";
+       echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
+     echo "</script>";
+  }
+}
+?>
