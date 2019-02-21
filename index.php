@@ -392,7 +392,7 @@
                           <p class="morph"><label>Email</label><input name="email" type="text" /></p>
                           <p class="morph"><label>Teléfono</label><input name="telefono" type="text" /></p>
                           <p class="morph"><label>Mensaje</label><textarea name="mensaje" placeholder="Dinos lo que necesitas, nos pondremos en contácto muy pronto"></textarea></p>
-                          <p class="txt_politicas">Al enviar este formulario estás aceptando nuestras <a class="estilos_links">políticas de privacidad</a></p>
+                          <p class="txt_politicas">Al enviar este formulario estás aceptando nuestras <a class="estilos_links">Políticas de Privacidad</a></p>
                           <!-- <p class="morph"><button type="submit" name="submit">ENVIAR<button/></p> -->
                           <p class="morph"><input id="sub_contact" type="submit" name="submit" value="ENVIAR" /></p>
                         </form>

@@ -1439,9 +1439,10 @@ i.ico_proceso {
 /* Politicas */
 p.txt_politicas {
    margin-bottom: 0!important;
-   font-size: 0.9em!important;
+   font-size: 0.9em!important ;
    line-height: 1.5;
    color: #444444!important;
+   text-align: center;
 }
 /* The Modal (background) */
 .modal {
@@ -1491,7 +1492,7 @@ p.txt_politicas {
    background: transparent;
    color: #b09a86;
    font-weight: 300;
-   font-size: 1.1em;
+   font-size: 1em;
 }
 .modal-body input:focus, .modal-body select:focus{
    border-color: rgba(185, 40, 40, 1);
@@ -1515,31 +1516,33 @@ p.txt_politicas {
    font-size: 1.2em;
 }
 /* Modal Footer */
-.modal-footer {
+.modal-footer input {
    background-color: rgba(185, 40, 40, 0.9);
    color: wheat!important;
    text-align: center;
-   padding: 19px;
+   padding: 15px;
    cursor: pointer;   
    font-weight: 600;
-   font-size: 19px;
+   font-size: 1.2em;
    letter-spacing: 1px;
+   border: none;
+   width: 100%;
+   margin-top: 1em;
 }
-.modal-footer:hover {
+.modal-footer input:hover {
    background-color: rgba(185, 40, 40, 1);
 }
 /* Modal Content */
 .modal-content {
   position: relative;
   background-color: #fefefe;
-  margin: auto;
+  margin: 2% auto;
   padding: 0;
   border: 1px solid #888;
   width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.4s;
-  margin-top: 5%;
   max-height: 90%;
   overflow-y: scroll;
 }

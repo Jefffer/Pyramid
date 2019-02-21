@@ -105,7 +105,7 @@
        <!-- Modal no certificado -->
        <div id="modalNoCert" class="modal">
         <!-- Modal content -->
-        <div class="modal-content">          
+        <form class="modal-content">          
           <div class="modal-header">
             <span class="closeModal">&times;</span>
             <h2>Avalúo No Certificado</h2>
@@ -204,19 +204,20 @@
                 <option value="si">Sí</option>                
                 <option value="no">No</option>                
               </select>
-            </p>         
+            </p>
+            <p class="txt_politicas">Al enviar este formulario estás aceptando nuestras <a class="estilos_links">Políticas de Privacidad</a></p>
           </div>
           <div class="modal-footer">
-            <a>ENVIAR</a>
+            <input type="submit" name="subNoCert" value="ENVIAR">
           </div>
-        </div>
+        </form>
 
       </div>
 
       <!-- Modal Certificado -->
        <div id="modalCert" class="modal">
         <!-- Modal content -->
-        <div class="modal-content">          
+        <form class="modal-content">          
           <div class="modal-header">
             <span class="closeModal">&times;</span>
             <h2>Avalúo Certificado</h2>
@@ -251,12 +252,12 @@
             <p><label><i class="fas fa-ruler"></i> &nbsp;¿Cuántos metros cuadrados tiene? (opcional) </label>
               <input type="number" min="1">
             </p>
-                     
+            <p class="txt_politicas">Al enviar este formulario estás aceptando nuestras <a class="estilos_links">Políticas de Privacidad</a></p>                     
           </div>
           <div class="modal-footer">
-            <a>ENVIAR</a>
+            <input type="submit" name="subCert" value="ENVIAR">            
           </div>
-        </div>
+        </form>
 
       </div>
       

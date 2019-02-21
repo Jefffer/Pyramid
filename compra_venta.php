@@ -215,7 +215,7 @@
                 <div class="campo coment">
                   <label for="coment_venta">Comentarios (opcional):</label>
                   <textarea maxlength="500" type="text" id="coment_venta" name="coment_venta" placeholder="Si tienes alguna duda o sugerencia para tu proceso de venta, cuéntanos..."></textarea>
-                  <p class="txt_politicas">Al enviar este formulario estás aceptando nuestras <a class="estilos_links">políticas de privacidad</a></p>
+                  <p class="txt_politicas">Al enviar este formulario estás aceptando nuestras <a class="estilos_links">Políticas de Privacidad</a></p>
                 </div>         
                 <div class="full_width">
                   <input type="submit" name="submitForm" class="button btn_form" id="btn_form_vender" value="INGRESA TU INMUEBLE" >
