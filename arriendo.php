@@ -38,7 +38,29 @@
            <h2>Arriendo</h2>
            <p>
              En <b>Inmobiliaria Pyramid</b>, nuestro interés es darte a conocer la gran variedad de ofertas inmobiliarias disponibles para ti que buscas cambiar tu estilo de vida empezando por una casa o apartamento con todo lo que quieres y necesitas. En cada inmueble encontraras una galería fotográfica mostrando todos sus espacios y un video con el recorrido completo por la vivienda.  Si deseas conocer alguno de nuestros inmuebles puedes agendar una cita con nosotros en el horario que más te convenga y continúa el proceso de arriendo.
-            </p>            
+            </p>
+            <?php
+              /*** mysql hostname ***/
+              $hostname = '147.135.87.130';
+
+              /*** mysql username ***/
+              $username = 'inmobi16_dbuser';
+
+              /*** mysql password ***/
+              $password = 'Inmopyd7890';
+
+              try {
+                  $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
+                  foreach($mbd->query('SELECT * from ciudad') as $fila) {
+                      print_r($fila);
+                  }
+                  $mbd = null;
+              }
+              catch(PDOException $e)
+              {
+                  echo $e->getMessage();
+              }              
+            ?>
        </section><!--.section-->       
 
        <section id="publicaciones_venta" class="invitados contenedor seccion">
