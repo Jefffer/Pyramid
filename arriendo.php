@@ -51,16 +51,49 @@
 
               try {
                   $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
-                  foreach($mbd->query('SELECT * from ciudad') as $fila) {
-                      print_r($fila);
+                  //foreach($mbd->query('SELECT * from ciudad') as $fila) {
+                  //    print_r($fila);
+                  //}
+                  //$mbd = null;
+                  $sth = $mbd->prepare("SELECT * FROM inmueble");
+                  $sth->execute();
+                  echo '</section><!--.section-->
+                     <section id="publicaciones_venta" class="invitados contenedor seccion">
+                     <h2>Inmuebles en Arriendo</h2>
+                      <ul class="lista-invitados publication clearfix">';
+
+                  while ($result = $sth->fetch(PDO::FETCH_ASSOC)) {
+
+                    echo '
+                           <li>
+                              <div class="invitado">
+                                <a href="pagina_venta.php">
+                                   <img src="img/Publicaciones_venta/house_1.jpg" alt="Imagen invitado">
+                                   <!-- <p class="bandera_venta">asdfasdfasdg</p> -->
+                                   <p class="item_venta">'.$result['nombre_inmueble'].'
+                                      <br>
+                                      <!-- <span class="width_25">En <B>Pyramid</B> la </span> -->
+                                      <i class="fas fa-bed"></i> <span>'.$result['habit_inmueble'] .' Hab</span>&nbsp;&nbsp;
+                                      <!-- <i class="fas fa-car"></i> <span>'. $result['parq_inmueble'] .' Parq</span>&nbsp;&nbsp; -->
+                                      <i class="fas fa-ruler"></i> <span>'. $result['area_inmueble'] .' m<sup>2</sup></span>&nbsp;&nbsp;
+                                      <i class="fas fa-dollar-sign azulito"></i> <span class="item_precio">'. $result['token_inmueble'] .' Mill</span>
+                                   </p>
+                                 </a>
+                              </div>
+                           </li>';
+                         
+                    }
+
+                    echo '</ul>
+                      </section><!--.invitados-->';
                   }
-                  $mbd = null;
-              }
-              catch(PDOException $e)
-              {
-                  echo $e->getMessage();
-              }              
-            ?>
+                  catch(PDOException $e)
+                  {
+                      echo $e->getMessage();
+                  }              
+                ?>
+
+
        </section><!--.section-->       
 
        <section id="publicaciones_venta" class="invitados contenedor seccion">
@@ -81,7 +114,7 @@
                      </p>
                    </a>
                 </div>
-             </li>             
+             </li>
              <li>
                 <div class="invitado">
                   <a href="pagina_venta.php">
@@ -241,7 +274,9 @@
                 </div>
             </div><!--#datos_usuario-->
           </form>
-       </section><!--.section-->  
+       </section><!--.section-->
+
+       
 
         <?php
           include('global/footer.php');

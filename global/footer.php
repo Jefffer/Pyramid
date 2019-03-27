@@ -36,5 +36,5 @@
  </div>
 </div>
 
-<p class="copyright">Inmobiliaria Pyramid - Bogotá, Colombia 2019</p>
+<p class="copyright">Inmobiliaria Pyramid - Bogotá, Colombia 2019 .: Developed by Jefffer</p>
 </footer>
