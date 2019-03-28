@@ -51,7 +51,7 @@
             //    print_r($fila);
             //}
             //$mbd = null;
-            $sth = $mbd->prepare("SELECT * FROM inmueble WHERE pk_inmueble = $myId");
+            $sth = $mbd->prepare("SELECT * FROM inmueble as inm INNER JOIN tipo_inmueble AS tip ON inm.fk_tipo_inmueble = tip.pk_tipo_inmueble WHERE pk_inmueble = $myId");
             $sth->execute();
 
             while ($result = $sth->fetch(PDO::FETCH_ASSOC)) {
@@ -115,10 +115,10 @@
                              <div id="talleres" class="info-curso ocultar clearfix">
                                 <div class="detalle-evento items_detalle">
                                      <!-- <h3>Traumas de un bastardo</h3> -->
-                                     <p><i class="fas fa-hand-holding-usd" aria-hidden="true"></i> <span class="ttl_info">Precio:</span> <b> 300.000.000</b></p>
-                                     <p><i class="fas fa-dollar-sign" aria-hidden="true"></i> <span class="ttl_info">Administración:</span> <b> 200.000</b></p>
-                                     <p><i class="fas fa-barcode" aria-hidden="true"></i> <span class="ttl_info">Código:</span> 1019</p>
-                                     <p><i class="fas fa-home" aria-hidden="true"></i> <span class="ttl_info">Tipo Inmueble:</span> Apartamento</p>
+                                     <p><i class="fas fa-hand-holding-usd" aria-hidden="true"></i> <span class="ttl_info">Precio:</span> <b> '.$result['precio_inmueble'].'</b></p>
+                                     <p><i class="fas fa-dollar-sign" aria-hidden="true"></i> <span class="ttl_info">Administración:</span> <b> '.$result['admon_inmueble'].'</b></p>
+                                     <p><i class="fas fa-barcode" aria-hidden="true"></i> <span class="ttl_info">Código:</span> '.$result['pk_inmueble'].'</p>
+                                     <p><i class="fas fa-home" aria-hidden="true"></i> <span class="ttl_info">Tipo Inmueble:</span> '.$result['tipo_inmueble'].'</p>
                                      <p><i class="fas fa-city" aria-hidden="true"></i> <span class="ttl_info">Ciudad:</span> Bogotá </p>
                                      <p><i class="fas fa-map-marked-alt" aria-hidden="true"></i> <span class="ttl_info">Zona (Localidad):</span> Usaquén</p>
                                      <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span class="ttl_info">Barrio:</span> Cedritos</p>
@@ -193,7 +193,7 @@
                                             </div>
                                         </div>
                                         <div class="div_agenda">
-                                          <div id="agendarCalendar" class="datepicker-here calendarClass" data-timepicker="true" data-language='en' name="Schedule"></div>
+                                          <div id="agendarCalendar" class="datepicker-here calendarClass" data-timepicker="true" data-language="en" name="Schedule"></div>
                                         </div>
                                         <div class="">
                                           <input type="button" class="button btn_form" id="btn_form_agendar" value="AGENDAR" >

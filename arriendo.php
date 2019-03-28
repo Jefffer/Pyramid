@@ -182,7 +182,6 @@
              </li>
           </ul>
        </section><!--.invitados-->
-       -->    
 
        <section id="vende-nosotros" class="seccion contenedor padding_bot_0">
          <h2>Arrienda con Nosotros</h2>
