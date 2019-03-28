@@ -93,7 +93,7 @@
             catch(PDOException $e)
             {
                 echo $e->getMessage();
-            }              
+            }
           ?>
        <!--
        <section id="publicaciones_venta" class="invitados contenedor seccion">
