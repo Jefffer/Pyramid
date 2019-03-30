@@ -78,7 +78,7 @@
                                   <i class="fas fa-bed"></i> <span>'.$result['habit_inmueble'] .' Hab</span>&nbsp;&nbsp;
                                   <!-- <i class="fas fa-car"></i> <span>'. $result['parq_inmueble'] .' Parq</span>&nbsp;&nbsp; -->
                                   <i class="fas fa-ruler"></i> <span>'. $result['area_inmueble'] .' m<sup>2</sup></span>&nbsp;&nbsp;
-                                  <i class="fas fa-dollar-sign azulito"></i> <span class="item_precio">'. $result['token_inmueble'] .' Mill</span>
+                                  <i class="fas fa-dollar-sign azulito"></i> <span class="item_precio">'.$result['arriendo_inmueble'].'</span>
                                </p>
                              </a>
                           </div>

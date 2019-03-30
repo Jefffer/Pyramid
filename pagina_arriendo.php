@@ -115,7 +115,7 @@
                              <div id="talleres" class="info-curso ocultar clearfix">
                                 <div class="detalle-evento items_detalle">
                                      <!-- <h3>Traumas de un bastardo</h3> -->
-                                     <p><i class="fas fa-hand-holding-usd" aria-hidden="true"></i> <span class="ttl_info">Precio:</span> <b> '.$result['precio_inmueble'].'</b></p>
+                                     <p><i class="fas fa-hand-holding-usd" aria-hidden="true"></i> <span class="ttl_info">Valor arriendo:</span> <b> '.$result['arriendo_inmueble'].'</b></p>
                                      <p><i class="fas fa-dollar-sign" aria-hidden="true"></i> <span class="ttl_info">Administración:</span> <b> '.$result['admon_inmueble'].'</b></p>
                                      <p><i class="fas fa-barcode" aria-hidden="true"></i> <span class="ttl_info">Código:</span> '.$result['pk_inmueble'].'</p>
                                      <p><i class="fas fa-home" aria-hidden="true"></i> <span class="ttl_info">Tipo Inmueble:</span> '.$result['tipo_inmueble'].'</p>

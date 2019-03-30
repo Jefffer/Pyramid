@@ -72,7 +72,7 @@
                 echo '
                    <li>
                       <div class="invitado">
-                        <a href="pagina_venta.php">
+                        <a href="pagina_venta.phpid='.$result['pk_inmueble'].'">
                            <img src="img/Publicaciones_venta/house_1.jpg" alt="Imagen invitado">
                            <!-- <p class="bandera_venta">asdfasdfasdg</p> -->
                            <p class="item_venta">'.$result['nombre_inmueble'].'
