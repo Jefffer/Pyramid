@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Inmueble en venta .: Inmobiliaria Pyramid</title>
+        <title>Inmueble en arriendo .: Inmobiliaria Pyramid</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -51,13 +51,13 @@
             //    print_r($fila);
             //}
             //$mbd = null;
-            $sth = $mbd->prepare("SELECT * FROM inmueble as inm INNER JOIN tipo_inmueble AS tip ON inm.fk_tipo_inmueble = tip.pk_tipo_inmueble WHERE pk_inmueble = $myId");
+            $sth = $mbd->prepare("SELECT * FROM inmueble as inm INNER JOIN tipo_inmueble AS tip ON inm.fk_tipo_inmueble = tip.pk_tipo_inmueble INNER JOIN ciudad AS ciu ON inm.fk_ciudad = ciu.pk_ciudad INNER JOIN descr_inmueble AS des ON inm.fk_desc_inmueble = des.pk_desc_inmueble WHERE pk_inmueble = $myId");
             $sth->execute();
 
             while ($result = $sth->fetch(PDO::FETCH_ASSOC)) {
                 echo '
                   <section id="galeria_fotos" class="seccion contenedor top_-180">
-                  <h2>'.$result['nombre_inmueble'].'</h2>
+                  <h2>'.$result['nombre_inmueble'].' .: Arriendo</h2>
                   <div class="galeria">
                     <a href="img/galeria/01.jpg" data-lightbox="galeria">
                       <img src="img/galeria/thumbs/01.jpg">
@@ -119,25 +119,25 @@
                                      <p><i class="fas fa-dollar-sign" aria-hidden="true"></i> <span class="ttl_info">Administración:</span> <b> '.$result['admon_inmueble'].'</b></p>
                                      <p><i class="fas fa-barcode" aria-hidden="true"></i> <span class="ttl_info">Código:</span> '.$result['pk_inmueble'].'</p>
                                      <p><i class="fas fa-home" aria-hidden="true"></i> <span class="ttl_info">Tipo Inmueble:</span> '.$result['tipo_inmueble'].'</p>
-                                     <p><i class="fas fa-city" aria-hidden="true"></i> <span class="ttl_info">Ciudad:</span> Bogotá </p>
-                                     <p><i class="fas fa-map-marked-alt" aria-hidden="true"></i> <span class="ttl_info">Zona (Localidad):</span> Usaquén</p>
-                                     <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span class="ttl_info">Barrio:</span> Cedritos</p>
-                                     <p><i class="fa fa-user" aria-hidden="true"></i> <span class="ttl_info">Estrato:</span> 4</p>
-                                     <p><i class="fas fa-ruler" aria-hidden="true"></i> <span class="ttl_info">Área total:</span> 200 m<sup>2</sup></p>
-                                     <p><i class="fas fa-align-justify" aria-hidden="true"></i> <span class="ttl_info">Nro. pisos:</span> 2</p>
-                                     <p><i class="fas fa-bed" aria-hidden="true"></i> <span class="ttl_info">Habitaciones:</span> 4</p>
-                                     <p><i class="fas fa-pen-alt" aria-hidden="true"></i> <span class="ttl_info">Estudio:</span> Si</p>
-                                     <p><i class="fas fa-bath" aria-hidden="true"></i> <span class="ttl_info">Baños:</span> 3</p>
-                                     <p><i class="fas fa-door-open" aria-hidden="true"></i> <span class="ttl_info">Closet:</span> Si</p>
-                                     <p><i class="fas fa-car" aria-hidden="true"></i> <span class="ttl_info">Parqueaderos:</span> 2</p>
-                                     <p><i class="fas fa-house-damage" aria-hidden="true"></i> <span class="ttl_info">Antigüedad:</span> 6 años</p>
-                                     <p><i class="fas fa-broom" aria-hidden="true"></i> <span class="ttl_info">Cuarto aseo:</span> Si</p>
-                                     <p><i class="fas fa-wind" aria-hidden="true"></i> <span class="ttl_info">Aire acondicionado:</span> No</p>
-                                     <p><i class="fas fa-dungeon" aria-hidden="true"></i> <span class="ttl_info">Balcón:</span> Si</p>
-                                     <p><i class="fas fa-sort-amount-up" aria-hidden="true"></i> <span class="ttl_info">Ascensor:</span> Si</p>
-                                     <p><i class="fas fa-archive" aria-hidden="true"></i> <span class="ttl_info">Deposito:</span> Si</p>
-                                     <p><i class="fab fa-gripfire" aria-hidden="true"></i> <span class="ttl_info">Chimenea:</span> No</p>
-                                     <p><i class="fas fa-umbrella-beach" aria-hidden="true"></i> <span class="ttl_info">Terraza:</span> Si</p>
+                                     <p><i class="fas fa-city" aria-hidden="true"></i> <span class="ttl_info">Ciudad:</span> '.$result['nombre_ciudad'].'</p>
+                                     <p><i class="fas fa-map-marked-alt" aria-hidden="true"></i> <span class="ttl_info">Zona (Localidad):</span> '.$result['zona_inmueble'].'</p>
+                                     <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span class="ttl_info">Barrio:</span> '.$result['barrio_inmueble'].'</p>
+                                     <p><i class="fa fa-user" aria-hidden="true"></i> <span class="ttl_info">Estrato:</span> '.$result['estrato_inmueble'].'</p>
+                                     <p><i class="fas fa-ruler" aria-hidden="true"></i> <span class="ttl_info">Área total:</span> '.$result['area_inmueble'].' m<sup>2</sup></p>
+                                     <p><i class="fas fa-align-justify" aria-hidden="true"></i> <span class="ttl_info">Nro. pisos:</span> '.$result['nro_pisos_inmueble'].'</p>
+                                     <p><i class="fas fa-bed" aria-hidden="true"></i> <span class="ttl_info">Habitaciones:</span> '.$result['habit_inmueble'].'</p>
+                                     <p><i class="fas fa-pen-alt" aria-hidden="true"></i> <span class="ttl_info">Estudio:</span> '.$result['estudio_inmueble'].'</p>
+                                     <p><i class="fas fa-bath" aria-hidden="true"></i> <span class="ttl_info">Baños:</span> '.$result['banos_inmueble'].'</p>
+                                     <p><i class="fas fa-door-open" aria-hidden="true"></i> <span class="ttl_info">Closet:</span> '.$result['closet_inmueble'].'</p>
+                                     <p><i class="fas fa-car" aria-hidden="true"></i> <span class="ttl_info">Parqueaderos:</span> '.$result['parq_inmueble'].'</p>
+                                     <p><i class="fas fa-house-damage" aria-hidden="true"></i> <span class="ttl_info">Antigüedad:</span> '.$result['antiguedad_inmueble'].' años</p>
+                                     <p><i class="fas fa-broom" aria-hidden="true"></i> <span class="ttl_info">Cuarto aseo:</span> '.$result['aseo_inmueble'].'</p>
+                                     <p><i class="fas fa-wind" aria-hidden="true"></i> <span class="ttl_info">Aire acondicionado:</span> '.$result['air_acon_inmueble'].'</p>
+                                     <p><i class="fas fa-dungeon" aria-hidden="true"></i> <span class="ttl_info">Balcón:</span> '.$result['balcon_inmueble'].'</p>
+                                     <p><i class="fas fa-sort-amount-up" aria-hidden="true"></i> <span class="ttl_info">Ascensor:</span> '.$result['ascen_inmueble'].'</p>
+                                     <p><i class="fas fa-archive" aria-hidden="true"></i> <span class="ttl_info">Deposito:</span> '.$result['deposito_inmueble'].'</p>
+                                     <p><i class="fab fa-gripfire" aria-hidden="true"></i> <span class="ttl_info">Chimenea:</span> '.$result['chimenea_inmueble'].'</p>
+                                     <p><i class="fas fa-umbrella-beach" aria-hidden="true"></i> <span class="ttl_info">Terraza:</span> '.$result['terraza_inmueble'].'</p>
                                 </div>
                                 
                                 <!-- <a href="#" class="button float-right">Ver Todos</a> -->
@@ -146,9 +146,7 @@
                              <div id="conferencias" class="info-curso ocultar clearfix">
                                 <div class="detalle-evento">
                                   <h3>General</h3>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                  quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
+                                  <p>'.$result['general_desc'].'</p>
                                 </div>
                                 <div class="detalle-evento">
                                   <h3>Sector</h3>
@@ -163,6 +161,16 @@
                                   quis nostrud exercitation ullamco laboris nisi ut .</p>
                                 </div>
                              </div><!--#talleres-->
+
+                             ';
+                            }
+
+                          }
+                          catch(PDOException $e)
+                          {
+                              echo $e->getMessage();
+                          }
+                      ?>
 
                              <div id="seminarios" class="info-curso ocultar clearfix">
                                 <div class="detalle-evento">                         
@@ -207,16 +215,7 @@
                     </div><!--.contenido-programa-->
 
                  </section><!--.programa-->
-               ';                
-              }
-
-            }
-            catch(PDOException $e)
-            {
-                echo $e->getMessage();
-            }
-        ?>
-
+               
 
        <section class="ubicacion" id="ubicacion">
           <h2>Ubicación</h2>
