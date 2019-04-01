@@ -57,7 +57,7 @@
             while ($result = $sth->fetch(PDO::FETCH_ASSOC)) {
                 echo '
                   <section id="galeria_fotos" class="seccion contenedor top_-180">
-                  <h2>'.$result['nombre_inmueble'].' .: Arriendo</h2>
+                  <h2>'.$result['nombre_inmueble'].' .: en Arriendo</h2>
                   <div class="galeria">
                     <a href="img/galeria/01.jpg" data-lightbox="galeria">
                       <img src="img/galeria/thumbs/01.jpg">
@@ -115,8 +115,8 @@
                              <div id="talleres" class="info-curso ocultar clearfix">
                                 <div class="detalle-evento items_detalle">
                                      <!-- <h3>Traumas de un bastardo</h3> -->
-                                     <p><i class="fas fa-hand-holding-usd" aria-hidden="true"></i> <span class="ttl_info">Valor arriendo:</span> <b> '.$result['arriendo_inmueble'].'</b></p>
-                                     <p><i class="fas fa-dollar-sign" aria-hidden="true"></i> <span class="ttl_info">Administración:</span> <b> '.$result['admon_inmueble'].'</b></p>
+                                     <p><i class="fas fa-hand-holding-usd" aria-hidden="true"></i> <span class="ttl_info">Valor arriendo:</span> <b> $'.$result['arriendo_inmueble'].'</b></p>
+                                     <p><i class="fas fa-dollar-sign" aria-hidden="true"></i> <span class="ttl_info">Administración:</span> <b> $'.$result['admon_inmueble'].'</b></p>
                                      <p><i class="fas fa-barcode" aria-hidden="true"></i> <span class="ttl_info">Código:</span> '.$result['pk_inmueble'].'</p>
                                      <p><i class="fas fa-home" aria-hidden="true"></i> <span class="ttl_info">Tipo Inmueble:</span> '.$result['tipo_inmueble'].'</p>
                                      <p><i class="fas fa-city" aria-hidden="true"></i> <span class="ttl_info">Ciudad:</span> '.$result['nombre_ciudad'].'</p>
@@ -150,27 +150,15 @@
                                 </div>
                                 <div class="detalle-evento">
                                   <h3>Sector</h3>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                  <p>'.$result['general_desc'].'</p>
                                 </div>
                                 <div class="detalle-evento">
                                   <h3>Vías de acceso</h3>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                  quis nostrud exercitation ullamco laboris nisi ut .</p>
+                                  <p>'.$result['vias_desc'].'</p>
                                 </div>
                              </div><!--#talleres-->
 
-                             ';
-                            }
-
-                          }
-                          catch(PDOException $e)
-                          {
-                              echo $e->getMessage();
-                          }
-                      ?>
+                            
 
                              <div id="seminarios" class="info-curso ocultar clearfix">
                                 <div class="detalle-evento">                         
@@ -217,11 +205,47 @@
                  </section><!--.programa-->
                
 
-       <section class="ubicacion" id="ubicacion">
-          <h2>Ubicación</h2>
-          <div class="mapa" id="mapa">
-          </div>
-       </section>
+                 <section class="ubicacion" id="ubicacion">
+                    <h2>Ubicación</h2>
+                    <div class="mapa" id="mapa">
+                    </div>
+                    <script>
+                        var img = '.$result['antiguedad_inmueble'].';
+                        if (document.getElementById("mapa")){
+                          var map = L.map("mapa").setView([4.728828, -74.053656], 16);
+
+                          L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                            attribution: "&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors"
+                          }).addTo(map);
+
+                          L.marker([4.728828, -74.053656]).addTo(map)
+                          //L.marker([10, 10]).addTo(map)
+                          .bindPopup("Prueba popup."")
+                          .openPopup()
+                          .bindTooltip("Tooltip de prueba")
+                          .openTooltip();
+
+                          map.scrollWheelZoom.disable();
+                          map.on("click", function() {
+                            if (map.scrollWheelZoom.enabled()) {
+                              map.scrollWheelZoom.disable();
+                            }
+                            else {
+                              map.scrollWheelZoom.enable();
+                            }
+                          });
+                        }
+                    </script>
+                 </section>
+                ';
+                }
+
+              }
+              catch(PDOException $e)
+              {
+                  echo $e->getMessage();
+              }
+          ?>
 
           <?php
             include('global/footer.php');
