@@ -5,7 +5,7 @@
 
 		document.addEventListener('DOMContentLoaded', function() {
 
-			// Mapa
+			// // Mapa
 			// if (document.getElementById('mapa')){
 			// 	var map = L.map('mapa').setView([4.728828, -74.053656], 16);
 

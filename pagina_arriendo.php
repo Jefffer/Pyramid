@@ -38,6 +38,9 @@
 
         <?php
           $myId = $_GET['id'];
+          $latitud;
+          $longitud;
+          $marcador;
           /*** mysql hostname ***/
           $hostname = '147.135.87.130';
           /*** mysql username ***/
@@ -55,6 +58,9 @@
             $sth->execute();
 
             while ($result = $sth->fetch(PDO::FETCH_ASSOC)) {
+                $latitud = $result['latitud'];              
+                $longitud = $result['longitud'];
+                $marcador = $result['nombre_inmueble'];
                 echo '
                   <section id="galeria_fotos" class="seccion contenedor top_-180">
                   <h2>'.$result['nombre_inmueble'].' .: en Arriendo</h2>
@@ -117,7 +123,7 @@
                                      <!-- <h3>Traumas de un bastardo</h3> -->
                                      <p><i class="fas fa-hand-holding-usd" aria-hidden="true"></i> <span class="ttl_info">Valor arriendo:</span> <b> $'.$result['arriendo_inmueble'].'</b></p>
                                      <p><i class="fas fa-dollar-sign" aria-hidden="true"></i> <span class="ttl_info">Administración:</span> <b> $'.$result['admon_inmueble'].'</b></p>
-                                     <p><i class="fas fa-barcode" aria-hidden="true"></i> <span class="ttl_info">Código:</span> '.$result['pk_inmueble'].'</p>
+                                     <p><i class="fas fa-barcode" aria-hidden="true"></i> <span class="ttl_info">Código:</span> '.$result['pk_inmueble'].'-A</p>
                                      <p><i class="fas fa-home" aria-hidden="true"></i> <span class="ttl_info">Tipo Inmueble:</span> '.$result['tipo_inmueble'].'</p>
                                      <p><i class="fas fa-city" aria-hidden="true"></i> <span class="ttl_info">Ciudad:</span> '.$result['nombre_ciudad'].'</p>
                                      <p><i class="fas fa-map-marked-alt" aria-hidden="true"></i> <span class="ttl_info">Zona (Localidad):</span> '.$result['zona_inmueble'].'</p>
@@ -158,7 +164,15 @@
                                 </div>
                              </div><!--#talleres-->
 
-                            
+                            ';
+                            }
+
+                          }
+                          catch(PDOException $e)
+                          {
+                              echo $e->getMessage();
+                          }
+                      ?>
 
                              <div id="seminarios" class="info-curso ocultar clearfix">
                                 <div class="detalle-evento">                         
@@ -202,50 +216,13 @@
                        </div><!--.contenedor-->
                     </div><!--.contenido-programa-->
 
-                 </section><!--.programa-->
-               
+                 </section><!--.programa-->               
 
                  <section class="ubicacion" id="ubicacion">
                     <h2>Ubicación</h2>
                     <div class="mapa" id="mapa">
                     </div>
-                    <script>
-                        var img = '.$result['antiguedad_inmueble'].';
-                        if (document.getElementById("mapa")){
-                          var map = L.map("mapa").setView([4.728828, -74.053656], 16);
-
-                          L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                            attribution: "&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors"
-                          }).addTo(map);
-
-                          L.marker([4.728828, -74.053656]).addTo(map)
-                          //L.marker([10, 10]).addTo(map)
-                          .bindPopup("Prueba popup."")
-                          .openPopup()
-                          .bindTooltip("Tooltip de prueba")
-                          .openTooltip();
-
-                          map.scrollWheelZoom.disable();
-                          map.on("click", function() {
-                            if (map.scrollWheelZoom.enabled()) {
-                              map.scrollWheelZoom.disable();
-                            }
-                            else {
-                              map.scrollWheelZoom.enable();
-                            }
-                          });
-                        }
-                    </script>
-                 </section>
-                ';
-                }
-
-              }
-              catch(PDOException $e)
-              {
-                  echo $e->getMessage();
-              }
-          ?>
+                 </section>                
 
           <?php
             include('global/footer.php');
@@ -273,6 +250,44 @@
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+
+        <script>
+          var longitud = '<?php echo $longitud;?>';
+          var latitud = '<?php echo $latitud;?>';
+          var marcador = '<?php echo $marcador;?>';
+          //alert(longitud);
+          // Mapa
+          if (document.getElementById('mapa')){
+            var map = L.map('mapa').setView([latitud, longitud], 16);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            //L.marker([4.728828, -74.053656]).addTo(map)
+            //L.marker([latitud, longitud]).addTo(map)
+            var circle = L.circle([latitud, longitud], {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.4,
+                radius: 200
+            }).addTo(map)
+            .bindPopup(marcador)
+            .openPopup();
+            //.bindTooltip('Ubicación aproximada')
+            //.openTooltip();
+
+            map.scrollWheelZoom.disable();
+            map.on('click', function() {
+              if (map.scrollWheelZoom.enabled()) {
+                map.scrollWheelZoom.disable();
+              }
+              else {
+                map.scrollWheelZoom.enable();
+              }
+            });
+          }
         </script>
     </body>
 </html>
