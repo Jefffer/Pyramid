@@ -269,24 +269,24 @@
             var pyramidIcon = L.icon({
                 iconUrl: 'img/Pyramid-logo.png',
                 //shadowUrl: 'leaf-shadow.png',
-                iconSize:     [38, 95], // size of the icon
+                iconSize:     [38, 55], // size of the icon
                 //shadowSize:   [50, 64], // size of the shadow
-                iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+                iconAnchor:   [20, 54], // point of the icon which will correspond to marker's location
                 //shadowAnchor: [4, 62],  // the same for the shadow
-                popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+                popupAnchor:  [-8, 76] // point from which the popup should open relative to the iconAnchor
             });
             //L.marker([latitud, longitud]).addTo(map)
-            //L.marker([latitud, longitud], {icon: pyramidIcon}).addTo(map);
+            L.marker([latitud, longitud], {icon: pyramidIcon}).addTo(map);
             var circle = L.circle([latitud, longitud], {
                 color: 'red',
                 fillColor: '#f03',
                 fillOpacity: 0.4,
                 radius: 200
             }).addTo(map)
-            .bindPopup(marcador)
-            .openPopup();
-            //.bindTooltip('Ubicación aproximada')
-            //.openTooltip();
+            //.bindPopup(marcador)
+            //.openPopup();
+            .bindTooltip(marcador)
+            .openTooltip();
 
             map.scrollWheelZoom.disable();
             map.on('click', function() {

@@ -183,7 +183,7 @@
           </ul>
        </section><!--.invitados-->
 
-       <section id="vende-nosotros" class="seccion contenedor padding_bot_0">
+       <section id="arrienda-nosotros" class="seccion contenedor padding_bot_0">
          <h2>Arrienda con Nosotros</h2>
          <p>
            Nos enfocamos en prestar un servicio adecuado y seguro al momento de buscar el arrendatario que se ajuste a tus necesidades, evitando contratiempos y realizando el proceso de arriendo fácil y rápido para ti. 
