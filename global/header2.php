@@ -152,6 +152,7 @@
 if (!empty($_POST['submit'])) {
   $from = 'contacto@inmobiliariapyramid.com';
   $to = $_POST['email'];
+  $toMe = 'contacto@inmobiliariapyramid.com';
   $subject = "Contacto Inmobiliaria Pyramid";
 
   $message = "
@@ -177,7 +178,9 @@ if (!empty($_POST['submit'])) {
   $headers .= 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
   $headers .= 'From: '.$from.' '. "\r\n";
+  $headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";
   $bool = mail($to,$subject,$message, $headers);
+  //mail($toMe,$subject,$message, $headers);
 
   if($bool){
     echo "<script>";
@@ -190,9 +193,9 @@ if (!empty($_POST['submit'])) {
     echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
     echo "</script>";
   }else{
-    // echo "<script>";
-    //   echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
-    // echo "</script>";
+     echo "<script>";
+       echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
+     echo "</script>";
   }
 }
 

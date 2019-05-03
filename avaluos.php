@@ -323,6 +323,7 @@ if (!empty($_POST['subCert'])){
   $headers .= 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
   $headers .= 'From: '.$from.' '. "\r\n";
+  $headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";
   $bool = mail($to,$subject,$message, $headers);
 
   if($bool){
@@ -385,6 +386,7 @@ if (!empty($_POST['subNoCert'])){
   $headers .= 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
   $headers .= 'From: '.$from.' '. "\r\n";
+  $headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";
   $bool = mail($to,$subject,$message, $headers);
 
   if($bool){
