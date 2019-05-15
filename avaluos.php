@@ -127,14 +127,14 @@
             <p><label><i class="fas fa-hotel"></i> &nbsp;¿Qué tipo de inmueble es? </label>
               <select name="inmueble" id="inmueble" required>
                 <option value="">Selecciona un tipo de inmueble</option>
-                <option value="apartamento">Apartamento</option>
-                <option value="bodega">Bodega</option>
-                <option value="casa">Casa</option>
-                <option value="finca">Finca</option>
-                <option value="local">Local Comercial</option>
-                <option value="lote">Lote</option>
-                <option value="oficina">Oficina</option>
-                <option value="otro">Otro (escríbelo en Comentarios)</option>
+                <option value="1">Apartamento</option>
+                <option value="2">Bodega</option>
+                <option value="3">Casa</option>
+                <option value="4">Finca</option>
+                <option value="5">Local Comercial</option>
+                <option value="6">Lote</option>
+                <option value="7">Oficina</option>
+                <option value="8">Otro (escríbelo en Comentarios)</option>
               </select>
             </p>
             <p><label><i class="fas fa-ruler"></i> &nbsp;¿Cuántos metros cuadrados tiene? </label>
@@ -231,7 +231,7 @@
               <input type="text" name="tel" required>
             </p>
             <p><label><i class="fas fa-at"></i> &nbsp;¿Cual es tu correo electrónico? </label>
-              <input type="text" name="email" required>
+              <input type="email" name="email" required>
             </p>
             <p><label><i class="fas fa-map-marker-alt"></i> &nbsp;¿Cuál es la direccion del inmueble? </label>
               <input type="text" name="direccion" required>
@@ -239,14 +239,14 @@
             <p><label><i class="fas fa-hotel"></i> &nbsp;¿Qué tipo de inmueble es? </label>
               <select name="inmueble" id="inmueble" required>
                 <option value="">Selecciona un tipo de inmueble</option>
-                <option value="apartamento">Apartamento</option>
-                <option value="bodega">Bodega</option>
-                <option value="casa">Casa</option>
-                <option value="finca">Finca</option>
-                <option value="local">Local Comercial</option>
-                <option value="lote">Lote</option>
-                <option value="oficina">Oficina</option>
-                <option value="otro">Otro (escríbelo en Comentarios)</option>
+                <option value="1">Apartamento</option>
+                <option value="2">Bodega</option>
+                <option value="3">Casa</option>
+                <option value="4">Finca</option>
+                <option value="5">Local Comercial</option>
+                <option value="6">Lote</option>
+                <option value="7">Oficina</option>
+                <option value="8">Otro (escríbelo en Comentarios)</option>
               </select>
             </p>
             <p><label><i class="fas fa-ruler"></i> &nbsp;¿Cuántos metros cuadrados tiene? (opcional) </label>
@@ -326,16 +326,38 @@ if (!empty($_POST['subCert'])){
   $headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";
   $bool = mail($to,$subject,$message, $headers);
 
-  if($bool){
-    echo "<script>";
-    // echo "swal({";
-    //   echo "title: "Datos incompletos",";
-    //   echo "text: "Por favor ingresa tu número telefónico.",";
-    //   echo "icon: "warning",";
-    //   echo "dangerMode: true,";
-    //   echo "});";
-    echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
-    echo "</script>";
+  if($bool){ // Cambiar PRUEBAS!!!!!!
+    // conexion Base de Datos
+    /*** mysql hostname ***/
+    $hostname = '147.135.87.130';
+    /*** mysql username ***/
+    $username = 'inmobi16_dbuser';
+    /*** mysql password ***/
+    $password = 'Inmopyd7890';
+
+    try {
+        $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
+        
+        $sth = $mbd->prepare("INSERT INTO aval_certificado (nombre, telefono, correo, direccion, fk_tipo_inmueble, metros) VALUES (?,?,?,?,?,?)");
+        //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
+        $nombre = $_POST['nombre']; $telefono = $_POST['tel']; $correo = $_POST['email']; $dir = $_POST['direccion'];
+        $tipoin = $_POST['inmueble']; $metro = $_POST['metros'];
+        $sth->execute([$nombre, $telefono, $correo, $dir, $tipoin, $metro]);
+
+        echo "<script>";
+        // echo "swal({";
+        //   echo "title: "Datos incompletos",";
+        //   echo "text: "Por favor ingresa tu número telefónico.",";
+        //   echo "icon: "warning",";
+        //   echo "dangerMode: true,";
+        //   echo "});";
+        echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
+        echo "</script>";
+    }
+    catch(PDOException $e)
+    {
+        echo $e->getMessage();
+    }    
   }else{
      echo "<script>";
        echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
@@ -389,16 +411,41 @@ if (!empty($_POST['subNoCert'])){
   $headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";
   $bool = mail($to,$subject,$message, $headers);
 
-  if($bool){
-    echo "<script>";
-    // echo "swal({";
-    //   echo "title: "Datos incompletos",";
-    //   echo "text: "Por favor ingresa tu número telefónico.",";
-    //   echo "icon: "warning",";
-    //   echo "dangerMode: true,";
-    //   echo "});";
-    echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
-    echo "</script>";
+  if(!$bool){
+    // conexion Base de Datos
+    /*** mysql hostname ***/
+    $hostname = '147.135.87.130';
+    /*** mysql username ***/
+    $username = 'inmobi16_dbuser';
+    /*** mysql password ***/
+    $password = 'Inmopyd7890';
+
+    try {
+        $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
+        
+        $sth = $mbd->prepare("INSERT INTO aval_no_certificado (nombre_nocert, telefono_nocert, correo_nocert, direccion_nocert, tipo_nocert, metros_nocert, pisos_nocert, sotano_nocert, estado_nocert, anios_nocert, remodelacion_nocert, habitacion_nocert, banos_nocert, parq_nocert, sala_nocert, cocina_nocert, jardin_nocert, estudio_nocert, lavado_nocert) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
+        $nombre = $_POST['nombre']; $telefono = $_POST['tel']; $correo = $_POST['correo']; $dir = $_POST['direccion'];
+        $tipoin = $_POST['inmueble']; $metro = $_POST['metros']; $pisos = $_POST['pisos']; $sotanos = $_POST['sotanos']; 
+        $estado = $_POST['estado']; $tiempo = $_POST['tiempo']; $remo = $_POST['remodelacion']; $hab = $_POST['habitacion'];
+        $banos = $_POST['banos']; $parq = $_POST['parq']; $sala = $_POST['sala']; $cocina = $_POST['cocina']; 
+        $jardin = $_POST['jardin']; $estudio = $_POST['estudio']; $lavado = $_POST['lavado'];
+        $sth->execute([$nombre, $telefono, $correo, $dir, $tipoin, $metro, $pisos, $sotanos, $estado, $tiempo, $remo, $hab, $banos, $parq, $sala, $cocina, $jardin, $estudio, $lavado]);
+
+        echo "<script>";
+        // echo "swal({";
+        //   echo "title: "Datos incompletos",";
+        //   echo "text: "Por favor ingresa tu número telefónico.",";
+        //   echo "icon: "warning",";
+        //   echo "dangerMode: true,";
+        //   echo "});";
+        echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
+        echo "</script>";
+    }
+    catch(PDOException $e)
+    {
+        echo $e->getMessage();
+    }
   }else{
      echo "<script>";
        echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";

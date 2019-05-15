@@ -44,10 +44,8 @@
        <?php
         /*** mysql hostname ***/
         $hostname = '147.135.87.130';
-
         /*** mysql username ***/
         $username = 'inmobi16_dbuser';
-
         /*** mysql password ***/
         $password = 'Inmopyd7890';
 
