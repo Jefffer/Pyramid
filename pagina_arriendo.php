@@ -174,55 +174,58 @@
                           }
                       ?>
 
-                             <div id="seminarios" class="info-curso ocultar clearfix">
-                                <div class="detalle-evento">                         
-                                   <!-- <p><i class="fa fa-calendar" aria-hidden="true"></i> <input type="text" class="datepicker-here" data-timepicker="true" data-time-format="hh:ii aa" data-language="en" /></p> -->
-                                   <p>Para agendar una visita a este inmueble, solo debes diligenciar estos datos y nos pondremos en contacto contigo lo antes posible.</p>
-                                   <div id="agenda_cita" class="registro">
-                                        <div class="div_agenda">
-                                            <div class="campo_agenda">                                    
-                                              <label for="nombre">Nombre completo: </label>
-                                              <div>
-                                                <i class="fas fa-user icon_form"></i>
-                                                <input type="text" id="nombre" name="nombre" placeholder="" maxlength="40">
-                                              </div>
-                                            </div>
-                                            <div class="campo_agenda">
-                                              <label for="celular">Teléfono o Celular: </label>
-                                              <div>
-                                                <i class="fas fa-phone icon_form"></i>
-                                                <input type="text" id="celular" name="celular" placeholder="" maxlength="15">
-                                              </div>
-                                            </div>
-                                            <div class="campo_agenda">
-                                              <label for="email">Email: </label>
-                                              <div>
-                                                <i class="fas fa-envelope icon_form"></i>
-                                                <input type="text" id="email" name="email" placeholder="" maxlength="40">
-                                              </div>
-                                            </div>
-                                        </div>
-                                        <div class="div_agenda">
-                                          <div id="agendarCalendar" class="datepicker-here calendarClass" data-timepicker="true" data-language="en" name="Schedule"></div>
-                                        </div>
-                                        <div class="">
-                                          <input type="button" class="button btn_form" id="btn_form_agendar" value="AGENDAR" >
-                                      </div>
-                                        
-                                   </div>
+                   <div id="seminarios" class="info-curso ocultar clearfix">
+                    <div class="detalle-evento">                         
+                       <!-- <p><i class="fa fa-calendar" aria-hidden="true"></i> <input type="text" class="datepicker-here" data-timepicker="true" data-time-format="hh:ii aa" data-language="en" /></p> -->
+                       <p>Para agendar una visita a este inmueble, solo debes diligenciar estos datos y nos pondremos en contacto contigo lo antes posible.</p>
+                       <div id="agenda_cita" class="registro">
+                        <form name="cita" method="post">
+
+                          <div class="div_agenda">
+                              <div class="campo_agenda">
+                                <label for="nombre">Nombre completo: </label>
+                                <div>
+                                  <i class="fas fa-user icon_form"></i>
+                                  <input type="text" id="nombre" name="nombre" placeholder="" maxlength="40">
                                 </div>
-                             </div><!--#talleres-->
-                          </div><!--.programa-evento-->
-                       </div><!--.contenedor-->
-                    </div><!--.contenido-programa-->
+                              </div>
+                              <div class="campo_agenda">
+                                <label for="celular">Teléfono o Celular: </label>
+                                <div>
+                                  <i class="fas fa-phone icon_form"></i>
+                                  <input type="text" id="celular" name="celular" placeholder="" maxlength="15">
+                                </div>
+                              </div>
+                              <div class="campo_agenda">
+                                <label for="email">Email: </label>
+                                <div>
+                                  <i class="fas fa-envelope icon_form"></i>
+                                  <input type="text" id="email" name="email" placeholder="" maxlength="40">
+                                </div>
+                              </div>
+                          </div>
+                          <div class="div_agenda">
+                            <div id="agendarCalendar" class="datepicker-here calendarClass" data-timepicker="true" data-language="en" name="schedule"></div>
+                          </div>
+                          <div class="">
+                            <input type="button" class="button btn_form" id="btn_form_agendar" value="AGENDAR" >
+                          </div>
 
-                 </section><!--.programa-->               
-
-                 <section class="ubicacion" id="ubicacion">
-                    <h2>Ubicación</h2>
-                    <div class="mapa" id="mapa">
+                        </form>                            
+                       </div>
                     </div>
-                 </section>                
+                   </div><!--#talleres-->
+                </div><!--.programa-evento-->
+             </div><!--.contenedor-->
+          </div><!--.contenido-programa-->
+
+         </section><!--.programa-->               
+
+         <section class="ubicacion" id="ubicacion">
+            <h2>Ubicación</h2>
+            <div class="mapa" id="mapa">
+            </div>
+         </section>                
 
           <?php
             include('global/footer.php');

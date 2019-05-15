@@ -183,15 +183,36 @@ if (!empty($_POST['submit'])) {
   //mail($toMe,$subject,$message, $headers);
 
   if($bool){
-    echo "<script>";
-    // echo "swal({";
-    //   echo "title: "Datos incompletos",";
-    //   echo "text: "Por favor ingresa tu número telefónico.",";
-    //   echo "icon: "warning",";
-    //   echo "dangerMode: true,";
-    //   echo "});";
-    echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
-    echo "</script>";
+    // conexion Base de Datos
+    /*** mysql hostname ***/
+    $hostname = '147.135.87.130';
+    /*** mysql username ***/
+    $username = 'inmobi16_dbuser';
+    /*** mysql password ***/
+    $password = 'Inmopyd7890';
+
+    try {
+        $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
+        
+        $sth = $mbd->prepare("INSERT INTO contacto (nombre, email, telefono, mensaje) VALUES (?,?,?,?)");
+        //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
+        $nombre = $_POST['nombre']; $correo = $_POST['email']; $telefono = $_POST['telefono'];  $mensaje = $_POST['mensaje'];
+        $sth->execute([$nombre, $correo, $telefono, $mensaje]);
+
+        echo "<script>";
+        // echo "swal({";
+        //   echo "title: "Datos incompletos",";
+        //   echo "text: "Por favor ingresa tu número telefónico.",";
+        //   echo "icon: "warning",";
+        //   echo "dangerMode: true,";
+        //   echo "});";
+        echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
+        echo "</script>";
+    }
+    catch(PDOException $e)
+    {
+        echo $e->getMessage();
+    }    
   }else{
      echo "<script>";
        echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
