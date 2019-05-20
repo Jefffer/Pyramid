@@ -1169,13 +1169,16 @@ form#registro_venta h3 {
    text-transform: uppercase;
    margin: 20px 0 0 0;
 }
-form#registro_venta label {
+form#registro_venta label, form#form_filtro label {   
    margin-bottom: 5px;
    color: wheat;
    margin-right: 10px;
    letter-spacing: 1px;
    text-transform: uppercase;
    font-size: 0.9em;
+}
+form#form_filtro label {
+   color: #464642;
 }
 form#registro_arriendo h4 {
    color: rgba(185, 40, 40, 0.8);
@@ -1229,7 +1232,7 @@ div.campo_agenda input{
    outline: 0;
 }
 @media only screen and (max-width: 768px) {
-   #datos_usuario input, #datos_usuario textarea, #datos_usuario select {
+   #datos_usuario input, #datos_usuario textarea, #datos_usuario select, #datos_filtro input , #datos_filtro select{
       font-size: 0.9em;
    }
    .seccion {
@@ -1596,7 +1599,48 @@ p.txt_politicas {
 .contact_hide {
    display: none;
 }
-
+/* Filtro */
+div.caja_filtro {
+   background-color: white;
+   width: 80%;
+   margin-left: 10%;
+   margin-bottom: 26px;
+   border-radius: 10px;
+   /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+   box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+   border: unset!important;
+}
+div.caja_filtro input, div.caja_filtro textarea, div.caja_filtro select {
+   border: 1px solid #cccccc;
+   width: 95%;
+   height: 35px;
+   padding: 0 10px 0 32px;
+   overflow: auto;
+   /*border-radius: 30px 10px;*/
+   border-bottom: solid 1px rgba(185, 40, 40, 1);
+   outline: 0;
+   color: #464646;
+}
+div.caja_filtro select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   outline: 0;
+}
+#btn_fltr {
+   display: block;
+   margin-top: 2em;
+   padding: 0.7em;
+   width: 100%;
+   border: none;
+   background: #e75854;
+   color: #f9f6e5;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-weight: 800;
+   font-size: 1.1em;
+   border-radius: 0px 0px 10px 10px;
+}
 
 /* ==========================================================================
    Helper classes

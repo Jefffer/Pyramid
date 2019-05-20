@@ -41,6 +41,7 @@
           $latitud;
           $longitud;
           $marcador;
+          $idInmueble;
           /*** mysql hostname ***/
           $hostname = '147.135.87.130';
           /*** mysql username ***/
@@ -61,6 +62,7 @@
                 $latitud = $result['latitud'];              
                 $longitud = $result['longitud'];
                 $marcador = $result['nombre_inmueble'];
+                $idInmueble = $result['pk_inmueble'];
                 echo '
                   <section id="galeria_fotos" class="seccion contenedor top_-180">
                   <h2>'.$result['nombre_inmueble'].' .: en Venta</h2>
@@ -174,47 +176,58 @@
                           }
                       ?>
 
-                             <div id="seminarios" class="info-curso ocultar clearfix">
-                                <div class="detalle-evento">                         
-                                   <!-- <p><i class="fa fa-calendar" aria-hidden="true"></i> <input type="text" class="datepicker-here" data-timepicker="true" data-time-format="hh:ii aa" data-language="en" /></p> -->
-                                   <p>Para agendar una visita a este inmueble, solo debes diligenciar estos datos y nos pondremos en contacto contigo lo antes posible.</p>
-                                   <div id="agenda_cita" class="registro">
-                                        <div class="div_agenda">
-                                            <div class="campo_agenda">                                    
-                                              <label for="nombre">Nombre completo: </label>
-                                              <div>
-                                                <i class="fas fa-user icon_form"></i>
-                                                <input type="text" id="nombre" name="nombre" placeholder="" maxlength="40">
-                                              </div>
-                                            </div>
-                                            <div class="campo_agenda">
-                                              <label for="celular">Teléfono o Celular: </label>
-                                              <div>
-                                                <i class="fas fa-phone icon_form"></i>
-                                                <input type="text" id="celular" name="celular" placeholder="" maxlength="15">
-                                              </div>
-                                            </div>
-                                            <div class="campo_agenda">
-                                              <label for="email">Email: </label>
-                                              <div>
-                                                <i class="fas fa-envelope icon_form"></i>
-                                                <input type="text" id="email" name="email" placeholder="" maxlength="40">
-                                              </div>
-                                            </div>
+                         <div id="seminarios" class="info-curso ocultar clearfix">
+                            <div class="detalle-evento">                         
+                               <!-- <p><i class="fa fa-calendar" aria-hidden="true"></i> <input type="text" class="datepicker-here" data-timepicker="true" data-time-format="hh:ii aa" data-language="en" /></p> -->
+                               <p>Para agendar una visita a este inmueble, solo debes diligenciar estos datos y nos pondremos en contacto contigo lo antes posible.</p>
+                               <div id="agenda_cita" class="registro">
+                                <form name="cita" method="post">
+
+                                  <div class="div_agenda">
+                                      <div class="campo_agenda">
+                                        <label for="nombre">Nombre completo: </label>
+                                        <div>
+                                          <i class="fas fa-user icon_form"></i>
+                                          <input type="text" id="nombre" name="nombre" placeholder="" maxlength="50" required>
                                         </div>
-                                        <div class="div_agenda">
-                                          <div id="agendarCalendar" class="datepicker-here calendarClass" data-timepicker="true" data-language="en" name="Schedule"></div>
-                                        </div>
-                                        <div class="">
-                                          <input type="button" class="button btn_form" id="btn_form_agendar" value="AGENDAR" >
                                       </div>
-                                        
-                                   </div>
-                                </div>
-                             </div><!--#talleres-->
-                          </div><!--.programa-evento-->
-                       </div><!--.contenedor-->
-                    </div><!--.contenido-programa-->
+                                      <div class="campo_agenda">
+                                        <label for="celular">Teléfono o Celular: </label>
+                                        <div>
+                                          <i class="fas fa-phone icon_form"></i>
+                                          <input type="text" id="celular" name="celular" placeholder="" maxlength="15" required>
+                                        </div>
+                                      </div>
+                                      <div class="campo_agenda">
+                                        <label for="email">Email: </label>
+                                        <div>
+                                          <i class="fas fa-envelope icon_form"></i>
+                                          <input type="text" id="email" name="email" placeholder="" maxlength="40" required>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="div_agenda">
+                                    <!-- <div id="agendarCalendar" class="datepicker-here calendarClass" data-timepicker="true" data-language="en" name="schedule"></div> -->
+                                    <div class="campo_agenda">
+                                      <label for="email">Fecha y hora: </label>
+                                      <div>
+                                        <i class="fas fa-calendar-check icon_form"></i>
+                                        <input id="agendarCalendar" class="datepicker-here calendarClass" data-timepicker="true" data-language="en" name="schedule" required>
+                                      </div>
+                                    </div>
+                                    
+                                  </div>
+                                  <div class="">
+                                    <input class="button btn_form" id="btn_form_agendar" value="AGENDAR" type="submit" name="submitDate">
+                                  </div>
+
+                                </form>                            
+                               </div>
+                              </div>
+                           </div><!--#talleres-->
+                        </div><!--.programa-evento-->
+                     </div><!--.contenedor-->
+                  </div><!--.contenido-programa-->
 
                  </section><!--.programa-->               
 
@@ -291,3 +304,78 @@
         </script>
     </body>
 </html>
+
+<?php
+  if (!empty($_POST['submitDate'])) {
+    $from = 'contacto@inmobiliariapyramid.com';
+    $to = $_POST['email'];
+    $toMe = 'contacto@inmobiliariapyramid.com';
+    $subject = "Agenda de visita .: Inmobiliaria Pyramid";
+
+    $message = "
+    <html>
+    <head>
+    <title>HTML email</title>
+    </head>
+    <body>
+    <h2>Hola " . $_POST['nombre'] . ",</h2><br>
+    <p>Sabemos que estás interesado en comprar uno de nuestros inmuebles, es por esto que muy pronto nos pondremos en contácto para formalizar la visita.<br><br>    
+    <b>Inmueble:</b> " . $marcador . "<br><br>
+    <b>Fecha:</b> " . $_POST['schedule'] . "<br><br>
+    
+    Gracias por escogernos<br><br>
+    <b>Inmobiliaria Pyramid</b>
+    </body>
+    </html>";
+
+    // Always set content-type when sending HTML email
+    $headers='';
+    $headers .= 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+    $headers .= 'From: '.$from.' '. "\r\n";
+    //$headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";
+    $bool = mail($to,$subject,$message, $headers);
+    //mail($toMe,$subject,$message, $headers);
+
+    if($bool){ // PRUEBAAAAAAAAAAS
+      // conexion Base de Datos
+      /*** mysql hostname ***/
+      $hostname = '147.135.87.130';
+      /*** mysql username ***/
+      $username = 'inmobi16_dbuser';
+      /*** mysql password ***/
+      $password = 'Inmopyd7890';
+
+      try {
+          $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
+          
+          $sth = $mbd->prepare("INSERT INTO form_agenda_cita (nombre_form_ac, telefono_form_ac, email_form_ac, fecha_form_ac, interes, fk_inmueble) VALUES (?,?,?,?,?,?)");
+          //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
+          $nombre = $_POST['nombre']; $correo = $_POST['email']; $telefono = $_POST['celular'];  $fecha = $_POST['schedule'];
+
+          //$sth->execute([$nombre, $telefono, $correo, $fecha, $idInmueble]);
+          $sth->execute([$nombre, $telefono, $correo, $fecha, "Compra", $idInmueble]);
+
+          echo "<script>";
+
+          // echo "swal({";
+          //   echo "title: "Datos incompletos",";
+          //   echo "text: "Por favor ingresa tu número telefónico.",";
+          //   echo "icon: "warning",";
+          //   echo "dangerMode: true,";
+          //   echo "});";
+
+          echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto ". $_POST['schedule'] ."');";
+          echo "</script>";
+      }
+      catch(PDOException $e)
+      {
+          echo $e->getMessage();
+      }    
+    }else{
+       echo "<script>";
+         echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
+       echo "</script>";
+    }
+  }
+?>

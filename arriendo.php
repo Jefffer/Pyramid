@@ -41,6 +41,65 @@
             </p>            
        </section><!--.section-->
 
+       <section id="publicaciones_venta" class="invitados contenedor seccion">
+         <h2>Inmuebles en Arriendo</h2>
+
+         <div class="caja_filtro clearfix" id="datos_filtro">
+           <form id="form_filtro" action="" method="GET">
+              <div class="campo">
+                <label for="filtro_tipo">Tipo inmueble: </label>
+                <div>
+                  <i class="fas fa-home icon_form"></i>
+                    <select name="filtro_tipo" id="filtro_tipo">
+                      <option value="">Todos</option>
+                      <option value="1">Apartamento</option>
+                      <option value="2">Bodega</option>
+                      <option value="3">Casa</option>
+                      <option value="4">Finca</option>
+                      <option value="5">Local Comercial</option>
+                      <option value="6">Lote</option>
+                      <option value="7">Oficina</option>
+                      <option value="8">Otro (escríbelo en Comentarios)</option>
+                    </select>
+                </div>
+              </div>              
+              <div class="campo">
+                <label for="filtro_zona">Zona: </label>
+                <div>
+                  <i class="fas fa-street-view icon_form"></i>
+                  <select name="filtro_zona" id="filtro_zona">
+                      <option value="">Todas</option>
+                      <option value="1">Norte</option>
+                      <option value="2">Noroccidente</option>
+                      <option value="3">Occidente</option>
+                      <option value="4">Sur</option>
+                      <option value="5">Centro</option>
+                      <option value="6">Oriente</option>
+                    </select>
+                </div>
+              </div>
+              <div class="campo">
+                <label for="filtro_precio">Precio: </label>
+                <div>                  
+                  <div>
+                    <i class="fas fa-search-dollar icon_form"></i>
+                    <select name="filtro_precio" id="filtro_precio">
+                        <option value="">Cualquier precio</option>
+                        <option value="1">< $1.000.000</option>
+                        <option value="2">$1.000.000 - $2.000.000</option>
+                        <option value="3">$2.000.000 - $4.000.000</option>
+                        <option value="4">$4.000.000 - $6.000.000</option>
+                        <option value="5">> $6.000.000</option>
+                      </select>
+                    </div>
+                </div>
+              </div>
+            </form>
+            <button class="button" id="btn_fltr" type="submit" form="form_filtro" name="submit_filtro">Filtrar</button>
+          </div>
+
+         <ul class="lista-invitados publication clearfix">
+
        <?php
         /*** mysql hostname ***/
         $hostname = '147.135.87.130';
@@ -50,49 +109,71 @@
         $password = 'Inmopyd7890';
 
         try {
-            $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
-            //foreach($mbd->query('SELECT * from ciudad') as $fila) {
-            //    print_r($fila);
-            //}
-            //$mbd = null;
-            $sth = $mbd->prepare("SELECT * FROM inmueble");
+          $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
+          //foreach($mbd->query('SELECT * from ciudad') as $fila) {
+          //    print_r($fila);
+          //}
+          //$mbd = null;
+          //$sth = $mbd->prepare("SELECT * FROM inmueble where isVenta = 1");
+          if(isset($_GET['submit_filtro'])){
+            $filtro_tipo = $_GET['filtro_tipo'];
+            //$filtro_tipo = 1;
+            $filtro_precio = $_GET['filtro_precio'];
+            $filtro_zona = $_GET['filtro_zona'];
+            if ($filtro_tipo != 'NULL' && $filtro_zona == 'NULL' && $filtro_precio == 'NULL') {
+              $sth = $mbd->prepare("SELECT * FROM inmueble where fk_tipo_inmueble = ? AND isArriendo = 1");
+              $sth->execute([$filtro_tipo]);
+              //echo $filtro_tipo;
+            }
+            else if ($filtro_tipo == 'NULL' && $filtro_zona != 'NULL' && $filtro_precio == 'NULL') {
+              $sth = $mbd->prepare("SELECT * FROM inmueble where fk_zona = ? AND isArriendo = 1");
+              $sth->execute([$filtro_zona]);
+            }
+            else if ($filtro_tipo != 'NULL' && $filtro_zona != 'NULL' && $filtro_precio == 'NULL') {
+              $sth = $mbd->prepare("SELECT * FROM inmueble where fk_tipo_inmueble = ? AND fk_zona = ? AND isArriendo = 1");
+              $sth->execute([$filtro_tipo, $filtro_zona]);
+            }
+            else {
+              $sth = $mbd->prepare("SELECT * FROM inmueble where isArriendo = 1");
+              $sth->execute();
+            }
+          } 
+          else {
+            $sth = $mbd->prepare("SELECT * FROM inmueble where isArriendo = 1");
             $sth->execute();
+          }
+
+          while ($result = $sth->fetch(PDO::FETCH_ASSOC)) {
+            if (!$result) {
+              echo 'asdfasdf';
+            }
             echo '
-               <section id="publicaciones_venta" class="invitados contenedor seccion">
-               <h2>Inmuebles en Arriendo</h2>
-                <ul class="lista-invitados publication clearfix">';
-
-            while ($result = $sth->fetch(PDO::FETCH_ASSOC)) {
-              if ($result['isArriendo'] == 1) {
-                echo '
-                       <li>
-                          <div class="invitado">
-                            <a href="pagina_arriendo.php?id='.$result['pk_inmueble'].'">
-                               <img src="img/Publicaciones_venta/house_1.jpg" alt="Imagen invitado">
-                               <!-- <p class="bandera_venta">asdfasdfasdg</p> -->
-                               <p class="item_venta">'.$result['nombre_inmueble'].'
-                                  <br>
-                                  <!-- <span class="width_25">En <B>Pyramid</B> la </span> -->
-                                  <i class="fas fa-bed"></i> <span>'.$result['habit_inmueble'] .' Hab</span>&nbsp;&nbsp;
-                                  <!-- <i class="fas fa-car"></i> <span>'. $result['parq_inmueble'] .' Parq</span>&nbsp;&nbsp; -->
-                                  <i class="fas fa-ruler"></i> <span>'. $result['area_inmueble'] .' m<sup>2</sup></span>&nbsp;&nbsp;
-                                  <i class="fas fa-dollar-sign azulito"></i> <span class="item_precio">'.$result['arriendo_inmueble'].'</span>
-                               </p>
-                             </a>
-                          </div>
-                       </li>';
-                   
-                }
-              }
-
-              echo '</ul>
-                </section><!--.invitados-->';
+               <li>
+                  <div class="invitado">
+                    <a href="pagina_arriendo.php?id='.$result['pk_inmueble'].'">
+                       <img src="img/Publicaciones_venta/house_1.jpg" alt="Imagen invitado">
+                       <!-- <p class="bandera_venta">asdfasdfasdg</p> -->
+                       <p class="item_venta">'.$result['nombre_inmueble'].'
+                          <br>
+                          <!-- <span class="width_25">En <B>Pyramid</B> la </span> -->
+                          <i class="fas fa-bed"></i> <span>'.$result['habit_inmueble'] .' Hab</span>&nbsp;&nbsp;
+                          <!-- <i class="fas fa-car"></i> <span>'. $result['parq_inmueble'] .' Parq</span>&nbsp;&nbsp; -->
+                          <i class="fas fa-ruler"></i> <span>'. $result['area_inmueble'] .' m<sup>2</sup></span>&nbsp;&nbsp;
+                          <i class="fas fa-dollar-sign azulito"></i> <span class="item_precio">'.$result['arriendo_inmueble'].'</span>
+                       </p>
+                     </a>
+                  </div>
+               </li>';
             }
-            catch(PDOException $e)
-            {
-                echo $e->getMessage();
-            }
-          ?>
+
+            echo '</ul>
+              </section><!--.invitados-->';
+          }
+          catch(PDOException $e)
+          {
+              echo $e->getMessage();
+          }
+        ?>
        <!--
        <section id="publicaciones_venta" class="invitados contenedor seccion">
           <h2>Inmuebles en Arriendo</h2>
@@ -194,21 +275,21 @@
                   <label for="nombreForm">Nombre completo: </label>
                   <div>
                     <i class="fas fa-user icon_form"></i>
-                    <input type="text" id="nombreForm" name="nombre" placeholder="" maxlength="40">
+                    <input type="text" id="nombreForm" name="nombre" placeholder="" maxlength="40" required>
                   </div>
                 </div>
                 <div class="campo">
                   <label for="celularForm">Teléfono o Celular: </label>
                   <div>
                     <i class="fas fa-phone icon_form"></i>
-                    <input type="text" id="celular" name="celularForm" placeholder="" maxlength="15">
+                    <input type="text" id="celular" name="celularForm" placeholder="" maxlength="15" required>
                   </div>
                 </div>
                 <div class="campo">
                   <label for="emailForm">Email: </label>
                    <div>
                     <i class="fas fa-envelope icon_form"></i>
-                    <input type="text" id="email" name="emailForm" placeholder="" maxlength="40">
+                    <input type="text" id="email" name="emailForm" placeholder="" maxlength="40" required>
                   </div>
                 </div>
 
@@ -218,16 +299,16 @@
                   <!-- <input type="text" id="nombre" name="nombre" placeholder=""> -->
                   <div>
                     <i class="fas fa-home icon_form"></i>
-                    <select name="inmuebleForm" id="inmueble">
+                    <select name="inmuebleForm" id="inmueble" required>
                       <option value="">Selecciona un tipo de inmueble</option>
-                      <option value="Apartamento">Apartamento</option>
-                      <option value="Bodega">Bodega</option>
-                      <option value="Casa">Casa</option>
-                      <option value="Finca">Finca</option>
-                      <option value="Local">Local Comercial</option>
-                      <option value="Lote">Lote</option>
-                      <option value="Oficina">Oficina</option>
-                      <option value="Otro">Otro (escríbelo en Comentarios)</option>
+                      <option value="1">Apartamento</option>
+                      <option value="2">Bodega</option>
+                      <option value="3">Casa</option>
+                      <option value="4">Finca</option>
+                      <option value="5">Local Comercial</option>
+                      <option value="6">Lote</option>
+                      <option value="7">Oficina</option>
+                      <option value="8">Otro (escríbelo en Comentarios)</option>
                     </select>
 
                   </div>
@@ -236,14 +317,17 @@
                   <label for="cuidadForm">Ciudad: </label>
                   <div>
                     <i class="fas fa-globe-americas  icon_form"></i>
-                    <input type="text" id="cuidad" name="cuidadForm" placeholder="" maxlength="40">
+                    <select name="cuidadForm" id="cuidad" required>
+                      <option value="">Selecciona la ciudad</option>
+                      <option value="1">Bogotá</option>
+                    </select>
                   </div>
                 </div>
                 <div class="campo">
                   <label for="barrioForm">Barrio: </label>
                   <div>
                     <i class="fas fa-street-view  icon_form"></i>
-                    <input type="text" id="barrio" name="barrioForm" placeholder="" maxlength="40">
+                    <input type="text" id="barrio" name="barrioForm" placeholder="" maxlength="40" required>
                   </div>
                 </div>
                 <div class="campo">
@@ -251,7 +335,7 @@
                   <!-- <input type="text¿¿" id="email" name="email" placeholder=""> -->
                   <div>
                     <i class="fas fa-house-damage  icon_form"></i>
-                    <select name="antiguedadForm" id="antiguedad" >
+                    <select name="antiguedadForm" id="antiguedad" required>
                       <option value="">Selecciona la Antiguedad del Inmueble</option>
                       <option value="Nuevo">Nuevo</option>
                       <option value="1 a 3 años">1 - 3 años</option>
@@ -343,16 +427,42 @@ if (isset($_POST['submitArriendo'])){
   $headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";  
   $bool = mail($to,$subject,$message, $headers);
 
-  if($bool){
-    echo "<script>";
-    // echo "swal({";
-    //   echo "title: "Datos incompletos",";
-    //   echo "text: "Por favor ingresa tu número telefónico.",";
-    //   echo "icon: "warning",";
-    //   echo "dangerMode: true,";
-    //   echo "});";
-    echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
-    echo "</script>";
+  if($bool){ // PRUEBAAAAAAAAAAAAAAAAAAAAAAAA
+    // conexion Base de Datos
+    /*** mysql hostname ***/
+    $hostname = '147.135.87.130';
+    /*** mysql username ***/
+    $username = 'inmobi16_dbuser';
+    /*** mysql password ***/
+    $password = 'Inmopyd7890';
+
+    try {
+        $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
+        
+        $sth = $mbd->prepare("INSERT INTO form_arrienda (nombre_form_arr, telefono_form_arr, email_form_arr, fk_tipo_inmueble_arr, fk_ciudad_arr, barrio_form_arr, antiguedad_form_arr, coment_form_arr) VALUES (?,?,?,?,?,?,?,?)");
+        //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
+        $nombre = $_POST['nombre']; $correo = $_POST['emailForm']; $telefono = $_POST['celularForm'];  $tipo = $_POST['inmuebleForm'];
+        $ciudad = $_POST['cuidadForm']; $barrio = $_POST['barrioForm']; $antiguedad = $_POST['antiguedadForm']; $coment = $_POST['coment_arriendo'];
+
+        //$sth->execute([$nombre, $telefono, $correo, $fecha, $idInmueble]);
+        $sth->execute([$nombre, $telefono, $correo, $tipo, $ciudad, $barrio, $antiguedad, $coment]);
+
+        echo "<script>";
+
+        // echo "swal({";
+        //   echo "title: "Datos incompletos",";
+        //   echo "text: "Por favor ingresa tu número telefónico.",";
+        //   echo "icon: "warning",";
+        //   echo "dangerMode: true,";
+        //   echo "});";
+
+        echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto ". $_POST['schedule'] ."');";
+        echo "</script>";
+    }
+    catch(PDOException $e)
+    {
+        echo $e->getMessage();
+    }
   }else{
      echo "<script>";
        echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";

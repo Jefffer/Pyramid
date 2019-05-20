@@ -44,49 +44,129 @@
             </p>
        </section><!--.section-->
 
-       <?php
-        /*** mysql hostname ***/
-        $hostname = '147.135.87.130';
+       <section id="publicaciones_venta" class="invitados contenedor seccion">
+         <h2>Inmuebles en venta</h2>  
+          <div class="caja_filtro clearfix" id="datos_filtro">
+           <form id="form_filtro" action="" method="GET">
+              <div class="campo">
+                <label for="filtro_tipo">Tipo inmueble: </label>
+                <div>
+                  <i class="fas fa-home icon_form"></i>
+                    <select name="filtro_tipo" id="filtro_tipo">
+                      <option value="NULL">Todos</option>
+                      <option value="1">Apartamento</option>
+                      <option value="2">Bodega</option>
+                      <option value="3">Casa</option>
+                      <option value="4">Finca</option>
+                      <option value="5">Local Comercial</option>
+                      <option value="6">Lote</option>
+                      <option value="7">Oficina</option>
+                    </select>
+                </div>
+              </div>              
+              <div class="campo">
+                <label for="filtro_zona">Zona: </label>
+                <div>
+                  <i class="fas fa-street-view icon_form"></i>
+                  <select name="filtro_zona" id="filtro_zona">
+                      <option value="NULL">Todas</option>
+                      <option value="1">Norte</option>
+                      <option value="2">Noroccidente</option>
+                      <option value="3">Occidente</option>
+                      <option value="4">Sur</option>
+                      <option value="5">Centro</option>
+                      <option value="6">Oriente</option>
+                    </select>
+                </div>
+              </div>
+              <div class="campo">
+                <label for="filtro_precio">Precio: </label>
+                <div>                  
+                  <div>
+                    <i class="fas fa-search-dollar icon_form"></i>
+                    <select name="filtro_precio" id="filtro_precio">
+                        <option value="NULL">Cualquier precio</option>
+                        <option value="1">< $100.000.000</option>
+                        <option value="2">$100.000.000 - $200.000.000</option>
+                        <option value="3">$200.000.000 - $400.000.000</option>
+                        <option value="4">$400.000.000 - $600.000.000</option>
+                        <option value="5">> $600.000.000</option>
+                      </select>
+                    </div>
+                </div>
+              </div>
+            </form>
+            <button class="button" id="btn_fltr" type="submit" form="form_filtro" name="submit_filtro">Filtrar</button>
+          </div>
 
-        /*** mysql username ***/
-        $username = 'inmobi16_dbuser';
+          <ul class="lista-invitados publication clearfix">
 
-        /*** mysql password ***/
-        $password = 'Inmopyd7890';
+         <?php
+          /*** mysql hostname ***/
+          $hostname = '147.135.87.130';
 
-        try {
+          /*** mysql username ***/
+          $username = 'inmobi16_dbuser';
+
+          /*** mysql password ***/
+          $password = 'Inmopyd7890';
+
+          try {
             $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
             //foreach($mbd->query('SELECT * from ciudad') as $fila) {
             //    print_r($fila);
             //}
             //$mbd = null;
-            $sth = $mbd->prepare("SELECT * FROM inmueble");
-            $sth->execute();
-            echo '
-               <section id="publicaciones_venta" class="invitados contenedor seccion">
-               <h2>Inmuebles en venta</h2>
-                <ul class="lista-invitados publication clearfix">';
+            //$sth = $mbd->prepare("SELECT * FROM inmueble where isVenta = 1");
+            if(isset($_GET['submit_filtro'])){
+              $filtro_tipo = $_GET['filtro_tipo'];
+              //$filtro_tipo = 1;
+              $filtro_precio = $_GET['filtro_precio'];
+              $filtro_zona = $_GET['filtro_zona'];
+              if ($filtro_tipo != 'NULL' && $filtro_zona == 'NULL' && $filtro_precio == 'NULL') {
+                $sth = $mbd->prepare("SELECT * FROM inmueble where fk_tipo_inmueble = ? AND isVenta = 1");
+                $sth->execute([$filtro_tipo]);
+                //echo $filtro_tipo;
+              }
+              else if ($filtro_tipo == 'NULL' && $filtro_zona != 'NULL' && $filtro_precio == 'NULL') {
+                $sth = $mbd->prepare("SELECT * FROM inmueble where fk_zona = ? AND isVenta = 1");
+                $sth->execute([$filtro_zona]);
+              }
+              else if ($filtro_tipo != 'NULL' && $filtro_zona != 'NULL' && $filtro_precio == 'NULL') {
+                $sth = $mbd->prepare("SELECT * FROM inmueble where fk_tipo_inmueble = ? AND fk_zona = ? AND isVenta = 1");
+                $sth->execute([$filtro_tipo, $filtro_zona]);
+              }
+              else {
+                $sth = $mbd->prepare("SELECT * FROM inmueble where isVenta = 1");
+                $sth->execute();
+              }
+            } 
+            else {
+              $sth = $mbd->prepare("SELECT * FROM inmueble where isVenta = 1");
+              $sth->execute();
+            }
 
             while ($result = $sth->fetch(PDO::FETCH_ASSOC)) {
-              if ($result['isVenta'] == 1) {
-                echo '
-                   <li>
-                      <div class="invitado">
-                        <a href="pagina_venta.php?id='.$result['pk_inmueble'].'">
-                           <img src="img/Publicaciones_venta/house_1.jpg" alt="Imagen invitado">
-                           <!-- <p class="bandera_venta">asdfasdfasdg</p> -->
-                           <p class="item_venta">'.$result['nombre_inmueble'].'
-                              <br>
-                              <!-- <span class="width_25">En <B>Pyramid</B> la </span> -->
-                              <i class="fas fa-bed"></i> <span>'.$result['habit_inmueble'] .' Hab</span>&nbsp;&nbsp;
-                              <!-- <i class="fas fa-car"></i> <span>'. $result['parq_inmueble'] .' Parq</span>&nbsp;&nbsp; -->
-                              <i class="fas fa-ruler"></i> <span>'. $result['area_inmueble'] .' m<sup>2</sup></span>&nbsp;&nbsp;
-                              <i class="fas fa-dollar-sign azulito"></i> <span class="item_precio">'. $result['token_inmueble'] .' Mill</span>
-                           </p>
-                         </a>
-                      </div>
-                   </li>';                   
-                }
+              if (!$result) {
+                echo 'asdfasdf';
+              }
+              echo '
+                 <li>
+                    <div class="invitado">
+                      <a href="pagina_venta.php?id='.$result['pk_inmueble'].'">
+                         <img src="img/Publicaciones_venta/house_1.jpg" alt="Imagen invitado">
+                         <!-- <p class="bandera_venta">asdfasdfasdg</p> -->
+                         <p class="item_venta">'.$result['nombre_inmueble'].'
+                            <br>
+                            <!-- <span class="width_25">En <B>Pyramid</B> la </span> -->
+                            <i class="fas fa-bed"></i> <span>'.$result['habit_inmueble'] .' Hab</span>&nbsp;&nbsp;
+                            <!-- <i class="fas fa-car"></i> <span>'. $result['parq_inmueble'] .' Parq</span>&nbsp;&nbsp; -->
+                            <i class="fas fa-ruler"></i> <span>'. $result['area_inmueble'] .' m<sup>2</sup></span>&nbsp;&nbsp;
+                            <i class="fas fa-dollar-sign azulito"></i> <span class="item_precio">'. $result['token_inmueble'] .' Mill</span>
+                         </p>
+                       </a>
+                    </div>
+                 </li>';
               }
 
               echo '</ul>
@@ -198,21 +278,21 @@
                   <label for="nombreForm">Nombre completo: </label>
                   <div>
                     <i class="fas fa-user icon_form"></i>
-                    <input type="text" id="nombre" name="nombreForm" placeholder="" maxlength="40">
+                    <input type="text" id="nombre" name="nombreForm" placeholder="" maxlength="40" required>
                   </div>
                 </div>
                 <div class="campo">
                   <label for="celularForm">Teléfono o Celular: </label>
                   <div>
                     <i class="fas fa-phone icon_form"></i>
-                    <input type="number" id="celular" name="celularForm" placeholder="" maxlength="15">
+                    <input type="number" id="celular" name="celularForm" placeholder="" maxlength="15" required>
                   </div>
                 </div>
                 <div class="campo">
                   <label for="emailForm">Email: </label>
                   <div>
                     <i class="fas fa-envelope icon_form"></i>
-                    <input type="text" id="email" name="emailForm" placeholder="" maxlength="40">
+                    <input type="text" id="email" name="emailForm" placeholder="" maxlength="40" required>
                   </div>
                 </div>
 
@@ -222,16 +302,16 @@
                   <!-- <input type="text" id="nombre" name="nombre" placeholder=""> -->
                   <div>
                     <i class="fas fa-home icon_form"></i>
-                    <select name="inmuebleForm" id="inmueble">
+                    <select name="inmuebleForm" id="inmueble" required>
                       <option value="">Selecciona un tipo de inmueble</option>
-                      <option value="Apartamento">Apartamento</option>
-                      <option value="Bodega">Bodega</option>
-                      <option value="Casa">Casa</option>
-                      <option value="Finca">Finca</option>
-                      <option value="Local">Local Comercial</option>
-                      <option value="Lote">Lote</option>
-                      <option value="Oficina">Oficina</option>
-                      <option value="Otro">Otro (escríbelo en Comentarios)</option>
+                      <option value="1">Apartamento</option>
+                      <option value="2">Bodega</option>
+                      <option value="3">Casa</option>
+                      <option value="4">Finca</option>
+                      <option value="5">Local Comercial</option>
+                      <option value="6">Lote</option>
+                      <option value="7">Oficina</option>
+                      <option value="8">Otro (escríbelo en Comentarios)</option>
                     </select>
 
                   </div>
@@ -240,14 +320,17 @@
                   <label for="cuidadForm">Ciudad: </label>
                   <div>
                     <i class="fas fa-globe-americas icon_form"></i>
-                    <input type="text" id="cuidad" name="cuidadForm" placeholder="" maxlength="40">
+                    <select name="cuidadForm" id="cuidad" required>
+                      <option value="">Selecciona un tipo de inmueble</option>
+                      <option value="1">Bogotá</option>
+                    </select>
                   </div>
                 </div>
                 <div class="campo">
                   <label for="barrioForm">Barrio: </label>
                   <div>
                     <i class="fas fa-street-view icon_form"></i>
-                    <input type="text" id="barrio" name="barrioForm" placeholder="" maxlength="40">
+                    <input type="text" id="barrio" name="barrioForm" placeholder="" maxlength="40" required>
                   </div>
                 </div>
                 <div class="campo">
@@ -255,14 +338,14 @@
                   <!-- <input type="text¿¿" id="email" name="email" placeholder=""> -->
                   <div>
                     <i class="fas fa-house-damage icon_form"></i>
-                     <select name="antiguedadForm" id="antiguedad" >
+                     <select name="antiguedadForm" id="antiguedad" required>
                       <option value="">Selecciona la Antiguedad del Inmueble</option>
-                      <option value="nuevo">Nuevo</option>
-                      <option value="1a3">1 - 3 años</option>
-                      <option value="4a6">4 - 6 años</option>
-                      <option value="7a10">7 - 10 años</option>
-                      <option value="11a15">11 - 15 años</option>
-                      <option value="mas15">Más de 15 años</option>
+                      <option value="Nuevo">Nuevo</option>
+                      <option value="1 a 3 años">1 - 3 años</option>
+                      <option value="4 a 6 años">4 - 6 años</option>
+                      <option value="7 a 10 años">7 - 10 años</option>
+                      <option value="11 a 15 años">11 - 15 años</option>
+                      <option value="Mas de 15 años">Más de 15 años</option>
                     </select>
                   </div>
                 </div>
@@ -345,16 +428,42 @@ if (isset($_POST['submitForm'])){
   $headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";  
   $bool = mail($to,$subject,$message, $headers);
 
-  if($bool){
-    echo "<script>";
-    // echo "swal({";
-    //   echo "title: "Datos incompletos",";
-    //   echo "text: "Por favor ingresa tu número telefónico.",";
-    //   echo "icon: "warning",";
-    //   echo "dangerMode: true,";
-    //   echo "});";
-    echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
-    echo "</script>";
+  if(!$bool){
+    // conexion Base de Datos
+    /*** mysql hostname ***/
+    $hostname = '147.135.87.130';
+    /*** mysql username ***/
+    $username = 'inmobi16_dbuser';
+    /*** mysql password ***/
+    $password = 'Inmopyd7890';
+
+    try {
+      $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
+      
+      $sth = $mbd->prepare("INSERT INTO form_vende (nombre_form_ven, telefono_form_ven, email_form_ven, fk_tipo_inmueble_ven, fk_ciudad_ven, barrio_form_ven, antiguedad_form_ven, coment_form_ven) VALUES (?,?,?,?,?,?,?,?)");
+      //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
+      $nombre = $_POST['nombreForm']; $correo = $_POST['emailForm']; $telefono = $_POST['celularForm'];  $tipo = $_POST['inmuebleForm'];
+      $ciudad = $_POST['cuidadForm']; $barrio = $_POST['barrioForm']; $antiguedad = $_POST['antiguedadForm']; $coment = $_POST['coment_venta'];
+
+      //$sth->execute([$nombre, $telefono, $correo, $fecha, $idInmueble]);
+      $sth->execute([$nombre, $telefono, $correo, $tipo, $ciudad, $barrio, $antiguedad, $coment]);
+
+      echo "<script>";
+
+      // echo "swal({";
+      //   echo "title: "Datos incompletos",";
+      //   echo "text: "Por favor ingresa tu número telefónico.",";
+      //   echo "icon: "warning",";
+      //   echo "dangerMode: true,";
+      //   echo "});";
+
+      echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto ". $_POST['schedule'] ."');";
+      echo "</script>";
+    }
+    catch(PDOException $e)
+    {
+        echo $e->getMessage();
+    }
   }else{
      echo "<script>";
        echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";

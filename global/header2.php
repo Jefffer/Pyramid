@@ -64,10 +64,10 @@
           <span class="icon icon-close">Close the dialog</span>
           <h2 class="morph">Contáctanos</h2>
           <form name="form_contact" action="" method="post" id="">
-            <p class="morph"><label>Nombre</label><input name="nombre" type="text" /></p>
-            <p class="morph"><label>Email</label><input name="email" type="text" /></p>
-            <p class="morph"><label>Teléfono</label><input name="telefono" type="text" /></p>
-            <p class="morph"><label>Mensaje</label><textarea name="mensaje" placeholder="Dinos lo que necesitas, nos pondremos en contácto muy pronto"></textarea></p>
+            <p class="morph"><label>Nombre</label><input name="nombre" type="text" required/></p>
+            <p class="morph"><label>Email</label><input name="email" type="text" required/></p>
+            <p class="morph"><label>Teléfono</label><input name="telefono" type="text" required/></p>
+            <p class="morph"><label>Mensaje</label><textarea name="mensaje" placeholder="Dinos lo que necesitas, nos pondremos en contácto muy pronto"></textarea required></p>
             <p class="txt_politicas">Al enviar este formulario estás aceptando nuestras <a class="estilos_links">Políticas de Privacidad</a></p>
             <!-- <p class="morph"><button type="submit" name="submit">ENVIAR<button/></p> -->
             <p class="morph"><input id="sub_contact" type="submit" name="submit" value="ENVIAR" /></p>
@@ -178,7 +178,7 @@
     $headers .= 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
     $headers .= 'From: '.$from.' '. "\r\n";
-    $headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";
+    //$headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";
     $bool = mail($to,$subject,$message, $headers);
     //mail($toMe,$subject,$message, $headers);
 
@@ -192,22 +192,22 @@
       $password = 'Inmopyd7890';
 
       try {
-          $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
-          
-          $sth = $mbd->prepare("INSERT INTO contacto (nombre, email, telefono, mensaje) VALUES (?,?,?,?)");
-          //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
-          $nombre = $_POST['nombre']; $correo = $_POST['email']; $telefono = $_POST['telefono'];  $mensaje = $_POST['mensaje'];
-          $sth->execute([$nombre, $correo, $telefono, $mensaje]);
+        $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
+        
+        $sth = $mbd->prepare("INSERT INTO contacto (nombre, email, telefono, mensaje) VALUES (?,?,?,?)");
+        //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
+        $nombre = $_POST['nombre']; $correo = $_POST['email']; $telefono = $_POST['telefono'];  $mensaje = $_POST['mensaje'];
+        $sth->execute([$nombre, $correo, $telefono, $mensaje]);
 
-          echo "<script>";
-          // echo "swal({";
-          //   echo "title: "Datos incompletos",";
-          //   echo "text: "Por favor ingresa tu número telefónico.",";
-          //   echo "icon: "warning",";
-          //   echo "dangerMode: true,";
-          //   echo "});";
-          echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
-          echo "</script>";
+        echo "<script>";
+        // echo "swal({";
+        //   echo "title: "Datos incompletos",";
+        //   echo "text: "Por favor ingresa tu número telefónico.",";
+        //   echo "icon: "warning",";
+        //   echo "dangerMode: true,";
+        //   echo "});";
+        echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
+        echo "</script>";
       }
       catch(PDOException $e)
       {
