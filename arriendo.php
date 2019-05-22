@@ -50,8 +50,8 @@
                 <label for="filtro_tipo">Tipo inmueble: </label>
                 <div>
                   <i class="fas fa-home icon_form"></i>
-                    <select name="filtro_tipo" id="filtro_tipo">
-                      <option value="">Todos</option>
+                    <select name="filtro_tipo" id="filtro_tipo" value="">
+                      <option value="NULL">Todos</option>
                       <option value="1">Apartamento</option>
                       <option value="2">Bodega</option>
                       <option value="3">Casa</option>
@@ -59,7 +59,6 @@
                       <option value="5">Local Comercial</option>
                       <option value="6">Lote</option>
                       <option value="7">Oficina</option>
-                      <option value="8">Otro (escríbelo en Comentarios)</option>
                     </select>
                 </div>
               </div>              
@@ -68,7 +67,7 @@
                 <div>
                   <i class="fas fa-street-view icon_form"></i>
                   <select name="filtro_zona" id="filtro_zona">
-                      <option value="">Todas</option>
+                      <option value="NULL">Todas</option>
                       <option value="1">Norte</option>
                       <option value="2">Noroccidente</option>
                       <option value="3">Occidente</option>
@@ -84,12 +83,12 @@
                   <div>
                     <i class="fas fa-search-dollar icon_form"></i>
                     <select name="filtro_precio" id="filtro_precio">
-                        <option value="">Cualquier precio</option>
-                        <option value="1">< $1.000.000</option>
-                        <option value="2">$1.000.000 - $2.000.000</option>
-                        <option value="3">$2.000.000 - $4.000.000</option>
-                        <option value="4">$4.000.000 - $6.000.000</option>
-                        <option value="5">> $6.000.000</option>
+                        <option value="NULL">Cualquier precio</option>
+                        <option value="1">< $100.000.000</option>
+                        <option value="2">$100.000.000 - $200.000.000</option>
+                        <option value="3">$200.000.000 - $400.000.000</option>
+                        <option value="4">$400.000.000 - $600.000.000</option>
+                        <option value="5">> $600.000.000</option>
                       </select>
                     </div>
                 </div>
@@ -97,7 +96,6 @@
             </form>
             <button class="button" id="btn_fltr" type="submit" form="form_filtro" name="submit_filtro">Filtrar</button>
           </div>
-
          <ul class="lista-invitados publication clearfix">
 
        <?php

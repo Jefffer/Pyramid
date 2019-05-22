@@ -428,7 +428,7 @@ if (isset($_POST['submitForm'])){
   $headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";  
   $bool = mail($to,$subject,$message, $headers);
 
-  if(!$bool){
+  if($bool){
     // conexion Base de Datos
     /*** mysql hostname ***/
     $hostname = '147.135.87.130';
