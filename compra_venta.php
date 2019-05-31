@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Compra y Venta .: Inmobiliaria Pyramid</title>
+        <title>Compra y Venta .: Akasâ Inmobiliaria</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -37,7 +37,7 @@
         <section id="compra_venta" class="seccion contenedor padding_bot_0 top_-180">
            <h2>Compra y Venta</h2>
            <p>
-             En <b>Inmobiliaria Pyramid</b> nos encargamos de publicar tu inmueble, incluyendo un servicio gratuito de galería fotográfica profesional y un video recorriendo los distintos espacios que componen la vivienda. Para más información haz click <a class="estilos_links" href="#vende-nosotros"> aquí</a>.
+             En <b><span class="rojito">A</span>kasâ Inmobiliaria</b> nos encargamos de publicar tu inmueble, incluyendo un servicio gratuito de galería fotográfica profesional y un video recorriendo los distintos espacios que componen la vivienda. Para más información haz click <a class="estilos_links" href="#vende-nosotros"> aquí</a>.
             </p>
             <p>
               Si tu intención es <b>comprar</b> casa o apartamento, en ésta sección también encontrarás gran variedad de ofertas con una descripcion detallada tanto del inmueble como de la zona donde se encuentra ubicado.

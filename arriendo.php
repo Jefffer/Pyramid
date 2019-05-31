@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Inmueble en Arriendo .: Inmobiliaria Pyramid</title>
+        <title>Inmueble en Arriendo .: Akasâ Inmobiliaria</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -37,7 +37,7 @@
         <section id="arriendo_div" class="seccion contenedor padding_bot_0 top_-180">
            <h2>Arriendo</h2>
            <p>
-             En <b>Inmobiliaria Pyramid</b>, nuestro interés es darte a conocer la gran variedad de ofertas inmobiliarias disponibles para ti que buscas cambiar tu estilo de vida empezando por una casa o apartamento con todo lo que quieres y necesitas. En cada inmueble encontraras una galería fotográfica mostrando todos sus espacios y un video con el recorrido completo por la vivienda.  Si deseas conocer alguno de nuestros inmuebles puedes agendar una cita con nosotros en el horario que más te convenga y continúa el proceso de arriendo.
+             En <b><span class="rojito">A</span>kasâ Inmobiliaria</b>, nuestro interés es darte a conocer la gran variedad de ofertas inmobiliarias disponibles para ti que buscas cambiar tu estilo de vida empezando por una casa o apartamento con todo lo que quieres y necesitas. En cada inmueble encontraras una galería fotográfica mostrando todos sus espacios y un video con el recorrido completo por la vivienda.  Si deseas conocer alguno de nuestros inmuebles puedes agendar una cita con nosotros en el horario que más te convenga y continúa el proceso de arriendo.
             </p>            
        </section><!--.section-->
 

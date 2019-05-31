@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Asesorias .: Inmobiliaria Pyramid</title>
+        <title>Asesorias .: Akasâ Inmobiliaria</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -48,14 +48,14 @@
            En esta sección, buscamos conocer mejor a las personas que desean vender con nosotros, solo necesitas diligenciar el formulario que encontraras en la parte inferior, el cual se compone de preguntas básicas sobre ti y el inmueble que deseas vender, para llevarnos una idea mas clara del servicio con el cual te sentirás mas cómodo al momento de vender tu inmueble.
           </p>
 
-          <button class="accordion">¿Por qué publicar mi inmueble en Pyramid?</button>
+          <button class="accordion">¿Por qué publicar mi inmueble en Akasâ?</button>
           <div class="panel">
             <div class="chapters">
               <ul class="view">
                 <li>
                   <a class="rows">
                     <!-- <div class="play"><i class="fas fa-bath" aria-hidden="true"></i></div> -->
-                    <div class="video-title">Pyramid te ofrece una amplia gama de servicios enfocándonos en satisfacer tus necesidades. Garantizamos la seguridad de cada proceso que quieras realizar con nosotros, a través de estudios crediticios que brinden confianza económica a nuestros clientes con el mayor compromiso y confianza en nuestro trabajo de manera eficiente.</div>
+                    <div class="video-title">Akasâ te ofrece una amplia gama de servicios enfocándonos en satisfacer tus necesidades. Garantizamos la seguridad de cada proceso que quieras realizar con nosotros, a través de estudios crediticios que brinden confianza económica a nuestros clientes con el mayor compromiso y confianza en nuestro trabajo de manera eficiente.</div>
                     <!-- <div class="view-preview">&nbsp;Vista Previa</div>
                     <div class="length">&nbsp;02:34</div> -->                    
                   </a>
@@ -71,7 +71,7 @@
                 <li>
                   <a class="rows">
                     <!-- <div class="play"><i class="fas fa-bath" aria-hidden="true"></i></div> -->
-                    <div class="video-title">En Pyramid, promocionamos tu inmueble tanto en nuestra página web como en distintos portales inmobiliarios más conocidos en el mercado, con la ayuda de un equipo profesional fotográfico detallando los espacios que contiene tu inmueble, además de un video de alta calidad que describa las características más representativas.</div>
+                    <div class="video-title">En Akasâ, promocionamos tu inmueble tanto en nuestra página web como en distintos portales inmobiliarios más conocidos en el mercado, con la ayuda de un equipo profesional fotográfico detallando los espacios que contiene tu inmueble, además de un video de alta calidad que describa las características más representativas.</div>
                     <!-- <div class="view-preview">&nbsp;Vista Previa</div>
                     <div class="length">&nbsp;02:34</div> -->                    
                   </a>
@@ -87,7 +87,7 @@
                 <li>
                   <a class="rows">
                     <!-- <div class="play"><i class="fas fa-bath" aria-hidden="true"></i></div> -->
-                    <div class="video-title">Para el proceso de arrendamiento, Inmobiliaria Pyramid te cobra una comisión equivalente al primer canon de arrendamiento de tu inmueble.</div>
+                    <div class="video-title">Para el proceso de arrendamiento, Akasâ Inmobiliaria te cobra una comisión equivalente al primer canon de arrendamiento de tu inmueble.</div>
                     <!-- <div class="view-preview">&nbsp;Vista Previa</div>
                     <div class="length">&nbsp;02:34</div> -->                    
                   </a>
@@ -103,7 +103,7 @@
                 <li>
                   <a class="rows">
                     <!-- <div class="play"><i class="fas fa-bath" aria-hidden="true"></i></div> -->
-                    <div class="video-title">Para el proceso de compra y venta, inmobiliaria Pyramid te cobra un 3% del precio acordado para el inmueble.</div>
+                    <div class="video-title">Para el proceso de compra y venta, Akasâ Inmobiliaria te cobra un 3% del precio acordado para el inmueble.</div>
                     <!-- <div class="view-preview">&nbsp;Vista Previa</div>
                     <div class="length">&nbsp;02:34</div> -->                    
                   </a>
