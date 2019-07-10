@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Akasâ Inmobiliaria .: Servicios Inmobiliarios</title>
+        <title>vîata Inmobiliaria .: Servicios Inmobiliarios</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -36,7 +36,7 @@
         <section id="como_funcion" class="seccion contenido contenedor">
            <h2>¿Cómo funciona?</h2>
            <p>
-             <b> <span class="rojito">A</span>kasâ Inmobiliaria</b> nace como respuesta a las diferentes inquietudes presentadas en el mercado inmobiliario, que gracias a nuestra constante innovación en diferentes estrategias de negociación y marketing buscamos resolver de manera rápida y eficiente, cambiando el concepto de compra-venta y alquiler en una manera más sencilla de intercambiar y utilizar tus bienes.
+             <b>V<span class="rojito">î</span>ata Inmobiliaria</b> nace como respuesta a las diferentes inquietudes presentadas en el mercado inmobiliario, que gracias a nuestra constante innovación en diferentes estrategias de negociación y marketing buscamos resolver de manera rápida y eficiente, cambiando el concepto de compra-venta y alquiler en una manera más sencilla de intercambiar y utilizar tus bienes.
             </p>
             <a href="como_funciona.php" class="button">Saber más</a>
        </section><!--.section-->
@@ -139,7 +139,7 @@
                      <p class="serv_title">Compra y Venta</p>
                      <p>Compra y Venta 
                      <br>
-                       <span>En <B>Akasâ</B> la vivienda ideal está a tu alcance, aquí encontrarás un grupo de expertos que te acompañarán en tu adquisición. También te ayudamos a ofertar tus inmuebles.</span>
+                       <span>En <B>vîata</B> la vivienda ideal está a tu alcance, aquí encontrarás un grupo de expertos que te acompañarán en tu adquisición. También te ayudamos a ofertar tus inmuebles.</span>
                      </p>
                    </a>
                 </div>
@@ -175,7 +175,7 @@
                      <p class="serv_title">Asesorías</p>
                      <p>Asesorías
                      <br>
-                       <span><B>Akasâ</B> te ofrece Asesorías Jurídicas e Inmobiliarias, tenemos profesionales a tu servicio para tratar de manera personalizada cada una de tus inquietudes e inconvenientes.</span>
+                       <span><B>vîata</B> te ofrece Asesorías Jurídicas e Inmobiliarias, tenemos profesionales a tu servicio para tratar de manera personalizada cada una de tus inquietudes e inconvenientes.</span>
                      </p>
                    </a>
                 </div>

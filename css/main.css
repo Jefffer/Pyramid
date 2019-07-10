@@ -394,7 +394,7 @@ h1.nombre-sitio {
    color: rgb(185, 40, 40);
    text-shadow: 1px 2px #000000b5;
 }
-h1.nombre-sitio .char14, h1.nombre-sitio .char15 {
+h1.nombre-sitio .char2 {
    color: wheat;
 }
 
@@ -427,16 +427,22 @@ div.barra {
    z-index: 2;
 }
 div.logo {
-   width: 80%;
+   width: 60%;
    float: left;
 }
 div.logo a {
    text-decoration: none;
 }
 div.logo img {
-   width: 15%;
+   width: 16%;
    cursor: pointer;
-   margin: 10px auto;
+   margin: 6px auto;
+   float: left;
+}
+div.logo h1 {
+   color: #000000;
+   font-size: 2.2em;
+
 }
 div.logo #logo_name {
    width: 35%;

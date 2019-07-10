@@ -4,10 +4,10 @@
          <div class="contenedor ">
           <div class="logo">
             <a href="index.php">
-              <img src="img/Pyramid-logo.png" alt="Logo">
+              <img src="img/logo/logo_sin_fondo.png" alt="Logo">
             </a>
             <a href="index.php">                    
-              <img id="logo_name" src="img/Pyramid-name-2.png" alt="Logo">
+              <h1 class="nombre-sitio-menu">v<span class="rojito">î</span>ata Inmobiliaria</h1>
             </a>
             <!-- <h1 class="nombre-sitio-menu">Inmobiliaria BABEL</h1> -->
           </div>
@@ -48,7 +48,7 @@
      <div class="informacion-evento">
       <br>
 
-      <h1 class="nombre-sitio">Inmobiliaria PYRAMID</h1>
+      <h1 class="nombre-sitio">vîata Inmobiliaria</h1>
       <p class="slogan">Eficacia, Confianza y Calidad</p> <br>
       <p class="slogan"><span>Juntos podemos hacerlo posible</span></p>
     </div><!--.informacion-evento-->
