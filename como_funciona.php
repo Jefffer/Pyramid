@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Cómo funcionamos .: Inmobiliaria Pyramid</title>
+        <title>Cómo funcionamos .: Viata Inmobiliaria</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,7 +35,7 @@
         </header>
 
         <section id="como_funciona" class="seccion contenedor padding_bot_0 top_-180">
-           <h2>Pasos para vender o arrendar con Inmobiliaria Pyramid</h2>
+           <h2>Pasos para vender o arrendar con vîata Inmobiliaria</h2>
            <div class="cf_fondo_rojo">
              <div class="ttl_proceso">
                <div>
@@ -117,7 +117,7 @@
              </div>
              <div class="txt_proceso">
                <p>
-                 Busca el espacio que mejor se adapte a lo que estés buscando, tenemos las mejores opciones para la casa o apartamento de tus sueños, o si lo que quieres es iniciar tu propio negocio o trasladarte del lugar donde te encuentras, en Inmobiliaria Pyramid te ofrecemos una gran variedad de opciones en oficinas y bodegas para que tomes la decisión correcta.
+                 Busca el espacio que mejor se adapte a lo que estés buscando, tenemos las mejores opciones para la casa o apartamento de tus sueños, o si lo que quieres es iniciar tu propio negocio o trasladarte del lugar donde te encuentras, en vîata Inmobiliaria te ofrecemos una gran variedad de opciones en oficinas y bodegas para que tomes la decisión correcta.
                </p>
              </div>
            </div>
