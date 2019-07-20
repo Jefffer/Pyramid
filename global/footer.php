@@ -8,13 +8,13 @@
      <div class="footer-informacion">
       <h3>Comunícate con <span>Nosotros</span></h3>
       <p><span>Angélica Pineda Martinez</span> <br>
-        <i class="far fa-envelope"></i> angelica.p@inmobiliariapyramid.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 350 6039310 
+        <i class="far fa-envelope"></i> angelica.p@viatainmobiliaria.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 350 6039310 
       </p>
       <p><span>Alexander Pineda Martinez</span> <br>
-        <i class="far fa-envelope"></i> alexander.p@inmobiliariapyramid.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 313 3655012 
+        <i class="far fa-envelope"></i> alexander.p@viatainmobiliaria.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 313 3655012 
       </p>
       <p><span>Jefferson Rodríguez Rodríguez</span> <br>
-        <i class="far fa-envelope"></i> jefferson.r@inmobiliariapyramid.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 313 3714054
+        <i class="far fa-envelope"></i> jefferson.r@viatainmobiliaria.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 313 3714054
       </p>
     </div>
     <div class="ultimos-tweets">
@@ -36,5 +36,5 @@
  </div>
 </div>
 
-<p class="copyright">Inmobiliaria Pyramid - Bogotá, Colombia 2019 .: Developed by Jefffer</p>
+<p class="copyright">vîata Inmobiliaria - Bogotá, Colombia 2019 .: Developed by Jefffer</p>
 </footer>
