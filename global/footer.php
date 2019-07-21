@@ -7,13 +7,13 @@
     <div class="contenedor clearfix">
      <div class="footer-informacion">
       <h3>Comunícate con <span>Nosotros</span></h3>
-      <p><span>Angélica Pineda Martinez</span> <br>
+      <p><span>Angélica Pineda</span> <br>
         <i class="far fa-envelope"></i> angelica.p@viatainmobiliaria.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 350 6039310 
       </p>
-      <p><span>Alexander Pineda Martinez</span> <br>
+      <p><span>Alexander Pineda</span> <br>
         <i class="far fa-envelope"></i> alexander.p@viatainmobiliaria.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 313 3655012 
       </p>
-      <p><span>Jefferson Rodríguez Rodríguez</span> <br>
+      <p><span>Jefferson Rodríguez</span> <br>
         <i class="far fa-envelope"></i> jefferson.r@viatainmobiliaria.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 313 3714054
       </p>
     </div>

@@ -185,7 +185,7 @@
 </html>
 
 <?php
-$from = 'contacto@inmobiliariapyramid.com';
+$from = 'contacto@viatainmobiliaria.com';
 $to = $_POST['email'];
 $subject = "Contacto Inmobiliaria Pyramid";
 

@@ -517,10 +517,10 @@
 
 <?php
   if (!empty($_POST['submit'])) {
-    $from = 'contacto@inmobiliariapyramid.com';
+    $from = 'contacto@viatainmobiliaria.com';
     $to = $_POST['email'];
-    $toMe = 'contacto@inmobiliariapyramid.com';
-    $subject = "Contacto Inmobiliaria Pyramid";
+    $toMe = 'contacto@viatainmobiliaria.com';
+    $subject = "Contacto vîata Inmobiliaria";
 
     $message = "
     <html>
@@ -536,7 +536,7 @@
     Y el siguiente mensaje: <i><br><br>" . 
     $_POST['mensaje'] . "</i><br><br>
     Nos pondremos en contácto contigo muy pronto. Gracias por escogernos<br><br>
-    <b>Inmobiliaria Pyramid</b>
+    <b>Vîata Inmobiliaria</b>
     </body>
     </html>";
 
@@ -545,7 +545,8 @@
     $headers .= 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
     $headers .= 'From: '.$from.' '. "\r\n";
-    //$headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";
+    $headers .= 'BCC:' . 'contacto@viatainmobiliaria.com' . "\r\n";
+    $headers .= 'BCC:' . 'angelica.p@viatainmobiliaria.com' . "\r\n";
     $bool = mail($to,$subject,$message, $headers);
     //mail($toMe,$subject,$message, $headers);
 

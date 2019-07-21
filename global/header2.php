@@ -150,9 +150,9 @@
 
 <?php
   if (!empty($_POST['submit'])) {
-    $from = 'contacto@inmobiliariapyramid.com';
+    $from = 'contacto@viatainmobiliaria.com';
     $to = $_POST['email'];
-    $toMe = 'contacto@inmobiliariapyramid.com';
+    $toMe = 'contacto@viatainmobiliaria.com';
     $subject = "Contacto Inmobiliaria Pyramid";
 
     $message = "
@@ -178,7 +178,7 @@
     $headers .= 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
     $headers .= 'From: '.$from.' '. "\r\n";
-    //$headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";
+    //$headers .= 'BCC:' . 'contacto@viatainmobiliaria.com' . "\r\n";
     $bool = mail($to,$subject,$message, $headers);
     //mail($toMe,$subject,$message, $headers);
 

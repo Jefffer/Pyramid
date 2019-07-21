@@ -393,7 +393,7 @@
 
 <?php
 if (isset($_POST['submitForm'])){
-  $from = 'contacto@inmobiliariapyramid.com';
+  $from = 'contacto@viatainmobiliaria.com';
   $to = $_POST['emailForm'];
   $subject = "Vende con Nosotros .: Inmobiliaria Pyramid";
 
@@ -425,7 +425,7 @@ if (isset($_POST['submitForm'])){
   $headers .= 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
   $headers .= 'From: '.$from.' '. "\r\n";
-  $headers .= 'BCC:' . 'contacto@inmobiliariapyramid.com' . "\r\n";  
+  $headers .= 'BCC:' . 'contacto@viatainmobiliaria.com' . "\r\n";  
   $bool = mail($to,$subject,$message, $headers);
 
   if($bool){
