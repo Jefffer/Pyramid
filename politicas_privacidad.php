@@ -34,387 +34,87 @@
         </header>
 
         <section id="como_funcion" class="seccion contenido contenedor">
-           <h2>¿Cómo funciona?</h2>
-           <p>
-             <b>V<span class="rojito">î</span>ata Inmobiliaria</b> nace como respuesta a las diferentes inquietudes presentadas en el mercado inmobiliario, que gracias a nuestra constante innovación en diferentes estrategias de negociación y marketing buscamos resolver de manera rápida y eficiente, cambiando el concepto de compra-venta y alquiler en una manera más sencilla de intercambiar y utilizar tus bienes.
-            </p>
-            <a href="como_funciona.php" class="button">Saber más</a>
-       </section><!--.section-->
+         <h2>POLÍTICA DE MANEJO DE INFORMACIÓN Y DATOS PERSONALES</h2>
+         <p>
+           <b>V<span class="rojito">î</span>ata Inmobiliaria</b> se hace responsable del buen manejo de los datos suministrados por nuestros clientes, en conformidad con la <span class="rojito">ley 1581 de 2012</span> en la cual se expresan los derechos de los titulares de la información y el correcto tratamiento de los datos por parte de las empresas que los requieran; garantizando el cumplimiento de los principios para el tratamiento de datos personales.
+           <br>
+           <br>
+           Los datos recolectados por vîata Inmobiliaria son de carácter privado, tales como nombre, teléfono, dirección, correo electrónico, número de documento de identificación, datos básicos de los inmuebles con los que trabajamos como el área de construcción y espacios que este contenga; además de material fotográfico y de video que se recogen durante las visitas a los inmuebles y que son publicados en nuestra página.
+            <br>
+           <br>
+           Lo anterior se hace con el fin de conocer a nuestros clientes para brindarles la mejor atención y asesoría en la prestación de los distintos servicios que ofrecemos. Almacenamos un registro histórico de las operaciones entre la inmobiliaria y el cliente para procesos de facturación y publicidad.
+          </p>
+        </section>
 
-       <!-- <section class="programa">
-          <div class="contenedor-video">
-             <video autoplay loop poster="">
-                <source src="video/video.mp4" type="video/mp4">
-                <source src="video/video.webm" type="video/webm">
-                <source src="video/video.ogv" type="video/ogv">
-             </video>
-          </div> --><!--.contenedor-video-->
+        <section class="seccion contenido contenedor sec_politicas">
+          <h3 class="new_h3">Principios de tratamiento de datos</h3>
+          <p>
+            Los principios para el tratamiento de los datos personales son:
+          </p>
+            <ol class="new_list">
+              <li><span>a)</span><p>Principio de legalidad en materia de Tratamiento de datos: El Tratamiento a que se refiere la presente ley es una actividad reglada que debe sujetarse a lo establecido en ella y en las demás disposiciones que la desarrollen.</p></li>
+              <li><span>b)</span><p>Principio de finalidad: El Tratamiento debe obedecer a una finalidad legítima de acuerdo con la Constitución y la Ley, la cual debe ser informada al Titular.</p></li>
+              <li><span>c)</span><p>Principio de libertad: El Tratamiento sólo puede ejercerse con el consentimiento, previo, expreso e informado del Titular. Los datos personales no podrán ser obtenidos o divulgados sin previa autorización, o en ausencia de mandato legal o judicial que releve el consentimiento.</p></li>
+              <li><span>d)</span><p>Principio de veracidad o calidad: La información sujeta a Tratamiento debe ser veraz, completa, exacta, actualizada, comprobable y comprensible. Se prohíbe el Tratamiento de datos parciales, incompletos, fraccionados o que induzcan a error.</p></li>
+              <li><span>e)</span><p>Principio de transparencia: En el Tratamiento debe garantizarse el derecho del Titular a obtener del Responsable del Tratamiento o del Encargado del Tratamiento, en cualquier momento y sin restricciones, información acerca de la existencia de datos que le conciernan.</p></li>
+              <li><span>f)</span><p>Principio de acceso y circulación restringida: El Tratamiento se sujeta a los límites que se derivan de la naturaleza de los datos personales, de las disposiciones de la presente ley y la Constitución. En este sentido, el Tratamiento sólo podrá hacerse por personas autorizadas por el Titular y/o por las personas previstas en la presente ley. Los datos personales, salvo la información pública, no podrán estar disponibles en Internet u otros medios de divulgación o comunicación masiva, salvo que el acceso sea técnicamente controlable para brindar un conocimiento restringido sólo a los Titulares o terceros autorizados conforme a la presente ley.</p></li>
+              <li><span>g)</span><p>Principio de seguridad: La información sujeta a Tratamiento por el Responsable del Tratamiento o Encargado del Tratamiento a que se refiere la presente ley, se deberá manejar con las medidas técnicas, humanas y administrativas que sean necesarias para otorgar seguridad a los registros evitando su adulteración, pérdida, consulta, uso o acceso no autorizado o fraudulento.</p></li>
+              <li><span>h)</span><p>Principio de confidencialidad: Todas las personas que intervengan en el Tratamiento de datos personales que no tengan la naturaleza de públicos están obligadas a garantizar la reserva de la información, inclusive después de finalizada su relación con alguna de las labores que comprende el Tratamiento, pudiendo sólo realizar suministro o comunicación de datos personales cuando ello corresponda al desarrollo de las actividades autorizadas en la presente ley y en los términos de esta.</p></li>
+            </ol>          
+        </section>
 
-          <!-- <div class="contenido-programa">
-             <div class="contenedor">
-                <div class="programa-evento">
-                   <h2>Programa del Evento</h2>
-                   <nav class="menu-programa">
-                      <a href="#talleres"><i class="fa fa-code" aria-hidden="true"></i> Talleres</a>
-                      <a href="#conferencias"><i class="fa fa-comment" aria-hidden="true"></i> Conferencias</a>
-                      <a href="#seminarios"><i class="fa fa-university" aria-hidden="true"></i> Seminarios</a>
-                   </nav>
+        <section class="seccion contenido contenedor sec_politicas">
+          <h3 class="new_h3">Derechos y condiciones de legalidad para el tratamiento de datos</h3>
+          <p>
+            El capítulo IV de la ley 1581 de 2012 reglamenta los derechos y condiciones de legalidad para el tratamiento de datos, los derechos de los titulares son los siguientes:
+          </p>
+          <ol class="new_list">
+            <li><span>a)</span><p>Conocer, actualizar y rectificar sus datos personales frente a los responsables del Tratamiento.</p></li>
+            <li><span>b)</span><p>Solicitar prueba de la autorización otorgada al responsable del Tratamiento salvo cuando expresamente se exceptúe como requisito para el Tratamiento.</p></li>
+            <li><span>c)</span><p>Ser informado por el responsable del Tratamiento o el Encargado del Tratamiento, previa solicitud, respecto del uso que le ha dado a sus datos personales.</p></li>
+            <li><span>d)</span><p>Presentar ante la Superintendencia de Industria y Comercio quejas por infracciones a lo dispuesto en la presente ley y las demás normas que la modifiquen, adicionen o complementen.</p></li>
+            <li><span>e)</span><p>Revocar la autorización y/o solicitar la supresión del dato cuando en el Tratamiento no se respeten los principios.</p></li>
+            <li><span>f)</span><p>Acceder en forma gratuita a sus datos personales que hayan sido objeto de Tratamiento.</p></li>
+          </ol>
+          <p>
+            Los procedimientos previstos por la ley que deben realizar los titulares para consultar e interponer un reclamo sobre la información suministrada y almacenada en cualquier base de datos publica o privada son los siguientes:
+            Las consultas de la información podrán realizarse por el medio habilitado por el responsable del tratamiento de datos, siempre y cuando se pueda mantener prueba de esta.
+            Las consultas serán atendidas en un término máximo de diez (10) días hábiles contados a partir de la fecha del recibo de esta. Cuando no fuere posible atender la consulta dentro de dicho termino, se informara al interesado, expresando los motivos de la demora y señalando la fecha en la que será atendida la consulta, el cual bajo ningún caso podrá superar los cinco (5) días hábiles siguientes al vencimiento del primer termino.
+            Los reclamos por parte del titular de los datos personales podrán interponer un reclamo cuando considere que la información contenida en una base de datos debe ser corregida, actualizada, suprimida, o se advierta del incumplimiento de cualquiera de los deberes contenidos en la ley 1581 de 2012, dicho reclamo será tramitado bajo las siguientes reglas:
+          </p>
+            <ol class="new_list">
+              <li><span>1.</span><p>El reclamo se formulará mediante solicitud dirigida al responsable del Tratamiento o al Encargado del Tratamiento, con la identificación del Titular, la descripción de los hechos que dan lugar al reclamo, la dirección, y acompañando los documentos que se quiera hacer valer. Si el reclamo resulta incompleto, se requerirá al interesado dentro de los cinco (5) días siguientes a la recepción del reclamo para que subsane las fallas. Transcurridos dos (2) meses desde la fecha del requerimiento, sin que el solicitante presente la información requerida, se entenderá que ha desistido del reclamo.
+              En caso de que quien reciba el reclamo no sea competente para resolverlo, dará traslado a quien corresponda en un término máximo de dos (2) días hábiles e informará de la situación al interesado.</p></li>
+              <li><span>2.</span><p>Una vez recibido el reclamo completo, se incluirá en la base de datos una leyenda que diga “reclamo en trámite” y el motivo de este, en un término no mayor a dos (2) días hábiles. Dicha leyenda deberá mantenerse hasta que el reclamo sea decidido.</p></li>
+              <li><span>3.</span><p>El término máximo para atender el reclamo será de quince (15) días hábiles contados a partir del día siguiente a la fecha de su recibo. Cuando no fuere posible atender el reclamo dentro de dicho término, se informará al interesado los motivos de la demora y la fecha en que se atenderá su reclamo, la cual en ningún caso podrá superar los ocho (8) días hábiles siguientes al vencimiento del primer término.
+              El titular solo podrá llevar la queja ante la superintendencia de industria y comercio una vez haya agotado el tramite de consulta o reclamo ante el responsable del tratamiento de datos personales.</p></li>
+            </ol>
+          </p>
+        </section>
 
-                   <div id="talleres" class="info-curso ocultar clearfix">
-                      <div class="detalle-evento">
-                           <h3>Traumas de un bastardo</h3>
-                           <p><i class="fa fa-clock-o" aria-hidden="true"></i> 16:00 hrs</p>
-                           <p><i class="fa fa-calendar" aria-hidden="true"></i> 10 de Dic</p>
-                           <p><i class="fa fa-user" aria-hidden="true"></i> Jon Snow</p>
-                      </div>
-                      <div class="detalle-evento">
-                           <h3>El mundo es un lugar Gigante</h3>
-                           <p><i class="fa fa-clock-o" aria-hidden="true"></i> 20:00 hrs</p>
-                           <p><i class="fa fa-calendar" aria-hidden="true"></i> 10 de Dic</p>
-                           <p><i class="fa fa-user" aria-hidden="true"></i> Tyrion Lannister</p>
-                      </div>
-                      <a href="#" class="button float-right">Ver Todos</a>
-                   </div> --><!--#talleres-->
-
-                   <!-- <div id="conferencias" class="info-curso ocultar clearfix">
-                      <div class="detalle-evento">
-                           <h3>Como ser Freelancer</h3>
-                           <p><i class="fa fa-clock-o" aria-hidden="true"></i> 10:00 hrs</p>
-                           <p><i class="fa fa-calendar" aria-hidden="true"></i> 10 de Dic</p>
-                           <p><i class="fa fa-user" aria-hidden="true"></i> Mago Norrea</p>
-                      </div>
-                      <div class="detalle-evento">
-                           <h3>Tecnologías del futuro</h3>
-                           <p><i class="fa fa-clock-o" aria-hidden="true"></i> 17:00 hrs</p>
-                           <p><i class="fa fa-calendar" aria-hidden="true"></i> 10 de Dic</p>
-                           <p><i class="fa fa-user" aria-hidden="true"></i> Susana Anasus</p>
-                      </div>
-                      <a href="#" class="button float-right">Ver Todos</a>
-                   </div> --><!--#talleres-->
-
-                   <!-- <div id="seminarios" class="info-curso ocultar clearfix">
-                      <div class="detalle-evento">
-                           <h3>Diseño UI/UX para móviles</h3>
-                           <p><i class="fa fa-clock-o" aria-hidden="true"></i> 17:00 hrs</p>
-                           <p><i class="fa fa-calendar" aria-hidden="true"></i> 11 de Dic</p>
-                           <p><i class="fa fa-user" aria-hidden="true"></i> Ana Lisa Mel</p>
-                      </div>
-                      <div class="detalle-evento">
-                           <h3>Aprende a programar en una mañana</h3>
-                           <p><i class="fa fa-clock-o" aria-hidden="true"></i> 10:00 hrs</p>
-                           <p><i class="fa fa-calendar" aria-hidden="true"></i> 11 de Dic</p>
-                           <p><i class="fa fa-user" aria-hidden="true"></i> Susana Anasus</p>
-                      </div>
-                      <a href="#" class="button float-right">Ver Todos</a>
-                   </div> --><!--#talleres-->
-
-
-                <!--</div><!--.programa-evento-->
-
-             <!--</div><!--.contenedor-->
-          <!--</div><!--.contenido-programa-->
-
-       <!--</section><!--.programa-->
-
-       <div class="serv parallax">
-          <div class="contenedor ">
-            <div class="div_recibe">
-               <h2>Recibe la mejor asesoria</h2>
-               <p>
-                 Nuestra prioridad es la atención al cliente, prestando siempre el mejor servicio para que estes satisfecho. Contamos con un equipo de profesionales altamente capacitados que te acompañaran en todo momento recomendando las mejores alternativas para escoger tu vivienda ideal. 
-               </p>
-            </div>
-          </div><!--.contenedor-->
-
-       </div><!--.contador parallax-->
-
-
-       <section id="nuestros_servicios" class="invitados contenedor seccion">
-          <h2>Nuestros Servicios</h2>
-          <ul class="lista-invitados clearfix">
-             <li>
-                <div class="invitado">
-                  <a href="compra_venta.php">
-                     <img src="img/llave_1.jpg" alt="Imagen invitado">                  
-                     <p class="serv_title">Compra y Venta</p>
-                     <p>Compra y Venta 
-                     <br>
-                       <span>En <B>vîata</B> la vivienda ideal está a tu alcance, aquí encontrarás un grupo de expertos que te acompañarán en tu adquisición. También te ayudamos a ofertar tus inmuebles.</span>
-                     </p>
-                   </a>
-                </div>
-             </li>             
-             <li>
-                <div class="invitado">
-                  <a href="arriendo.php">
-                     <img src="img/arriendo_1.jpg" alt="Imagen invitado">
-                     <p class="serv_title">Arriendo</p>
-                     <p>Arriendo
-                     <br>
-                       <span>Aquí podrás conocer la gran variedad de inmuebles que tenemos en arriendo para ti, además te asesoramos si deseas publicar tus inmuebles en alquiler de forma fácil, rápida y segura.</span>
-                     </p>
-                   </a>
-                </div>
-             </li>
-             <li>
-                <div class="invitado">
-                  <a href="avaluos.php">
-                     <img src="img/avaluo_1.jpg" alt="Imagen invitado">
-                     <p class="serv_title">Avalúos</p>
-                     <p>Avalúos
-                     <br>
-                       <span>¿Sabes cuánto cuesta tu inmueble? Con este servicio tienes la posibilidad de conocer el valor comercial de tu predio.</span>
-                     </p>
-                   </a>
-                </div>
-             </li>
-             <li>
-                <div class="invitado">
-                  <a href="asesorias.php">
-                     <img src="img/asesorias.jpg" alt="Imagen invitado">
-                     <p class="serv_title">Asesorías</p>
-                     <p>Asesorías
-                     <br>
-                       <span><B>vîata</B> te ofrece Asesorías Jurídicas e Inmobiliarias, tenemos profesionales a tu servicio para tratar de manera personalizada cada una de tus inquietudes e inconvenientes.</span>
-                     </p>
-                   </a>
-                </div>
-             </li>
-             <!-- <li>
-                <div class="invitado">
-                   <img src="img/jorah.jpg" alt="Imagen invitado">
-                   <p class="serv_title">The Hound</p>
-                   <p>Jorah Mormont
-                   <br>
-                     <span>Nuestra prioridad es la atención al cliente, prestando siempre el mejor servicio para que estes satisfecho.  </span>
-                   </p>
-                </div>
-             </li> -->
-
-          </ul>
-
-       </section><!--.invitados-->
-
-       <div class="contador parallax">
-          <div class="contenedor">
-             <ul class="resumen-evento">
-                <li>
-                   <p class="numero">2</p> Casas
-                </li>
-                <li>
-                   <p class="numero">10</p> Apartamentos
-                </li>
-                <li>
-                   <p class="numero">2</p> Tipos de Avalúo
-                </li>
-                <li>
-                   <p class="numero">3</p> Asesores
-                </li>
-             </ul>
-
-          </div><!--.contenedor-->
-
-       </div><!--.contador parallax-->
-
-       <!--
-
-       <section class="precios seccion">
-          <h2>Precios</h2>
-          <div class="contenedor">
-             <ul class="lista-precios clearfix">
-                <li>
-                   <div class="tabla-precio">
-                      <h3>Pase por Día</h3>
-                      <p class="numero">$30</p>
-                      <ul>
-                         <li>Bocadillos Gratis</li>
-                         <li>Todas las Conferencias</li>
-                         <li>Todos los Talleres</li>
-                      </ul>
-                      <a href="#" class="button hollow">Comprar</a>
-                   </div>
-                </li>
-
-                <li>
-                   <div class="tabla-precio">
-                      <h3>Todos los Días</h3>
-                      <p class="numero">$50</p>
-                      <ul>
-                         <li>Bocadillos Gratis</li>
-                         <li>Todas las Conferencias</li>
-                         <li>Todos los Talleres</li>
-                         <li>Sentada en el Trono de Hierro</li>
-                      </ul>
-                      <a href="#" class="button">Comprar</a>
-                   </div>
-                </li>
-
-                <li>
-                   <div class="tabla-precio">
-                      <h3>Pase por 2 Días</h3>
-                      <p class="numero">$45</p>
-                      <ul>
-                         <li>Bocadillos Gratis</li>
-                         <li>Todas las Conferencias</li>
-                         <li>Todos los Talleres</li>
-                      </ul>
-                      <a href="#" class="button hollow">Comprar</a>
-                   </div>
-                </li>
-
-             </ul>
-
-          </div><!--.contenedor-->
-
-<!--
-
-       </section><!--.precios .seccion-->
-
-       <section class="precios seccion contenedor">
-        <h2>Avalúos</h2>
-              <div id="precios_avaluos" class="contenedor">
-               <ul class="lista-precios clearfix">
-                <!-- <li>
-                   <div class="tabla-precio">
-                      <h3>Avalúo no certificado clase 1</h3>
-                      <p class="numero">Gratis</p>
-                      <ul>
-                         <li>Realizado por Profesionales catastrales</li>                        
-                         <li>Entrega el mismo día</li>
-                         <li></li>
-                         <li>Todos los Talleres</li>
-                      </ul>
-                      <a href="#" class="button hollow">Comprar</a>
-                   </div>
-                 </li> -->
-
-                 <li>
-                   <div class="tabla-precio">
-                    <h3>Avalúo no certificado</h3>
-                    <!-- <p class="numero">$37.900</p> -->
-                    <ul>
-                     <li>Precio de venta y arriendo</li>
-                     <li>Estudio de Normatividad del inmueble</li>
-                     <li>Estudio de mercado del sector</li>
-                     <li>Características jurídicas del inmueble</li>
-                     <li>Descripción del método valuación</li>
-                   </ul>
-                   <a id="noCertBtn" href="avaluos.php" class="button">Saber más</a>
-                 </div>
-               </li>
-
-               <li>
-                 <div class="tabla-precio">
-                  <h3>Avalúo certificado</h3>                      
-                  <!-- <p class="numero">desde $249.000</p> -->
-                  <ul>
-                   <li>Visita al inmueble</li>                         
-                   <li>Precio de venta y arriendo</li>
-                   <li>Estudio de Normatividad del inmueble</li>
-                   <li>Estudio de mercado del sector</li>
-                   <li>Características jurídicas del inmueble</li>
-                   <li>Descripción del método valuación</li>                         
-                   <li>Objetivo de la valuación</li>
-                   <li>Disposiciones legales</li>
-                   <li>Registro fotográfico</li>
-                   <li>Firma certificada por Lonja de avaluadores</li>
-                 </ul>
-                 <a id="certBtn" href="avaluos.php" class="button">Saber más</a>
-               </div>
-             </li>
-           </ul>
-         </div><!--.contenedor-->
-       </section><!--.precios .seccion-->
-
-       <!--
-
-       <section class="ubicacion">
-          <h2>Ubicación</h2>
-          <div class="mapa" id="mapa">
-
-          </div>
-       </section>
-
-      -->
-
-       <!--<section class="seccion">
-          <h2>Testimonios</h2>
-          <div class="testimoniales contenedor clearfix">
-             <div class="testimonial">
-                <blockquote>
-                   <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                   <footer class="info-testimonial clearfix">
-                      <img src="img/missandei.jpeg" alt="Imagen testimonial">
-                      <cite>Missandei de Naath<span> Diseñador en @prisma</span></cite>
-                   </footer>
-                </blockquote>
-             </div><!--.testimonial-->
-
-             <!--<div class="testimonial">
-                <blockquote>
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <footer class="info-testimonial clearfix">
-                     <img src="img/bronn.jpg" alt="Imagen testimonial">
-                     <cite>Ser Bronn del Aguasnegras<span> Diseñador en @prisma</span></cite>
-                  </footer>
-                </blockquote>
-             </div><!--.testimonial-->
-
-             <!--<div class="testimonial">
-                <blockquote>
-                  <p>Hodor Hodor Hodor ¿Hodor? Hodor Hodor Hodor HODOR Hodor Hodor... Hodor Hodor Hodor Hodor Hodor Hodor Ho... doooor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor.</p>
-                  <footer class="info-testimonial clearfix">
-                     <img src="img/hodor.jpg" alt="Imagen testimonial">
-                     <cite>Hodor Hodor Hodor<span>Diseñador en @prisma</span></cite>
-                  </footer>
-                </blockquote>
-             </div><!--.testimonial-->
-          <!--</div><!--.testimoniales
-
-       <!--</section>-->
-
-       <div class="newsletter parallax">
-          <div class="contenido contenedor">
-             <p class="nl">Déjanos ayudarte</p>
-             <h3 class="nl">Contáctate con nosotros</h3>
-             <section>
-              <div class="mockup-content">
-                <div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
-                  <button id="btnContacto" type="button">Contacto</button>
-                  <div class="morph-content">
-                    <div>
-                      <div class="content-style-form content-style-form-1">
-                        <span class="icon icon-close">Close the dialog</span>
-                        <h2 class="morph">Contáctanos</h2>
-                        <form name="form_contact" action="" method="post" id="">
-                          <p class="morph"><label>Nombre</label><input name="nombre" type="text" required/></p>
-                          <p class="morph"><label>Email</label><input name="email" type="text" required/></p>
-                          <p class="morph"><label>Teléfono</label><input name="telefono" type="text" required/></p>
-                          <p class="morph"><label>Mensaje</label><textarea name="mensaje" placeholder="Dinos lo que necesitas, nos pondremos en contácto muy pronto" required></textarea></p>
-                          <p class="txt_politicas">Al enviar este formulario estás aceptando nuestras <a class="estilos_links">Políticas de Privacidad</a></p>
-                          <!-- <p class="morph"><button type="submit" name="submit">ENVIAR<button/></p> -->
-                          <p class="morph"><input id="sub_contact" type="submit" name="submit" value="ENVIAR" /></p>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- morph-button -->                
-              </div><!-- /form-mockup -->
-            </section>
-          </div><!--.contenido-->
-       </div><!--.newsletter-->
-
-       <!-- <section class="seccion ">
-          <h2>Faltan</h2>
-          <div class="cuenta-regresiva contenedor">
-             <ul class="clearfix">
-               <li><p id="dias" class="numero"></p> Días</li>
-                <li><p id="horas" class="numero"></p> Horas</li>
-                <li><p id="minutos" class="numero"></p> Minutos</li>
-                <li><p id="segundos" class="numero"></p> Segundos</li>
-             </ul>
-          </div> -->  <!--.cuenta-regresiva-->
-       <!-- </section> -->
+        <section class="seccion contenido contenedor sec_politicas">
+          <h3 class="new_h3">Deberes de los responsables del tratamiento de datos personales.</h3>
+          <p>
+            Estos son los deberes que cumplir por parte de los responsables del manejo y uso de la información suministradas en nuestras bases de datos.
+            <ol class="new_list">
+              <li><span>a)</span><p>Garantizar al Titular, en todo tiempo, el pleno y efectivo ejercicio del derecho de hábeas data.</p></li>
+              <li><span>b)</span><p>Solicitar y conservar, en las condiciones previstas en la presente ley, copia de la respectiva autorización otorgada por el Titular.</p></li>
+              <li><span>c)</span><p>Informar debidamente al Titular sobre la finalidad de la recolección y los derechos que le asisten por virtud de la autorización otorgada.</p></li>
+              <li><span>d)</span><p>Conservar la información bajo las condiciones de seguridad necesarias para impedir su adulteración, pérdida, consulta, uso o acceso no autorizado o fraudulento.</p></li>
+              <li><span>e)</span><p>Garantizar que la información que se suministre al Encargado del Tratamiento sea veraz, completa, exacta, actualizada, comprobable y comprensible.</p></li>
+              <li><span>f)</span><p>Actualizar la información, comunicando de forma oportuna al Encargado del Tratamiento, todas las novedades respecto de los datos que previamente le haya suministrado y adoptar las demás medidas necesarias para que la información suministrada a este se mantenga actualizada.</p></li>
+              <li><span>g)</span><p>Rectificar la información cuando sea incorrecta y comunicar lo pertinente al Encargado del Tratamiento.</p></li>
+              <li><span>h)</span><p>Suministrar al Encargado del Tratamiento, según el caso, únicamente datos cuyo Tratamiento esté previamente autorizado de conformidad con lo previsto en la presente ley.</p></li>
+              <li><span>i)</span><p>Exigir al Encargado del Tratamiento en todo momento, el respeto a las condiciones de seguridad y privacidad de la información del Titular.</p></li>
+              <li><span>j)</span><p>Tramitar las consultas y reclamos formulados en los términos señalados en la presente ley.</p></li>
+              <li><span>k)</span><p>Adoptar un manual interno de políticas y procedimientos para garantizar el adecuado cumplimiento de la presente ley y en especial, para la atención de consultas y reclamos.</p></li>
+              <li><span>l)</span><p>Informar al Encargado del Tratamiento cuando determinada información se encuentra en discusión por parte del Titular, una vez se haya presentado la reclamación y no haya finalizado el trámite respectivo.</p></li>
+              <li><span>m)</span><p>Informar a solicitud del Titular sobre el uso dado a sus datos.</p></li>
+              <li><span>n)</span><p>Informar a la autoridad de protección de datos cuando se presenten violaciones a los códigos de seguridad y existan riesgos en la administración de la información de los Titulares.</p></li>
+              <li><span>o)</span><p>Cumplir las instrucciones y requerimientos que imparta la Superintendencia de Industria y Comercio.</p></li>
+            </ol>
+          </p>
+       </section><!--.section-->       
 
         <?php
           include('global/footer.php');
