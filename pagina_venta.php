@@ -344,7 +344,7 @@
         <b>Inmueble:</b> " . $marcador . "<br><br>
         <b>Fecha:</b> " . $_POST['schedule'] . "<br><br>        
         Gracias por escogernos<br><br>
-        <b>Inmobiliaria Pyramid</b>
+        <b>Vîata Inmobiliaria</b>
         </body>
         </html>";
 
@@ -387,5 +387,5 @@
         echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo.');";         
       echo "</script>";
     }
-  }   
+  }
 ?>

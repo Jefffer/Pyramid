@@ -292,50 +292,71 @@
 </html>
 
 <?php
-if (!empty($_POST['subCert'])){
-  $from = 'contacto@viatainmobiliaria.com';
-  $to = $_POST['email'];
-  $subject = "Avalúo Certificado .: Inmobiliaria Pyramid";
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+  require 'PHPMailer-master/src/PHPMailer.php'; // Only file you REALLY need
+  require 'PHPMailer-master/src/Exception.php'; // If you want to debug
+  if (!empty($_POST['subCert'])){
+    $from = 'contacto@viatainmobiliaria.com';
+    $to = $_POST['email'];
+    $subject = "Avaluo Certificado .: Viata Inmobiliaria";
 
-  $message = "
-  <html>
-  <head>
-  <title>Avalúo Certificado</title>
-  </head>
-  <body>
-  <h2>Nos complace saludarte " . $_POST['nombre'] . ",</h2><br>
-  <p>Has solicitado un Avalúo Certificado, relacionando la siguiente información personal:<br><br>
-  <b>Nombre completo:</b> " . $_POST['nombre'] . "<br>
-  <b>Número telefónico:</b> " . $_POST['tel'] . "<br>
-  <b>Correo electrónico:</b> " . $_POST['email'] . "<br><br>
-  Además de la siguiente información del inmueble:<br><br>  
-  <b>Dirección:</b> " . $_POST['direccion'] . "<br>
-  <b>Tipo:</b> " . $_POST['inmueble'] . "<br>
-  <b>Metros cuadrados:</b> " . $_POST['metros'] . "<br><br>  
-  Nos pondremos en contácto contigo muy pronto. Gracias por escogernos.<br><br>
-  <b>Inmobiliaria Pyramid</b><br>
-  Juntos podemos hacerlo posible</p>
-  </body>
-  </html>";
-
-  // Always set content-type when sending HTML email
-  $headers='';
-  $headers .= 'MIME-Version: 1.0' . "\r\n";
-  $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-  $headers .= 'From: '.$from.' '. "\r\n";
-  $headers .= 'BCC:' . 'contacto@viatainmobiliaria.com' . "\r\n";
-  $bool = mail($to,$subject,$message, $headers);
-
-  if($bool){ // Cambiar PRUEBAS!!!!!!
-    // conexion Base de Datos
-    /*** mysql hostname ***/
-    $hostname = '147.135.87.130';
-    /*** mysql username ***/
-    $username = 'inmobi16_dbuser';
-    /*** mysql password ***/
-    $password = 'Inmopyd7890';
+    $mail = new PHPMailer(true); // Passing `true` enables exceptions
+    $mail->CharSet = 'UTF-8';
+    //$mail->Encoding = "base64";
 
     try {
+      //$mail->IsSMTP(); // enable SMTP
+      //Recipients
+      $mail->setFrom($from);
+      //$mail->addAddress('jefsrodriguezr@correo.udistrital.edu.co', 'Joe User'); // Add a recipient
+      $mail->addAddress($to); // Name is optional
+      //$mail->addReplyTo('info@example.com', 'Information');
+      //$mail->addCC('cc@example.com');
+      $mail->addBCC($from);
+
+      //Attachments
+      //$mail->addAttachment('/var/tmp/file.tar.gz'); // Add attachments
+      //$mail->addAttachment('/tmp/image.jpg', 'new.jpg'); // Optional name
+
+      $message = "
+        <html>
+        <head>
+        <title>Avalúo Certificado</title>
+        </head>
+        <body>
+        <h2>Nos complace saludarte " . $_POST['nombre'] . ",</h2><br>
+        <p>Has solicitado un Avalúo Certificado, relacionando la siguiente información personal:<br><br>
+        <b>Nombre completo:</b> " . $_POST['nombre'] . "<br>
+        <b>Número telefónico:</b> " . $_POST['tel'] . "<br>
+        <b>Correo electrónico:</b> " . $_POST['email'] . "<br><br>
+        Además de la siguiente información del inmueble:<br><br>  
+        <b>Dirección:</b> " . $_POST['direccion'] . "<br>
+        <b>Tipo:</b> " . $_POST['inmueble'] . "<br>
+        <b>Metros cuadrados:</b> " . $_POST['metros'] . "<br><br>  
+        Nos pondremos en contácto contigo muy pronto. Gracias por escogernos.<br><br>
+        <b>Vîata Inmobiliaria</b><br>
+        Juntos podemos hacerlo posible</p>
+        </body>
+        </html>";
+
+      //Content
+      $mail->isHTML(true); // Set email format to HTML
+      $mail->Subject = utf8_decode($subject);
+      $mail->Body = $message;
+      $mail->AltBody = 'Error al mostrar el mensaje. Posibles causas: version muy antigua del explorador.';
+
+      $mail->send();
+
+      // conexion Base de Datos
+      /*** mysql hostname ***/
+      $hostname = '147.135.87.130';
+      /*** mysql username ***/
+      $username = 'inmobi16_dbuser';
+      /*** mysql password ***/
+      $password = 'Inmopyd7890';
+
+      try {
         $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
         
         $sth = $mbd->prepare("INSERT INTO aval_certificado (nombre, telefono, correo, direccion, fk_tipo_inmueble, metros) VALUES (?,?,?,?,?,?)");
@@ -353,74 +374,92 @@ if (!empty($_POST['subCert'])){
         //   echo "});";
         echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
         echo "</script>";
+      }
+      catch(PDOException $e)
+      {
+          echo $e->getMessage();
+      }   
+    } catch (Exception $e) {
+      echo "<script>";
+        echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo.');";         
+      echo "</script>";
     }
-    catch(PDOException $e)
-    {
-        echo $e->getMessage();
-    }    
-  }else{
-     echo "<script>";
-       echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
-     echo "</script>";
   }
-}
-if (!empty($_POST['subNoCert'])){
-  $from = 'contacto@viatainmobiliaria.com';
-  $to = $_POST['correo'];
-  $subject = "Avalúo No Certificado .: Inmobiliaria Pyramid";
 
-  $message = "
-  <html>
-  <head>
-  <title>Avalúo No Certificado</title>
-  </head>
-  <body>
-  <h2>Nos complace saludarte " . $_POST['nombre'] . ",</h2><br>
-  <p>Has solicitado un Avalúo No Certificado, relacionando la siguiente información personal:<br><br>
-  <b>Nombre completo:</b> " . $_POST['nombre'] . "<br>
-  <b>Número telefónico:</b> " . $_POST['tel'] . "<br>
-  <b>Correo electrónico:</b> " . $_POST['correo'] . "<br><br>
-  Además de la siguiente información del inmueble:<br><br>  
-  <b>Dirección:</b> " . $_POST['direccion'] . "<br>
-  <b>Tipo:</b> " . $_POST['inmueble'] . "<br>
-  <b>Metros cuadrados:</b> " . $_POST['metros'] . "<br>
-  <b>Pisos:</b> " . $_POST['pisos'] . "<br>
-  <b>Sótanos:</b> " . $_POST['sotanos'] . "<br>
-  <b>Estado:</b> " . $_POST['estado'] . "<br>
-  <b>Antiguedad:</b> " . $_POST['tiempo'] . "<br>
-  <b>Remodelaciones:</b> " . $_POST['remodelacion'] . "<br>
-  <b>Habitaciones:</b> " . $_POST['habitacion'] . "<br>
-  <b>Baños:</b> " . $_POST['banos'] . "<br>
-  <b>Parqueadero(s):</b> " . $_POST['parq'] . "<br>
-  <b>Sala de estar:</b> " . $_POST['sala'] . "<br>
-  <b>Cocina integral:</b> " . $_POST['cocina'] . "<br>
-  <b>Antejardín:</b> " . $_POST['jardin'] . "<br>
-  <b>Cuarto de estudio:</b> " . $_POST['estudio'] . "<br>
-  <b>Cuarto de Lavado:</b> " . $_POST['lavado'] . "<br><br>
-  Nos pondremos en contácto contigo muy pronto. Gracias por escogernos.<br><br>
-  <b>Inmobiliaria Pyramid</b><br>
-  Juntos podemos hacerlo posible</p>
-  </body>
-  </html>";
+  if (!empty($_POST['subNoCert'])){
+    $from = 'contacto@viatainmobiliaria.com';
+    $to = $_POST['email'];
+    $subject = "Avaluo No Certificado .: Viata Inmobiliaria";
 
-  // Always set content-type when sending HTML email
-  $headers='';
-  $headers .= 'MIME-Version: 1.0' . "\r\n";
-  $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-  $headers .= 'From: '.$from.' '. "\r\n";
-  $headers .= 'BCC:' . 'contacto@viatainmobiliaria.com' . "\r\n";
-  $bool = mail($to,$subject,$message, $headers);
-
-  if($bool){
-    // conexion Base de Datos
-    /*** mysql hostname ***/
-    $hostname = '147.135.87.130';
-    /*** mysql username ***/
-    $username = 'inmobi16_dbuser';
-    /*** mysql password ***/
-    $password = 'Inmopyd7890';
+    $mail = new PHPMailer(true); // Passing `true` enables exceptions
+    $mail->CharSet = 'UTF-8';
+    //$mail->Encoding = "base64";
 
     try {
+      //$mail->IsSMTP(); // enable SMTP
+      //Recipients
+      $mail->setFrom($from);
+      //$mail->addAddress('jefsrodriguezr@correo.udistrital.edu.co', 'Joe User'); // Add a recipient
+      $mail->addAddress($to); // Name is optional
+      //$mail->addReplyTo('info@example.com', 'Information');
+      //$mail->addCC('cc@example.com');
+      $mail->addBCC($from);
+
+      //Attachments
+      //$mail->addAttachment('/var/tmp/file.tar.gz'); // Add attachments
+      //$mail->addAttachment('/tmp/image.jpg', 'new.jpg'); // Optional name
+
+      $message = "
+        <html>
+        <head>
+        <title>Avalúo No Certificado</title>
+        </head>
+        <body>
+        <h2>Nos complace saludarte " . $_POST['nombre'] . ",</h2><br>
+        <p>Has solicitado un Avalúo No Certificado, relacionando la siguiente información personal:<br><br>
+        <b>Nombre completo:</b> " . $_POST['nombre'] . "<br>
+        <b>Número telefónico:</b> " . $_POST['tel'] . "<br>
+        <b>Correo electrónico:</b> " . $_POST['correo'] . "<br><br>
+        Además de la siguiente información del inmueble:<br><br>  
+        <b>Dirección:</b> " . $_POST['direccion'] . "<br>
+        <b>Tipo:</b> " . $_POST['inmueble'] . "<br>
+        <b>Metros cuadrados:</b> " . $_POST['metros'] . "<br>
+        <b>Pisos:</b> " . $_POST['pisos'] . "<br>
+        <b>Sótanos:</b> " . $_POST['sotanos'] . "<br>
+        <b>Estado:</b> " . $_POST['estado'] . "<br>
+        <b>Antiguedad:</b> " . $_POST['tiempo'] . "<br>
+        <b>Remodelaciones:</b> " . $_POST['remodelacion'] . "<br>
+        <b>Habitaciones:</b> " . $_POST['habitacion'] . "<br>
+        <b>Baños:</b> " . $_POST['banos'] . "<br>
+        <b>Parqueadero(s):</b> " . $_POST['parq'] . "<br>
+        <b>Sala de estar:</b> " . $_POST['sala'] . "<br>
+        <b>Cocina integral:</b> " . $_POST['cocina'] . "<br>
+        <b>Antejardín:</b> " . $_POST['jardin'] . "<br>
+        <b>Cuarto de estudio:</b> " . $_POST['estudio'] . "<br>
+        <b>Cuarto de Lavado:</b> " . $_POST['lavado'] . "<br><br>
+        Nos pondremos en contácto contigo muy pronto. Gracias por escogernos.<br><br>
+        <b>Vîata Inmobiliaria</b><br>
+        Juntos podemos hacerlo posible</p>
+        </body>
+        </html>";
+
+      //Content
+      $mail->isHTML(true); // Set email format to HTML
+      $mail->Subject = utf8_decode($subject);
+      $mail->Body = $message;
+      $mail->AltBody = 'Error al mostrar el mensaje. Posibles causas: version muy antigua del explorador.';
+
+      $mail->send();
+
+      // conexion Base de Datos
+      /*** mysql hostname ***/
+      $hostname = '147.135.87.130';
+      /*** mysql username ***/
+      $username = 'inmobi16_dbuser';
+      /*** mysql password ***/
+      $password = 'Inmopyd7890';
+
+      try {
         $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
         
         $sth = $mbd->prepare("INSERT INTO aval_no_certificado (nombre_nocert, telefono_nocert, correo_nocert, direccion_nocert, tipo_nocert, metros_nocert, pisos_nocert, sotano_nocert, estado_nocert, anios_nocert, remodelacion_nocert, habitacion_nocert, banos_nocert, parq_nocert, sala_nocert, cocina_nocert, jardin_nocert, estudio_nocert, lavado_nocert) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
@@ -433,23 +472,17 @@ if (!empty($_POST['subNoCert'])){
         $sth->execute([$nombre, $telefono, $correo, $dir, $tipoin, $metro, $pisos, $sotanos, $estado, $tiempo, $remo, $hab, $banos, $parq, $sala, $cocina, $jardin, $estudio, $lavado]);
 
         echo "<script>";
-        // echo "swal({";
-        //   echo "title: "Datos incompletos",";
-        //   echo "text: "Por favor ingresa tu número telefónico.",";
-        //   echo "icon: "warning",";
-        //   echo "dangerMode: true,";
-        //   echo "});";
         echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
         echo "</script>";
+      }
+      catch(PDOException $e)
+      {
+          echo $e->getMessage();
+      }   
+    } catch (Exception $e) {
+      echo "<script>";
+        echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo.');";         
+      echo "</script>";
     }
-    catch(PDOException $e)
-    {
-        echo $e->getMessage();
-    }
-  }else{
-     echo "<script>";
-       echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
-     echo "</script>";
-  }
-}
+  }  
 ?>
