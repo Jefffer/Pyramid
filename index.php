@@ -14,8 +14,7 @@
         <meta name="twitter:site" content="@publisher_handle">
         <meta name="twitter:title" content="Vîata Inmobiliaria">
         <meta name="twitter:description" content="Viata inmobiliaria ofrece diversos servicios inmobiliarios, desde compra-venta y alquiler de inmuebles, hasta asesorias y avalúos catastrales">
-        <meta name="twitter:creator" content="@author_handle">
-        <-- Las imágenes de sumario de Twitter deben ser de al menos 200x200px -->
+        <meta name="twitter:creator" content="@author_handle">        
         <meta name="twitter:image" content="https://viatainmobiliaria.com/img/logo/logo_sin_fondo.png">
 
         <!-- Open Graph data -->
