@@ -316,38 +316,56 @@
 </html>
 
 <?php
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+  require 'PHPMailer-master/src/PHPMailer.php'; // Only file you REALLY need
+  require 'PHPMailer-master/src/Exception.php'; // If you want to debug
   if (!empty($_POST['submitDate'])) {
     $from = 'contacto@viatainmobiliaria.com';
     $to = $_POST['email'];
-    $toMe = 'contacto@viatainmobiliaria.com';
-    $subject = "Agenda de visita .: Inmobiliaria Pyramid";
+    $subject = "Agenda de visita .: Viata Inmobiliaria";
 
-    $message = "
-    <html>
-    <head>
-    <title>HTML email</title>
-    </head>
-    <body>
-    <h2>Hola " . $_POST['nombre'] . ",</h2><br>
-    <p>Sabemos que estás interesado en tomar en arriendo uno de nuestros inmuebles, es por esto que muy pronto nos pondremos en contácto para formalizar la visita.<br><br>    
-    <b>Inmueble:</b> " . $marcador . "<br><br>
-    <b>Fecha:</b> " . $_POST['schedule'] . "<br><br>
-    
-    Gracias por escogernos<br><br>
-    <b>Inmobiliaria Pyramid</b>
-    </body>
-    </html>";
+    $mail = new PHPMailer(true); // Passing `true` enables exceptions
+    $mail->CharSet = 'UTF-8';
+    //$mail->Encoding = "base64";
 
-    // Always set content-type when sending HTML email
-    $headers='';
-    $headers .= 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-    $headers .= 'From: '.$from.' '. "\r\n";
-    //$headers .= 'BCC:' . 'contacto@viatainmobiliaria.com' . "\r\n";
-    $bool = mail($to,$subject,$message, $headers);
-    //mail($toMe,$subject,$message, $headers);
+    try {
+      //$mail->IsSMTP(); // enable SMTP
+      //Recipients
+      $mail->setFrom($from);
+      //$mail->addAddress('jefsrodriguezr@correo.udistrital.edu.co', 'Joe User'); // Add a recipient
+      $mail->addAddress($to); // Name is optional
+      //$mail->addReplyTo('info@example.com', 'Information');
+      //$mail->addCC('cc@example.com');
+      $mail->addBCC($from);
 
-    if($bool){ // PRUEBAAAAAAAAAAS
+      //Attachments
+      //$mail->addAttachment('/var/tmp/file.tar.gz'); // Add attachments
+      //$mail->addAttachment('/tmp/image.jpg', 'new.jpg'); // Optional name
+
+      $message = "
+        <html>
+        <head>
+        <title>HTML email</title>
+        </head>
+        <body>
+        <h2>Hola " . $_POST['nombre'] . ",</h2><br>
+        <p>Sabemos que estás interesado en tomar en arriendo uno de nuestros inmuebles, es por esto que muy pronto nos pondremos en contácto para formalizar la visita.<br><br>    
+        <b>Inmueble:</b> " . $marcador . "<br><br>
+        <b>Fecha:</b> " . $_POST['schedule'] . "<br><br>          
+        Gracias por escogernos<br><br>
+        <b>Inmobiliaria Pyramid</b>
+        </body>
+        </html>";
+
+      //Content
+      $mail->isHTML(true); // Set email format to HTML
+      $mail->Subject = utf8_decode($subject);
+      $mail->Body = $message;
+      $mail->AltBody = 'Error al mostrar el mensaje. Posibles causas: version muy antigua del explorador.';
+
+      $mail->send();
+
       // conexion Base de Datos
       /*** mysql hostname ***/
       $hostname = '147.135.87.130';
@@ -357,35 +375,33 @@
       $password = 'Inmopyd7890';
 
       try {
-          $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
-          
-          $sth = $mbd->prepare("INSERT INTO form_agenda_cita (nombre_form_ac, telefono_form_ac, email_form_ac, fecha_form_ac, interes, fk_inmueble) VALUES (?,?,?,?,?,?)");
-          //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
-          $nombre = $_POST['nombre']; $correo = $_POST['email']; $telefono = $_POST['celular'];  $fecha = $_POST['schedule'];
+        $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
+        
+        $sth = $mbd->prepare("INSERT INTO form_agenda_cita (nombre_form_ac, telefono_form_ac, email_form_ac, fecha_form_ac, interes, fk_inmueble) VALUES (?,?,?,?,?,?)");
+        //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
+        $nombre = $_POST['nombre']; $correo = $_POST['email']; $telefono = $_POST['celular'];  $fecha = $_POST['schedule'];
 
-          //$sth->execute([$nombre, $telefono, $correo, $fecha, $idInmueble]);
-          $sth->execute([$nombre, $telefono, $correo, $fecha, "Arriendo", $idInmueble]);
+        //$sth->execute([$nombre, $telefono, $correo, $fecha, $idInmueble]);
+        $sth->execute([$nombre, $telefono, $correo, $fecha, "Arriendo", $idInmueble]);
 
-          echo "<script>";
-
-          // echo "swal({";
-          //   echo "title: "Datos incompletos",";
-          //   echo "text: "Por favor ingresa tu número telefónico.",";
-          //   echo "icon: "warning",";
-          //   echo "dangerMode: true,";
-          //   echo "});";
-
-          echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto ". $_POST['schedule'] ."');";
-          echo "</script>";
+        echo "<script>";
+        // echo "swal({";
+        //   echo "title: "Datos incompletos",";
+        //   echo "text: "Por favor ingresa tu número telefónico.",";
+        //   echo "icon: "warning",";
+        //   echo "dangerMode: true,";
+        //   echo "});";
+        echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto ". $_POST['schedule'] ."');";
+        echo "</script>";
       }
       catch(PDOException $e)
       {
           echo $e->getMessage();
-      }
-    }else{
-       echo "<script>";
-         echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
-       echo "</script>";
+      }   
+    } catch (Exception $e) {
+      echo "<script>";
+        echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo.');";         
+      echo "</script>";
     }
-  }
+  }    
 ?>

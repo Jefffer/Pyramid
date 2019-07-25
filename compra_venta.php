@@ -392,82 +392,103 @@
 </html>
 
 <?php
-if (isset($_POST['submitForm'])){
-  $from = 'contacto@viatainmobiliaria.com';
-  $to = $_POST['emailForm'];
-  $subject = "Vende con Nosotros .: Inmobiliaria Pyramid";
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+  require 'PHPMailer-master/src/PHPMailer.php'; // Only file you REALLY need
+  require 'PHPMailer-master/src/Exception.php'; // If you want to debug
+  if (isset($_POST['submitForm'])) {
+    $from = 'contacto@viatainmobiliaria.com';
+    $to = $_POST['emailForm'];
+    $subject = "Vende con Nosotros .: Viata Inmobiliaria";
 
-  $message = "
-  <html>
-  <head>
-  <title>HTML email</title>
-  </head>
-  <body>
-  <h2>Nos complace saludarte " . $_POST['nombreForm'] . ",</h2><br>
-  <p>Has ingresado la siguiente información, relacionada al inmueble en venta que deseas publicar en nuestra plataforma:<br><br>
-  <b>Tipo de Inmueble:</b> " . $_POST['inmuebleForm'] . "<br>
-  <b>Ciudad:</b> " . $_POST['cuidadForm'] . "<br>
-  <b>Barrio:</b> " . $_POST['barrioForm'] . "<br>
-  <b>Antiguedad:</b> " . $_POST['antiguedadForm'] . "<br>
-  <b>Comentarios:</b> " . $_POST['coment_venta'] . "<br><br>
-  Además de la siguiente información personal:<br>
-  <b>Nombre:</b> " . $_POST['nombreForm'] . "<br>
-  <b>Teléfono:</b> " . $_POST['celularForm'] . "<br>
-  <b>Email:</b> " . $_POST['emailForm'] . "<br><br>
-  Nos pondremos en contácto contigo muy pronto. Gracias por escogernos.<br><br>
-  <b>Inmobiliaria Pyramid</b><br>
-  Juntos podemos hacerlo posible</p>
-  </body>
-  </html>";
-
-  // Always set content-type when sending HTML email
-  $headers='';
-  $headers .= 'MIME-Version: 1.0' . "\r\n";
-  $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-  $headers .= 'From: '.$from.' '. "\r\n";
-  $headers .= 'BCC:' . 'contacto@viatainmobiliaria.com' . "\r\n";  
-  $bool = mail($to,$subject,$message, $headers);
-
-  if($bool){
-    // conexion Base de Datos
-    /*** mysql hostname ***/
-    $hostname = '147.135.87.130';
-    /*** mysql username ***/
-    $username = 'inmobi16_dbuser';
-    /*** mysql password ***/
-    $password = 'Inmopyd7890';
+    $mail = new PHPMailer(true); // Passing `true` enables exceptions
+    $mail->CharSet = 'UTF-8';
+    //$mail->Encoding = "base64";
 
     try {
-      $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
-      
-      $sth = $mbd->prepare("INSERT INTO form_vende (nombre_form_ven, telefono_form_ven, email_form_ven, fk_tipo_inmueble_ven, fk_ciudad_ven, barrio_form_ven, antiguedad_form_ven, coment_form_ven) VALUES (?,?,?,?,?,?,?,?)");
-      //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
-      $nombre = $_POST['nombreForm']; $correo = $_POST['emailForm']; $telefono = $_POST['celularForm'];  $tipo = $_POST['inmuebleForm'];
-      $ciudad = $_POST['cuidadForm']; $barrio = $_POST['barrioForm']; $antiguedad = $_POST['antiguedadForm']; $coment = $_POST['coment_venta'];
+      //$mail->IsSMTP(); // enable SMTP
+      //Recipients
+      $mail->setFrom($from);
+      //$mail->addAddress('jefsrodriguezr@correo.udistrital.edu.co', 'Joe User'); // Add a recipient
+      $mail->addAddress($to); // Name is optional
+      //$mail->addReplyTo('info@example.com', 'Information');
+      //$mail->addCC('cc@example.com');
+      $mail->addBCC($from);
 
-      //$sth->execute([$nombre, $telefono, $correo, $fecha, $idInmueble]);
-      $sth->execute([$nombre, $telefono, $correo, $tipo, $ciudad, $barrio, $antiguedad, $coment]);
+      //Attachments
+      //$mail->addAttachment('/var/tmp/file.tar.gz'); // Add attachments
+      //$mail->addAttachment('/tmp/image.jpg', 'new.jpg'); // Optional name
 
-      echo "<script>";
+      $message = "
+        <html>
+        <head>
+        <title>HTML email</title>
+        </head>
+        <body>
+        <h2>Nos complace saludarte " . $_POST['nombreForm'] . ",</h2><br>
+        <p>Has ingresado la siguiente información, relacionada al inmueble en venta que deseas publicar en nuestra plataforma:<br><br>
+        <b>Tipo de Inmueble:</b> " . $_POST['inmuebleForm'] . "<br>
+        <b>Ciudad:</b> " . $_POST['cuidadForm'] . "<br>
+        <b>Barrio:</b> " . $_POST['barrioForm'] . "<br>
+        <b>Antiguedad:</b> " . $_POST['antiguedadForm'] . "<br>
+        <b>Comentarios:</b> " . $_POST['coment_venta'] . "<br><br>
+        Además de la siguiente información personal:<br>
+        <b>Nombre:</b> " . $_POST['nombreForm'] . "<br>
+        <b>Teléfono:</b> " . $_POST['celularForm'] . "<br>
+        <b>Email:</b> " . $_POST['emailForm'] . "<br><br>
+        Nos pondremos en contácto contigo muy pronto. Gracias por escogernos.<br><br>
+        <b>Vîata Inmobiliaria</b><br>
+        Juntos podemos hacerlo posible</p>
+        </body>
+        </html>";
 
-      // echo "swal({";
-      //   echo "title: "Datos incompletos",";
-      //   echo "text: "Por favor ingresa tu número telefónico.",";
-      //   echo "icon: "warning",";
-      //   echo "dangerMode: true,";
-      //   echo "});";
+      //Content
+      $mail->isHTML(true); // Set email format to HTML
+      $mail->Subject = utf8_decode($subject);
+      $mail->Body = $message;
+      $mail->AltBody = 'Error al mostrar el mensaje. Posibles causas: version muy antigua del explorador.';
 
-      echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto ". $_POST['schedule'] ."');";
-      echo "</script>";
+      $mail->send();
+
+      // conexion Base de Datos
+      /*** mysql hostname ***/
+      $hostname = '147.135.87.130';
+      /*** mysql username ***/
+      $username = 'inmobi16_dbuser';
+      /*** mysql password ***/
+      $password = 'Inmopyd7890';
+
+      try {
+        $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
+        
+        $sth = $mbd->prepare("INSERT INTO form_vende (nombre_form_ven, telefono_form_ven, email_form_ven, fk_tipo_inmueble_ven, fk_ciudad_ven, barrio_form_ven, antiguedad_form_ven, coment_form_ven) VALUES (?,?,?,?,?,?,?,?)");
+        //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
+        $nombre = $_POST['nombreForm']; $correo = $_POST['emailForm']; $telefono = $_POST['celularForm'];  $tipo = $_POST['inmuebleForm'];
+        $ciudad = $_POST['cuidadForm']; $barrio = $_POST['barrioForm']; $antiguedad = $_POST['antiguedadForm']; $coment = $_POST['coment_venta'];
+
+        //$sth->execute([$nombre, $telefono, $correo, $fecha, $idInmueble]);
+        $sth->execute([$nombre, $telefono, $correo, $tipo, $ciudad, $barrio, $antiguedad, $coment]);
+
+        echo "<script>";
+
+        // echo "swal({";
+        //   echo "title: "Datos incompletos",";
+        //   echo "text: "Por favor ingresa tu número telefónico.",";
+        //   echo "icon: "warning",";
+        //   echo "dangerMode: true,";
+        //   echo "});";
+
+        echo "alert('Registro exitoso. Nos pondremos en contacto contigo muy pronto ". $_POST['schedule'] ."');";
+        echo "</script>";
+      }
+      catch(PDOException $e)
+      {
+          echo $e->getMessage();
+      }
+    } catch (Exception $e) {
+        echo "<script>";
+           echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo.');";         
+         echo "</script>";
     }
-    catch(PDOException $e)
-    {
-        echo $e->getMessage();
-    }
-  }else{
-     echo "<script>";
-       echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
-     echo "</script>";
   }
-}
 ?>

@@ -523,6 +523,11 @@
   require 'PHPMailer-master/src/PHPMailer.php'; // Only file you REALLY need
   require 'PHPMailer-master/src/Exception.php'; // If you want to debug
   if (!empty($_POST['submit'])) {
+    $from = 'contacto@viatainmobiliaria.com';
+    $to = $_POST['email'];
+    //$toMe = 'contacto@viatainmobiliaria.com';
+    $subject = "Contacto Viata Inmobiliaria";
+
     $mail = new PHPMailer(true); // Passing `true` enables exceptions
     $mail->CharSet = 'UTF-8';
     //$mail->Encoding = "base64";
@@ -530,12 +535,12 @@
     try {
         //$mail->IsSMTP(); // enable SMTP
         //Recipients
-        $mail->setFrom('contacto@viatainmobiliaria.com');
+        $mail->setFrom($from);
         //$mail->addAddress('jefsrodriguezr@correo.udistrital.edu.co', 'Joe User'); // Add a recipient
-        $mail->addAddress('jefre123@hotmail.com'); // Name is optional
+        $mail->addAddress($to); // Name is optional
         //$mail->addReplyTo('info@example.com', 'Information');
         //$mail->addCC('cc@example.com');
-        $mail->addBCC('contacto@viatainmobiliaria.com');
+        $mail->addBCC($from);
 
         //Attachments
         //$mail->addAttachment('/var/tmp/file.tar.gz'); // Add attachments
@@ -561,7 +566,7 @@
 
         //Content
         $mail->isHTML(true); // Set email format to HTML
-        $mail->Subject = utf8_decode('Contacto Vîata Inmobiliaria');
+        $mail->Subject = utf8_decode($subject);
         $mail->Body = $message;
         $mail->AltBody = 'Error al mostrar el mensaje. Posibles causas: version muy antigua del explorador.';
 
