@@ -8,7 +8,7 @@
      <div class="footer-informacion">
       <h3>Comunícate con <span>Nosotros</span></h3>
       <p><span>Angélica Pineda</span> <br>
-        <i class="far fa-envelope"></i> angelica.p@viatainmobiliaria.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 350 6039310 
+        <i class="far fa-envelope"></i> angelica.p@viatainmobiliaria.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 311 2868539 
       </p>
       <p><span>Alexander Pineda</span> <br>
         <i class="far fa-envelope"></i> alexander.p@viatainmobiliaria.com &nbsp;&nbsp;<i class="fab fa-whatsapp"></i> 313 3655012 
@@ -36,5 +36,5 @@
  </div>
 </div>
 
-<p class="copyright">vîata Inmobiliaria - Bogotá, Colombia 2019 .: Developed by Jefffer</p>
+<p class="copyright">vîata Inmobiliaria - Bogotá, Colombia 2019 Nit. 901302616 .: Developed by Jefffer</p>
 </footer>

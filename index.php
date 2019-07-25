@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Viata Inmobiliaria .: Servicios Inmobiliarios</title>
-        <meta name="description" content="">
+        <meta name="description" content="Viata inmobiliaria ofrece diversos servicios inmobiliarios, desde compra-venta y alquiler de inmuebles, hasta asesorias y avalúos catastrales">
+        <meta name="keywords" content="Viata inmobiliaria, viata, inmobiliaria, inmobiliarios, arriendo, casa, apartamento, bogota">
+        <meta name="author" content="Jefffer">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -36,7 +38,7 @@
         <section id="como_funcion" class="seccion contenido contenedor">
            <h2>¿Cómo funciona?</h2>
            <p>
-             <b>V<span class="rojito">î</span>ata Inmobiliaria</b> nace como respuesta a las diferentes inquietudes presentadas en el mercado inmobiliario, que gracias a nuestra constante innovación en diferentes estrategias de negociación y marketing buscamos resolver de manera rápida y eficiente, cambiando el concepto de compra-venta y alquiler en una manera más sencilla de intercambiar y utilizar tus bienes.
+             <b>V<span class="rojito">î</span>ata Inmobiliaria</b> nace como respuesta a las diferentes inquietudes presentadas en el mercado inmobiliario, que gracias a nuestra constante innovación en diversas estrategias de negociación y marketing buscamos resolver de manera rápida y eficiente, cambiando el concepto de compra-venta y alquiler en una manera más sencilla de intercambiar y utilizar tus bienes raíces.
             </p>
             <a href="como_funciona.php" class="button">Saber más</a>
        </section><!--.section-->
@@ -516,75 +518,89 @@
 </html>
 
 <?php
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+  require 'PHPMailer-master/src/PHPMailer.php'; // Only file you REALLY need
+  require 'PHPMailer-master/src/Exception.php'; // If you want to debug
   if (!empty($_POST['submit'])) {
-    $from = 'contacto@viatainmobiliaria.com';
-    $to = $_POST['email'];
-    $toMe = 'contacto@viatainmobiliaria.com';
-    $subject = "Contacto vîata Inmobiliaria";
+    $mail = new PHPMailer(true); // Passing `true` enables exceptions
+    $mail->CharSet = 'UTF-8';
+    //$mail->Encoding = "base64";
 
-    $message = "
-    <html>
-    <head>
-    <title>HTML email</title>
-    </head>
-    <body>
-    <h2>Hola " . $_POST['nombre'] . ",</h2><br>
-    <p>Hemos recibido un correo de tu parte con la siguiente información:<br><br>
-    <b>Nombre:</b> " . $_POST['nombre'] . "<br>
-    <b>Email:</b> " . $_POST['email'] . "<br>
-    <b>Teléfono:</b> " . $_POST['telefono'] . "<br><br>
-    Y el siguiente mensaje: <i><br><br>" . 
-    $_POST['mensaje'] . "</i><br><br>
-    Nos pondremos en contácto contigo muy pronto. Gracias por escogernos<br><br>
-    <b>Vîata Inmobiliaria</b>
-    </body>
-    </html>";
+    try {
+        //$mail->IsSMTP(); // enable SMTP
+        //Recipients
+        $mail->setFrom('contacto@viatainmobiliaria.com');
+        //$mail->addAddress('jefsrodriguezr@correo.udistrital.edu.co', 'Joe User'); // Add a recipient
+        $mail->addAddress('jefre123@hotmail.com'); // Name is optional
+        //$mail->addReplyTo('info@example.com', 'Information');
+        //$mail->addCC('cc@example.com');
+        $mail->addBCC('contacto@viatainmobiliaria.com');
 
-    // Always set content-type when sending HTML email
-    $headers='';
-    $headers .= 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-    $headers .= 'From: '.$from.' '. "\r\n";
-    $headers .= 'BCC:' . 'contacto@viatainmobiliaria.com' . "\r\n";
-    $headers .= 'BCC:' . 'angelica.p@viatainmobiliaria.com' . "\r\n";
-    $bool = mail($to,$subject,$message, $headers);
-    //mail($toMe,$subject,$message, $headers);
+        //Attachments
+        //$mail->addAttachment('/var/tmp/file.tar.gz'); // Add attachments
+        //$mail->addAttachment('/tmp/image.jpg', 'new.jpg'); // Optional name
 
-    if($bool){
-      // conexion Base de Datos
-      /*** mysql hostname ***/
-      $hostname = '147.135.87.130';
-      /*** mysql username ***/
-      $username = 'inmobi16_dbuser';
-      /*** mysql password ***/
-      $password = 'Inmopyd7890';
+        $message = "
+          <html>
+          <head>
+          <title>HTML email</title>
+          </head>
+          <body>
+          <h2>Hola " . $_POST['nombre'] . ",</h2><br>
+          <p>Hemos recibido un correo de tu parte con la siguiente información:<br><br>
+          <b>Nombre:</b> " . $_POST['nombre'] . "<br>
+          <b>Email:</b> " . $_POST['email'] . "<br>
+          <b>Teléfono:</b> " . $_POST['telefono'] . "<br><br>
+          Y el siguiente mensaje: <i><br><br>" . 
+          $_POST['mensaje'] . "</i><br><br>
+          Nos pondremos en contácto contigo muy pronto. Gracias por escogernos<br><br>
+          <b>Vîata Inmobiliaria</b>
+          </body>
+          </html>";
 
-      try {
-        $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
-        
-        $sth = $mbd->prepare("INSERT INTO contacto (nombre, email, telefono, mensaje) VALUES (?,?,?,?)");
-        //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
-        $nombre = $_POST['nombre']; $correo = $_POST['email']; $telefono = $_POST['telefono'];  $mensaje = $_POST['mensaje'];
-        $sth->execute([$nombre, $correo, $telefono, $mensaje]);
+        //Content
+        $mail->isHTML(true); // Set email format to HTML
+        $mail->Subject = utf8_decode('Contacto Vîata Inmobiliaria');
+        $mail->Body = $message;
+        $mail->AltBody = 'Error al mostrar el mensaje. Posibles causas: version muy antigua del explorador.';
 
+        $mail->send();
+
+        // conexion Base de Datos
+        /*** mysql hostname ***/
+        $hostname = '147.135.87.130';
+        /*** mysql username ***/
+        $username = 'inmobi16_dbuser';
+        /*** mysql password ***/
+        $password = 'Inmopyd7890';
+
+        try {
+          $mbd = new PDO("mysql:host=$hostname;dbname=inmobi16_pyramiddb", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
+          
+          $sth = $mbd->prepare("INSERT INTO contacto (nombre, email, telefono, mensaje) VALUES (?,?,?,?)");
+          //$sth->execute([$_POST['nombre'], $_POST['tel'], $_POST['email'], $_POST['direccion'], $_POST['inmueble'], $_POST['metros']]);
+          $nombre = $_POST['nombre']; $correo = $_POST['email']; $telefono = $_POST['telefono'];  $mensaje = $_POST['mensaje'];
+          $sth->execute([$nombre, $correo, $telefono, $mensaje]);
+
+          echo "<script>";
+          // echo "swal({";
+          //   echo "title: "Datos incompletos",";
+          //   echo "text: "Por favor ingresa tu número telefónico.",";
+          //   echo "icon: "warning",";
+          //   echo "dangerMode: true,";
+          //   echo "});";
+          echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
+          echo "</script>";
+        }
+        catch(PDOException $e)
+        {
+            echo $e->getMessage();
+        }   
+    } catch (Exception $e) {
         echo "<script>";
-        // echo "swal({";
-        //   echo "title: "Datos incompletos",";
-        //   echo "text: "Por favor ingresa tu número telefónico.",";
-        //   echo "icon: "warning",";
-        //   echo "dangerMode: true,";
-        //   echo "});";
-        echo "alert('Mensaje Enviado exitosamente. Nos pondremos en contacto contigo muy pronto');";
-        echo "</script>";
-      }
-      catch(PDOException $e)
-      {
-          echo $e->getMessage();
-      }    
-    }else{
-       echo "<script>";
-         echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo');";
-       echo "</script>";
+           echo "alert('El mensaje no pudo ser enviado, por favor intentalo de nuevo.');";         
+         echo "</script>";
     }
   }
 ?>
