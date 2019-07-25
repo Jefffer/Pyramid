@@ -8,6 +8,23 @@
         <meta name="keywords" content="Viata inmobiliaria, viata, inmobiliaria, inmobiliarios, arriendo, casa, apartamento, bogota">
         <meta name="author" content="Jefffer">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="Vîata inmobiliaria .: Servicios Inmobiliarios">
+        <meta name="twitter:site" content="@publisher_handle">
+        <meta name="twitter:title" content="Vîata Inmobiliaria">
+        <meta name="twitter:description" content="Viata inmobiliaria ofrece diversos servicios inmobiliarios, desde compra-venta y alquiler de inmuebles, hasta asesorias y avalúos catastrales">
+        <meta name="twitter:creator" content="@author_handle">
+        <-- Las imágenes de sumario de Twitter deben ser de al menos 200x200px -->
+        <meta name="twitter:image" content="https://viatainmobiliaria.com/img/logo/logo_sin_fondo.png">
+
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Vîata Inmobiliaria" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://viatainmobiliaria.com" />
+        <meta property="og:image" content="https://viatainmobiliaria.com/img/logo/logo_sin_fondo.png" />
+        <meta property="og:description" content="Viata inmobiliaria ofrece diversos servicios inmobiliarios, desde compra-venta y alquiler de inmuebles, hasta asesorias y avalúos catastrales" />
+        <meta property="og:site_name" content="Vîata Inmobiliaria" /meta property="fb:admins" content="Facebook numeric ID" />
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
