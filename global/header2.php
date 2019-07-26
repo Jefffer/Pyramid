@@ -49,8 +49,7 @@
       <br>
 
       <h1 class="nombre-sitio">vîata Inmobiliaria</h1>
-      <p class="slogan">Eficacia, Confianza y Calidad</p> <br>
-      <p class="slogan"><span>Juntos podemos hacerlo posible</span></p>
+      <p class="slogan"><span>Obtienes lo que quieres</span></p>
     </div><!--.informacion-evento-->
   </div><!--.contenido-header-->
 </div><!--.hero-->

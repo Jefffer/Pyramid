@@ -10,7 +10,6 @@
                       <!--<img id="logo_name" src="img/logo/logo_sin_fondo.png" alt="Logo">  -->
                       <h1 class="nombre-sitio-menu">v<span class="rojito">î</span>ata Inmobiliaria</h1>
                     </a>
-                     <!-- <h1 class="nombre-sitio-menu">Inmobiliaria BABEL</h1> -->
                   </div>
 
                   <div class="menu-movil">
@@ -53,9 +52,8 @@
                       </div> -->
                       <br>
 
-                      <h1 class="nombre-sitio">vîata Inmobiliaria</h1>
-                      <p class="slogan">Eficacia, Confianza y Calidad</p> <br>
-                      <p class="slogan"><span>Juntos podemos hacerlo posible</span></p>
+                      <h1 class="nombre-sitio">vîata Inmobiliaria</h1>                      
+                      <p class="slogan"><span>Obtienes lo que quieres</span></p>
                    </div><!--.informacion-evento-->
                 </div><!--.contenido-header-->
              </div><!--.hero-->

@@ -20,7 +20,7 @@
     <div class="ultimos-tweets">
       <!--<h3>Últimos <span>tweets</span></h3>-->
       <ul>
-        <a class="twitter-timeline" data-lang="es" data-height="240" data-theme="dark" data-link-color="#b92828" href="https://twitter.com/LVPibai?ref_src=twsrc%5Etfw">Tweets by LVPibai</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="twitter-timeline" data-lang="es" data-height="200" data-theme="dark" data-link-color="#b92828" href="https://twitter.com/Viatainmobi?ref_src=twsrc%5Etfw">Tweets by Viatainmobi</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
        <!--
        <li>Sed do eiusmod tempor incm veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</li>
        <li>Sed do eiusmod tempor  et dolore  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</li>
