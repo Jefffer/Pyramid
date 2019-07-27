@@ -40,8 +40,8 @@
 
              <div class="contenido-header">
                 <nav class="redes-sociales">
-                   <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                   <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                   <a href="https://www.facebook.com/viatainmobiliaria"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                   <a href="https://twitter.com/Viatainmobi"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                    <!--<a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>-->
                    <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                 </nav>
