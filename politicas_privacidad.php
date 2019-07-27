@@ -3,9 +3,25 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Viata Inmobiliaria .: Servicios Inmobiliarios</title>
+        <title>Viata Inmobiliaria .: Políticas de Privacidad</title>
         <meta name="description" content="Políticas de privacidad de Viata Inmobiliaria">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="Vîata inmobiliaria .: Políticas de Privacidad">
+        <meta name="twitter:site" content="@Viatainmobi">
+        <meta name="twitter:title" content="Vîata Inmobiliaria">
+        <meta name="twitter:description" content="Viata inmobiliaria ofrece diversos servicios inmobiliarios, desde compra-venta y alquiler de inmuebles, hasta asesorias y avalúos catastrales">
+        <meta name="twitter:creator" content="@author_handle">        
+        <meta name="twitter:image" content="https://viatainmobiliaria.com/img/logo/logo_sin_fondo.png">
+
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Vîata Inmobiliaria .: Políticas de Privacidad" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://viatainmobiliaria.com" />
+        <meta property="og:image" content="https://viatainmobiliaria.com/img/logo/logo_sin_fondo.png" />
+        <meta property="og:description" content="Viata inmobiliaria ofrece diversos servicios inmobiliarios, desde compra-venta y alquiler de inmuebles, hasta asesorias y avalúos catastrales" />
+        <meta property="og:site_name" content="Vîata Inmobiliaria" /meta property="fb:admins" content="Facebook numeric ID" />
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->

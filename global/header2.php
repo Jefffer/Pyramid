@@ -42,7 +42,7 @@
        <a href="https://www.facebook.com/viatainmobiliaria"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
        <a href="https://twitter.com/Viatainmobi"><i class="fab fa-twitter" aria-hidden="true"></i></a>
        <!--<a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>-->
-       <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+       <a href="https://www.instagram.com/viatainmobiliaria"><i class="fab fa-instagram" aria-hidden="true"></i></a>
      </nav>
      <div class="informacion-evento">
       <br>
@@ -66,7 +66,7 @@
             <p class="morph"><label>Email</label><input name="email" type="text" required/></p>
             <p class="morph"><label>Teléfono</label><input name="telefono" type="text" required/></p>
             <p class="morph"><label>Mensaje</label><textarea name="mensaje" placeholder="Dinos lo que necesitas, nos pondremos en contácto muy pronto"></textarea required></p>
-            <p class="txt_politicas">Al enviar este formulario estás aceptando nuestras <a class="estilos_links">Políticas de Privacidad</a></p>
+            <p class="txt_politicas">Al enviar este formulario estás aceptando nuestras <a href="politicas_privacidad.php" target="_blank" class="estilos_links">Políticas de Privacidad</a></p>
             <!-- <p class="morph"><button type="submit" name="submit">ENVIAR<button/></p> -->
             <p class="morph"><input id="sub_contact" type="submit" name="submit" value="ENVIAR" /></p>
           </form>
