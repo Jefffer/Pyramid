@@ -31,15 +31,13 @@
    <div class="menu footer-informacion">
     <h3><span>Síguenos</span> en</h3>
     <nav class="redes-sociales">
-     <a href="https://www.facebook.com/viatainmobiliaria"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-     <a href="https://twitter.com/Viatainmobi"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+     <a href="https://www.facebook.com/viatainmobi" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+     <a href="https://twitter.com/Viatainmobi" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
      <!--<a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>-->
-     <a href="https://www.instagram.com/viatainmobiliaria"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+     <a href="https://www.instagram.com/viatainmobiliaria" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
    </nav>
    <h3>Políticas de <span>Privacidad</span></h3>
-    <nav class="redes-sociales">
-      <p>Conoce nuestras políticas de tratamiento de datos <a href="politicas_privacidad.php" target="_blank" class="estilos_links">aquí</a></p>
-   </nav>
+      <p>Conoce nuestras políticas de tratamiento de datos <a href="politicas_privacidad.php" target="_blank" class="estilos_links">aquí</a>.</p>   
  </div>
 </div>
 

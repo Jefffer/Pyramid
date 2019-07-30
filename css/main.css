@@ -1099,7 +1099,7 @@ footer h3 {
    color: white;
    text-transform: uppercase;
    font-family: 'Oswald', sans-serif;
-   margin-bottom: 20px;
+   margin-bottom: 16px;
 }
 footer h3 span {
    color: rgba(185, 40, 40, 1);
@@ -1108,7 +1108,7 @@ footer .ultimos-tweets li {
    margin-bottom: 10px;
 }
 footer nav.redes-sociales {
-   text-align: left;
+   text-align: center;
 }
 footer nav.redes-sociales a i{color: white;}
 footer nav.redes-sociales a i:hover{color: wheat;}

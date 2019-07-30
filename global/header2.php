@@ -9,7 +9,6 @@
             <a href="index.php">                    
               <h1 class="nombre-sitio-menu">v<span class="rojito">î</span>ata Inmobiliaria</h1>
             </a>
-            <!-- <h1 class="nombre-sitio-menu">Inmobiliaria BABEL</h1> -->
           </div>
 
           <div class="menu-movil">
@@ -39,10 +38,10 @@
 
     <div class="contenido-header">
       <nav class="redes-sociales">
-       <a href="https://www.facebook.com/viatainmobiliaria"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-       <a href="https://twitter.com/Viatainmobi"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+       <a href="https://www.facebook.com/viatainmobi" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+       <a href="https://twitter.com/Viatainmobi" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
        <!--<a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>-->
-       <a href="https://www.instagram.com/viatainmobiliaria"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+       <a href="https://www.instagram.com/viatainmobiliaria" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
      </nav>
      <div class="informacion-evento">
       <br>

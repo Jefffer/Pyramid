@@ -39,10 +39,10 @@
 
              <div class="contenido-header">
                 <nav class="redes-sociales">
-                   <a href="https://www.facebook.com/viatainmobiliaria"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                   <a href="https://twitter.com/Viatainmobi"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                   <a href="https://www.facebook.com/viatainmobi" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                   <a href="https://twitter.com/Viatainmobi" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                    <!--<a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>-->
-                   <a href="https://www.instagram.com/viatainmobiliaria"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                   <a href="https://www.instagram.com/viatainmobiliaria" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                 </nav>
                    <div class="informacion-evento">
                       <!-- <div class="clearfix">
