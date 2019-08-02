@@ -530,7 +530,7 @@
 
 		// Boton Whatsapp
 		$('#wppDiv').floatingWhatsApp({
-		    phone: '573506039310',
+		    phone: '573112868539',
 		    popupMessage: 'Hola, cuéntanos que necesitas',
 		    message: "",
 		    position: 'right',
