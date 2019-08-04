@@ -55,7 +55,7 @@
                 <li>
                   <a class="rows">
                     <!-- <div class="play"><i class="fas fa-bath" aria-hidden="true"></i></div> -->
-                    <div class="video-title">vîata te ofrece una amplia gama de servicios enfocándonos en satisfacer tus necesidades. Garantizamos la seguridad de cada proceso que quieras realizar con nosotros, a través de estudios crediticios que brinden confianza económica a nuestros clientes con el mayor compromiso y confianza en nuestro trabajo de manera eficiente.</div>
+                    <div class="video-title">Vîata te ofrece una amplia gama de servicios enfocándonos en satisfacer tus necesidades. Garantizamos la seguridad de cada proceso que quieras realizar con nosotros, a través de estudios crediticios que brinden confianza económica a nuestros clientes con el mayor compromiso y confianza en nuestro trabajo de manera eficiente.</div>
                     <!-- <div class="view-preview">&nbsp;Vista Previa</div>
                     <div class="length">&nbsp;02:34</div> -->                    
                   </a>
@@ -192,14 +192,33 @@
             </div>
           </div>
 
-          <button class="accordion">¿Cuáles son tipos de sucesión de predios que existen?</button>
+          <button class="accordion">¿Cuáles son tipos de adquisición de predios que existen?</button>
           <div class="panel">
             <div class="chapters">
               <ul class="view">
                 <li>
                   <a class="rows">
                     <!-- <div class="play"><i class="fas fa-bath" aria-hidden="true"></i></div> -->
-                    <div class="video-title">----------</div>
+                    <div class="video-title">Existen 5 formas de adquirir predios en el territorio colombiano.
+                      <ol class="new_list">
+                        <li>
+                          <span>1.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden:
+                          </p>
+                        </li>
+                        <li>
+                          <span>2.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden:</p>
+                        </li>
+                        <li>
+                          <span>3.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden:</p>
+                        </li>
+                        <li>
+                          <span>4.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden:</p>
+                        </li>
+                        <li>
+                          <span>5.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden:</p>
+                        </li>
+                      </ol>
+                    </div>
                     <!-- <div class="view-preview">&nbsp;Vista Previa</div>
                     <div class="length">&nbsp;02:34</div> -->                    
                   </a>
