@@ -202,16 +202,8 @@
                     <div class="video-title">Existen 5 formas de adquirir predios en el territorio colombiano.
                       <ol class="new_list advisory">
                         <li>
-                          <span>1.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden:</p>
-                          <ul>
-                            <li>Los descendientes del fallecido.</li>
-                            <li>Los hijos adoptivos.</li>
-                            <li>Los ascendientes, padres adoptantes.</li>
-                            <li>El cónyuge supérstite o cónyuge sobreviviente.</li>
-                            <li>Los hermanos y demás parientes.</li>
-                            <li>El instituto de bienestar familiar.</li>
-                          </ul>                            
-                          <p>Se debe certificar el parentesco en cada caso con el causante, estos tramite se pueden realizar en una notaría.</p>
+                          <span>1.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden: los descendientes del fallecido; los hijos adoptivos; los ascendientes, padres adoptantes; el cónyuge supérstite o cónyuge sobreviviente; Los hermanos y demás parientes; el instituto de bienestar familiar.<br><br>
+                          Se debe certificar el parentesco en cada caso con el causante, estos tramite se pueden realizar en una notaría.</p>
                         </li>
                         <li>
                           <span>2.</span><p>La adquisición por ocupación es un tipo de adquisición de predios en la cual se realiza la aprehensión material o tenencia y administración del bien inmueble con el ánimo de adquirir el dominio del mismo; estos bienes se caracterizan por carecer de un dueño aparente o conocido y por tanto están a cargo de la nación.</p>
