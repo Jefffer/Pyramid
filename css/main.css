@@ -1670,7 +1670,11 @@ ol.new_list li {
 ol.new_list li p {
    padding-left: 40px;
    font: 0.7em/1.5 Helvetica, sans-serif;
+   text-align: justify;
    color: #555;
+}
+ol.new_list li p {
+   margin-top: 0;
 }
 ol.new_list span {
    position: absolute;

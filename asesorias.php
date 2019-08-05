@@ -200,22 +200,30 @@
                   <a class="rows">
                     <!-- <div class="play"><i class="fas fa-bath" aria-hidden="true"></i></div> -->
                     <div class="video-title">Existen 5 formas de adquirir predios en el territorio colombiano.
-                      <ol class="new_list">
+                      <ol class="new_list advisory">
                         <li>
-                          <span>1.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden:
-                          </p>
+                          <span>1.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden:</p>
+                          <ul>
+                            <li>Los descendientes del fallecido.</li>
+                            <li>Los hijos adoptivos.</li>
+                            <li>Los ascendientes, padres adoptantes.</li>
+                            <li>El cónyuge supérstite o cónyuge sobreviviente.</li>
+                            <li>Los hermanos y demás parientes.</li>
+                            <li>El instituto de bienestar familiar.</li>
+                          </ul>                            
+                          <p>Se debe certificar el parentesco en cada caso con el causante, estos tramite se pueden realizar en una notaría.</p>
                         </li>
                         <li>
-                          <span>2.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden:</p>
+                          <span>2.</span><p>La adquisición por ocupación es un tipo de adquisición de predios en la cual se realiza la aprehensión material o tenencia y administración del bien inmueble con el ánimo de adquirir el dominio del mismo; estos bienes se caracterizan por carecer de un dueño aparente o conocido y por tanto están a cargo de la nación.</p>
                         </li>
                         <li>
-                          <span>3.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden:</p>
+                          <span>3.</span><p>La adquisición por prescripción ocurre cuando una persona ha poseído un bien por un tiempo determinado con ánimo de señor y dueño, es decir que se responsabiliza por las obligaciones legales, jurídicas y fiscales del bien. Este tiempo se da de acuerdo al tipo de prescripción que se realice, es decir, si la prescripción es ordinaria son 5 años y en caso de ser extraordinaria son 10 años de permanencia del bien. La prescripción ordinaria se adquiere cuando se ha mantenido posesión regular no interrumpida en el inmueble durante el tiempo que la ley lo requiere además de un justo título y buena fe del poseedor; por su parte, la prescripción extraordinaria no necesita de la existencia de un título referente a dicho bien, por tanto, se pide una mayor cantidad de permanencia. Para solicitar el derecho de propiedad se debe realizar a través de una declaración judicial.</p>
                         </li>
                         <li>
-                          <span>4.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden:</p>
+                          <span>4.</span><p>La adquisición por accesión se genera cuando una persona que es propietaria de un bien se convierte en dueña de todo lo que ese bien pueda producir o que sea adherido a este. El ejemplo más claro para entender este tipo de adquisición es con el arrendamiento de una propiedad puesto que el dueño de esta propiedad también es dueña del canon de arrendamiento generado.</p>
                         </li>
                         <li>
-                          <span>5.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden:</p>
+                          <span>5.</span><p>El quinto y último tipo de adquisición es por tradición, siendo este el más común, puesto que ocurre cuando una persona transfiere sus bienes a otra, haciéndolo con toda la facultad o intención de transferir dicho dominio, esto se establece mediante documentos de escritura pública en la que se estipula la transferencia de este dominio.</p>
                         </li>
                       </ol>
                     </div>
@@ -250,7 +258,7 @@
                 <li>
                   <a class="rows">
                     <!-- <div class="play"><i class="fas fa-bath" aria-hidden="true"></i></div> -->
-                    <div class="video-title">---------------------</div>
+                    <div class="video-title">Este estudio se realiza como proceso investigativo de la situación legal que tiene el inmueble con el fin de saber si se tiene un buen aprovechamiento de la funcionalidad de este. En el estudio de la normatividad del inmueble se revisan aspectos como el índice de edificabilidad, el índice de construcción, las características de la tipología de construcción y el tipo de tratamiento y modalidad que se tiene en el sector donde se encuentra ubicado según la norma urbanística establecida.</div>
                     <!-- <div class="view-preview">&nbsp;Vista Previa</div>
                     <div class="length">&nbsp;02:34</div> -->                    
                   </a>
