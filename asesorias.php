@@ -203,6 +203,7 @@
                       <ol class="new_list advisory">
                         <li>
                           <span>1.</span><p>La sucesión por causa de muerte se realiza cuando se distribuye, reparte y asignan los bienes y obligaciones de una persona que ha fallecido. Hay 3 tipo de sucesión por causa de muerte, testamentaria, abintestato y mixta; la testamentaria sucede cuando la persona fallecida o causante, como se denomina jurídicamente, deja un testamento el cual cumple con todos los requisitos formales. El segundo tipo es el abintestato el cual sucede cuando no existe un testamento o este es anulado por falta de cumplimiento en los requisitos formales, en este caso se realiza la repartición y asignación de bienes en el siguiente orden: los descendientes del fallecido; los hijos adoptivos; los ascendientes, padres adoptantes; el cónyuge supérstite o cónyuge sobreviviente; Los hermanos y demás parientes; el instituto de bienestar familiar.<br><br>
+                            
                           Se debe certificar el parentesco en cada caso con el causante, estos tramite se pueden realizar en una notaría.</p>
                         </li>
                         <li>
